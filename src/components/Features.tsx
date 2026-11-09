@@ -2,6 +2,8 @@ import React from 'react';
 import { Repeat, Eye, Crosshair, SlidersHorizontal, Users, Smartphone } from 'lucide-react';
 import type { LucideIcon } from 'lucide-react';
 import { scrollToPlanos } from '../utils/utm';
+import imgRepetir from '../assets/images/features/beneficio-repetir.webp';
+import imgEntender from '../assets/images/features/beneficio-entender.webp';
 
 /**
  * "O que muda no seu vôlei de praia": benefícios (o que muda para a pessoa),
@@ -10,6 +12,8 @@ import { scrollToPlanos } from '../utils/utm';
  */
 interface BeneficioItem {
   icon: LucideIcon;
+  /** Ícone 3D (webp). Quando existe, substitui o ícone de linha. */
+  image?: string;
   beneficio: string;
   prova: string;
 }
@@ -17,11 +21,13 @@ interface BeneficioItem {
 const BENEFICIOS: BeneficioItem[] = [
   {
     icon: Repeat,
+    image: imgRepetir,
     beneficio: 'Você para de repetir o mesmo treino toda semana',
     prova: '240 exercícios em 15 categorias, do aquecimento ao jogo reduzido.',
   },
   {
     icon: Eye,
+    image: imgEntender,
     beneficio: 'Você entende o exercício antes de entrar na areia',
     prova: 'O diagrama animado mostra onde cada um fica e para onde vai a bola.',
   },
@@ -63,14 +69,26 @@ export const Features: React.FC = () => {
 
       {/* Cards Grid */}
       <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-4">
-        {BENEFICIOS.map(({ icon: Icone, beneficio, prova }) => (
+        {BENEFICIOS.map(({ icon: Icone, image, beneficio, prova }) => (
           <div
             key={beneficio}
             className="p-5 sm:p-6 rounded-2xl bg-white border border-[#E2DBC9] hover:border-[#FF9F1C] hover:shadow-md transition-all duration-200 shadow-sm flex gap-4 items-start"
           >
-            <div className="shrink-0 w-12 h-12 rounded-xl bg-[#FF9F1C]/15 text-[#E07D00] flex items-center justify-center">
-              <Icone className="w-6 h-6" strokeWidth={2.4} aria-hidden="true" />
-            </div>
+            {image ? (
+              <img
+                src={image}
+                width={192}
+                height={192}
+                alt=""
+                loading="lazy"
+                decoding="async"
+                className="shrink-0 w-16 h-16 sm:w-20 sm:h-20 object-contain -mt-1"
+              />
+            ) : (
+              <div className="shrink-0 w-12 h-12 rounded-xl bg-[#FF9F1C]/15 text-[#E07D00] flex items-center justify-center">
+                <Icone className="w-6 h-6" strokeWidth={2.4} aria-hidden="true" />
+              </div>
+            )}
             <div className="min-w-0">
               <h3 className="text-base sm:text-lg font-extrabold text-[#0E4B75] font-heading leading-snug">
                 {beneficio}
