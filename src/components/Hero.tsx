@@ -89,38 +89,13 @@ export const Hero: React.FC = () => {
         <div className="relative rounded-[36px] p-2 bg-gradient-to-b from-slate-900 to-slate-950 shadow-2xl border-4 border-slate-700/80 overflow-hidden group">
           <div className="absolute -inset-4 bg-gradient-to-tr from-[#FF9F1C]/25 via-[#0E4B75]/20 to-[#FF4A3F]/20 rounded-[48px] blur-xl opacity-70 pointer-events-none -z-10" />
           
-          <video
-            ref={videoRef}
-            poster="https://i.imgur.com/GfgesKg.jpg"
-            preload="none"
-            width={720}
-            height={1280}
-            controls={isPlayingAudio}
-            playsInline
-            autoPlay
-            muted={!isPlayingAudio}
-            loop={!isPlayingAudio}
-            className={`w-full h-auto aspect-[9/16] rounded-[28px] object-cover block shadow-inner ${!isPlayingAudio ? 'cursor-pointer' : ''}`}
-            onClick={!isPlayingAudio ? handleStartWithSound : undefined}
-          >
-            Seu navegador não suporta a tag de vídeo.
-          </video>
-
-          {/* Overlay 'Toque para ouvir' (estilo VSL idêntico ao modelo) */}
-          {!isPlayingAudio && (
-            <div
-              onClick={handleStartWithSound}
-              className="absolute inset-0 z-30 flex items-center justify-center bg-black/25 hover:bg-black/35 transition-all cursor-pointer p-4"
-            >
-              <div className="flex items-center gap-3 px-6 py-3.5 rounded-full bg-[#18181B]/90 hover:bg-black text-white shadow-2xl border border-white/20 transition-transform active:scale-95 animate-pulse select-none">
-                <Volume2 className="w-6 h-6 text-white shrink-0" />
-                <div className="text-left font-black tracking-wide leading-tight text-sm sm:text-base">
-                  <div>Toque</div>
-                  <div>para ouvir</div>
-                </div>
-              </div>
-            </div>
-          )}
+          {/* Imagem do topo (provisória, em branco). Troque o bloco abaixo por
+              <img src="..." alt="..." className="w-full h-auto aspect-[9/16] rounded-[28px] object-cover block" /> */}
+          <div
+            role="img"
+            aria-label="Imagem do aplicativo"
+            className="w-full aspect-[9/16] rounded-[28px] bg-white block"
+          />
         </div>
       </div>
 

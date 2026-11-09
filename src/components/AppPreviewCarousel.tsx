@@ -67,12 +67,12 @@ export const AppPreviewCarousel: React.FC = () => {
       <div className="max-w-4xl mx-auto text-center">
         {/* Title */}
         <h2 className="text-3xl sm:text-4xl font-black text-[#0E4B75] tracking-tight uppercase">
-          VEJA O APP POR DENTRO
+          VEJA COMO É FÁCIL DE USAR
         </h2>
 
         {/* Text */}
         <p className="mt-3 text-sm sm:text-base text-slate-700 max-w-xl mx-auto leading-relaxed font-medium">
-          Cada exercício tem o seu código. Você sabe na hora o nível, o fundamento e para quantos alunos ele serve.
+          Escolha o que quer treinar, abra o exercício e siga o passo a passo com a animação do movimento. Tudo em poucos toques.
         </p>
 
         {/* Carousel Container */}
