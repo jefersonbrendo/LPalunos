@@ -51,7 +51,7 @@ export const Faq: React.FC = () => {
     <section className="py-12 sm:py-16 px-4 max-w-3xl mx-auto">
       <div className="text-center">
         <h2 className="text-3xl sm:text-4xl font-black text-[#0E4B75] tracking-tight uppercase">
-          PERGUNTAS <span className="text-[#FF9F1C]">FREQUENTES</span>
+          PERGUNTAS FREQUENTES
         </h2>
       </div>
 
