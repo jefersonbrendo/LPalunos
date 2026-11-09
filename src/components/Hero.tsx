@@ -77,12 +77,11 @@ export const Hero: React.FC = () => {
         <span className="underline decoration-[#0284C7] decoration-[4px] underline-offset-6 text-[#0E4B75]">
           mais rápido
         </span>
-        , com vídeo de cada movimento
       </h1>
 
       {/* Subheadline */}
       <p className="mt-4 sm:mt-6 text-base sm:text-lg text-slate-700 max-w-2xl mx-auto leading-relaxed font-medium">
-        Do primeiro toque à impulsão do ataque, organizados por nível num aplicativo.
+        Com vídeo de cada movimento, do primeiro toque à impulsão do ataque, organizados por nível num aplicativo.
       </p>
 
       {/* Vídeo demonstrativo do aplicativo (Imgur a/7zDDHGV) */}
