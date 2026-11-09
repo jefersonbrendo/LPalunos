@@ -4,6 +4,8 @@ import type { LucideIcon } from 'lucide-react';
 import { scrollToPlanos } from '../utils/utm';
 import imgRepetir from '../assets/images/features/beneficio-repetir.webp';
 import imgEntender from '../assets/images/features/beneficio-entender.webp';
+import imgCorrigir from '../assets/images/features/beneficio-corrigir.webp';
+import imgNivel from '../assets/images/features/beneficio-nivel.webp';
 
 /**
  * "O que muda no seu vôlei de praia": benefícios (o que muda para a pessoa),
@@ -33,11 +35,13 @@ const BENEFICIOS: BeneficioItem[] = [
   },
   {
     icon: Crosshair,
+    image: imgCorrigir,
     beneficio: 'Você corrige o erro na hora, sem precisar de alguém olhando',
     prova: 'Cada exercício traz o erro mais comum e os pontos de atenção.',
   },
   {
     icon: SlidersHorizontal,
+    image: imgNivel,
     beneficio: 'Você treina no seu nível, sem travar e sem se entediar',
     prova: 'Do iniciante ao avançado, com versão mais fácil e mais difícil de cada exercício.',
   },
