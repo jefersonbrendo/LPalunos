@@ -6,6 +6,8 @@ import imgRepetir from '../assets/images/features/beneficio-repetir.webp';
 import imgEntender from '../assets/images/features/beneficio-entender.webp';
 import imgCorrigir from '../assets/images/features/beneficio-corrigir.webp';
 import imgNivel from '../assets/images/features/beneficio-nivel.webp';
+import imgGalera from '../assets/images/features/beneficio-galera.webp';
+import imgCelular from '../assets/images/features/beneficio-celular.webp';
 
 /**
  * "O que muda no seu vôlei de praia": benefícios (o que muda para a pessoa),
@@ -47,11 +49,13 @@ const BENEFICIOS: BeneficioItem[] = [
   },
   {
     icon: Users,
+    image: imgGalera,
     beneficio: 'Você nunca fica sem treino, sozinho ou com a galera',
     prova: 'Cada exercício mostra para quantas pessoas serve, inclusive sozinho ou em dupla.',
   },
   {
     icon: Smartphone,
+    image: imgCelular,
     beneficio: 'Você chega na quadra sabendo exatamente o que fazer',
     prova: 'Tudo no celular, com acesso na hora e vitalício.',
   },
