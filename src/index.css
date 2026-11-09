@@ -1,0 +1,66 @@
+@import "tailwindcss";
+
+/* Fonte padrão do Tailwind (classe font-sans, usada no container da página) */
+@theme {
+  --font-sans: 'Inter Variable', 'Inter', ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer base {
+  :root {
+    --font-heading: 'Inter Variable', 'Inter', ui-sans-serif, system-ui, sans-serif;
+    --font-body: 'Inter Variable', 'Inter', ui-sans-serif, system-ui, sans-serif;
+    
+    /* Paleta Praia de Alta Performance */
+    --color-sand-bg: #F7F4EE;
+    --color-ocean-blue: #0E4B75;
+    --color-solar-energy: #FF9F1C;
+    --color-coral-cta: #FF4A3F;
+  }
+
+  body {
+    font-family: var(--font-body);
+    background-color: var(--color-sand-bg);
+    color: #0F172A;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, .font-heading {
+    font-family: var(--font-heading);
+    letter-spacing: normal;
+  }
+
+  h1, h2 {
+    letter-spacing: -0.025em;
+  }
+}
+
+/* Glowing pulse animation for the coral fluorescent CTA */
+@keyframes pulseCoralCta {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(255, 74, 63, 0.45), 0 4px 14px 0 rgba(14, 75, 117, 0.25);
+  }
+  50% {
+    transform: scale(1.02);
+    box-shadow: 0 0 25px 6px rgba(255, 74, 63, 0.38), 0 8px 25px 0 rgba(14, 75, 117, 0.3);
+  }
+}
+
+.animate-pulse-cta {
+  animation: pulseCoralCta 2.2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #F7F4EE;
+}
+::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94A3B8;
+}

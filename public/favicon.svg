@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <!-- Fundo Azul Oceano Arredondado (Estilo App Icon) -->
+  <rect width="512" height="512" rx="115" fill="#0E4B75"/>
+
+  <!-- Bola de Vôlei Central -->
+  <g transform="translate(256, 256)">
+    <!-- Preenchimento Laranja da Bola com Borda Branca Grossa -->
+    <circle cx="0" cy="0" r="196" fill="#F4921E" stroke="#FFFFFF" stroke-width="18"/>
+
+    <!-- Costura Azul Vertical -->
+    <path d="M -5,-194 C -75,-60 -75,60 6,194" fill="none" stroke="#0E4B75" stroke-width="16" stroke-linecap="round"/>
+    
+    <!-- Costura Azul Horizontal -->
+    <path d="M -192,-6 C -60,-60 60,-60 192,-6" fill="none" stroke="#0E4B75" stroke-width="16" stroke-linecap="round"/>
+
+    <!-- Faixa Diagonal Coral/Vermelha -->
+    <line x1="-140" y1="-140" x2="140" y2="140" stroke="#FF4A3F" stroke-width="18" stroke-linecap="round"/>
+  </g>
+</svg>
