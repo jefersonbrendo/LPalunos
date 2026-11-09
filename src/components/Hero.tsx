@@ -72,17 +72,17 @@ export const Hero: React.FC = () => {
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[550px] h-[360px] bg-gradient-to-b from-[#FF9F1C]/10 via-[#0E4B75]/10 to-transparent blur-3xl pointer-events-none -z-10" />
 
       {/* Main Headline */}
-      <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-[#0E4B75] leading-[1.1] max-w-3xl mx-auto text-balance">
-        <span className="text-[#FF9F1C] font-black">+240</span> Exercícios de Vôlei de Praia{' '}
+      <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black uppercase text-[#0E4B75] leading-[1.1] max-w-3xl mx-auto text-balance">
+        <span className="text-[#FF9F1C] font-black">+240</span> treinos de vôlei de areia para evoluir{' '}
         <span className="underline decoration-[#0284C7] decoration-[4px] underline-offset-6 text-[#0E4B75]">
-          Prontos
-        </span>{' '}
-        para a sua próxima aula
+          mais rápido
+        </span>
+        , com vídeo de cada movimento
       </h1>
 
       {/* Subheadline */}
       <p className="mt-4 sm:mt-6 text-base sm:text-lg text-slate-700 max-w-2xl mx-auto leading-relaxed font-medium">
-        App com todos os fundamentos da dupla de praia, diagramas de quadra, variações por nível e filtro por categoria, acesso direto pelo celular.
+        Do primeiro toque à impulsão do ataque, organizados por nível num aplicativo.
       </p>
 
       {/* Vídeo demonstrativo do aplicativo (Imgur a/7zDDHGV) */}
