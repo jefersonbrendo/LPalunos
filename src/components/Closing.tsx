@@ -7,7 +7,7 @@ export const Closing: React.FC = () => {
       <div className="max-w-3xl mx-auto space-y-4">
         {/* Título */}
         <h2 className="text-3xl sm:text-5xl font-black text-[#0E4B75] tracking-tight uppercase font-heading text-balance">
-          SUA PRÓXIMA AULA JÁ PODE ESTAR PRONTA
+          SUA PRÓXIMA AULA <span className="text-[#FF9F1C]">JÁ PODE ESTAR PRONTA</span>
         </h2>
 
         {/* Texto */}

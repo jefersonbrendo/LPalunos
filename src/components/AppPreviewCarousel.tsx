@@ -67,7 +67,7 @@ export const AppPreviewCarousel: React.FC = () => {
       <div className="max-w-4xl mx-auto text-center">
         {/* Title */}
         <h2 className="text-3xl sm:text-4xl font-black text-[#0E4B75] tracking-tight uppercase">
-          VEJA COMO É FÁCIL DE USAR
+          VEJA COMO É <span className="text-[#FF9F1C]">FÁCIL DE USAR</span>
         </h2>
 
         {/* Text */}

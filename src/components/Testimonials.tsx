@@ -16,7 +16,7 @@ export const Testimonials: React.FC = () => {
       aria-hidden="true"
     >
       <h2 className="text-3xl sm:text-4xl font-black text-[#0E4B75] tracking-tight uppercase">
-        O QUE OS PROFESSORES ESTÃO DIZENDO
+        O QUE OS PROFESSORES <span className="text-[#FF9F1C]">ESTÃO DIZENDO</span>
       </h2>
       <p className="mt-2 text-sm text-slate-600 font-medium">
         [Espaço para prints reais de depoimentos. Enquanto não houver, deixe esta seção oculta (display:none) para eu ativar depois.]

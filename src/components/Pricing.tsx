@@ -13,7 +13,7 @@ export const Pricing: React.FC<PricingProps> = ({ onOpenUpsell }) => {
     <section id="planos" className="py-14 sm:py-20 px-4 max-w-5xl mx-auto scroll-mt-12">
       <div className="text-center">
         <h2 className="text-3xl sm:text-5xl font-black text-[#0E4B75] tracking-tight uppercase">
-          ESCOLHA SEU ACESSO
+          ESCOLHA <span className="text-[#FF9F1C]">SEU ACESSO</span>
         </h2>
         <p className="mt-2 text-sm sm:text-base text-slate-600 font-medium">
           Pagamento único • Acesso imediato

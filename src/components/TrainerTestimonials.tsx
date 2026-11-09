@@ -69,7 +69,7 @@ export const TrainerTestimonials: React.FC = () => {
   return (
     <section id="treinadores" className="py-12 sm:py-16 px-4 max-w-4xl mx-auto">
       <h2 className="text-center text-3xl sm:text-4xl font-black text-[#0E4B75] tracking-tight uppercase text-balance">
-        TREINADORES QUE JÁ UTILIZARAM E APROVARAM
+        TREINADORES QUE JÁ <span className="text-[#FF9F1C]">UTILIZARAM E APROVARAM</span>
       </h2>
 
       <div className="mt-8 mx-auto w-full max-w-[400px]">
