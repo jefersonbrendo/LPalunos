@@ -4,6 +4,7 @@ import { Hero } from './components/Hero';
 import { AppPreviewCarousel } from './components/AppPreviewCarousel';
 import { TrainerTestimonials } from './components/TrainerTestimonials';
 import { Features } from './components/Features';
+import { ParaQuemE } from './components/ParaQuemE';
 import { Bonuses } from './components/Bonuses';
 import { Pricing } from './components/Pricing';
 import { Testimonials } from './components/Testimonials';
@@ -35,6 +36,9 @@ export default function App() {
 
       {/* 4. TUDO QUE VOCÊ VAI RECEBER */}
       <Features />
+
+      {/* 4.1 PARA QUEM É */}
+      <ParaQuemE />
 
       {/* 5. BÔNUS */}
       <Bonuses />
