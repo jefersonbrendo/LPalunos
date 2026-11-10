@@ -1,5 +1,10 @@
 import React from 'react';
 import { scrollToPlanos } from '../utils/utm';
+import bonus01 from '../assets/images/bonus_01_app_1794274953388.jpg';
+import bonus02 from '../assets/images/bonus_02_app_1794274955213.jpg';
+import bonus03 from '../assets/images/bonus_03_app_1794274958784.jpg';
+import bonus04 from '../assets/images/bonus_04_app_1794274961006.jpg';
+import bonus05 from '../assets/images/bonus_05_app_1794274962064.jpg';
 
 interface BonusItem {
   numberString: string;
@@ -21,6 +26,7 @@ const BONUSES: BonusItem[] = [
     originalPrice: 'R$ 67',
     isNew: true,
     icon: '🗓️',
+    image: bonus01,
   },
   {
     numberString: '02',
@@ -29,6 +35,7 @@ const BONUSES: BonusItem[] = [
     desc: 'Abra o treino do dia e siga, do iniciante ao avançado, sem precisar montar nada.',
     originalPrice: 'R$ 47',
     icon: '📋',
+    image: bonus02,
   },
   {
     numberString: '03',
@@ -37,6 +44,7 @@ const BONUSES: BonusItem[] = [
     desc: 'Bola na parede, impulsão, força e agilidade para treinar na semana em que não dá para ir à areia.',
     originalPrice: 'R$ 37',
     icon: '🏠',
+    image: bonus03,
   },
   {
     numberString: '04',
@@ -45,6 +53,7 @@ const BONUSES: BonusItem[] = [
     desc: 'Jogos em dupla e em grupo, com placar no app, para a resenha virar treino.',
     originalPrice: 'R$ 27',
     icon: '🏐',
+    image: bonus04,
   },
   {
     numberString: '05',
@@ -54,6 +63,7 @@ const BONUSES: BonusItem[] = [
     originalPrice: 'R$ 57',
     isNew: true,
     icon: '📈',
+    image: bonus05,
   },
 ];
 
@@ -94,6 +104,7 @@ export const Bonuses: React.FC = () => {
                     alt={`Capa do bônus ${bonus.numberString}: ${bonus.name}`}
                     loading="lazy"
                     decoding="async"
+                    referrerPolicy="no-referrer"
                     className="block w-full h-full object-cover object-center"
                   />
                 </div>

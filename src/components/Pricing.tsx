@@ -113,7 +113,7 @@ export const Pricing: React.FC<PricingProps> = ({ onOpenUpsell }) => {
           {/* Selo no topo */}
           <div className="absolute -top-3.5 left-1/2 -translate-x-1/2">
             <span className="bg-gradient-to-r from-[#FF9F1C] via-[#F58F00] to-[#FF9F1C] text-slate-950 text-xs sm:text-sm font-black uppercase px-4 py-1 rounded-full shadow-md border border-[#E07D00]/40 flex items-center gap-1 whitespace-nowrap">
-              ⭐ MELHOR OFERTA
+              ⭐ MAIS ESCOLHIDO
             </span>
           </div>
 
