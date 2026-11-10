@@ -19,7 +19,7 @@ export const Closing: React.FC = () => {
         <div className="pt-4 max-w-md mx-auto">
           <button
             onClick={scrollToPlanos}
-            className="w-full py-4 sm:py-5 px-6 rounded-2xl bg-gradient-to-r from-[#E23D2E] via-[#D63426] to-[#E23D2E] text-white font-extrabold text-base sm:text-lg tracking-wide shadow-2xl hover:brightness-105 active:scale-[0.98] transition-all animate-pulse-cta cursor-pointer uppercase border-b-4 border-[#A8261B]"
+            className="w-full py-4 sm:py-5 px-6 rounded-2xl bg-gradient-to-r from-[#FFC60B] via-[#FFD43B] to-[#FFC60B] text-[#14110B] font-extrabold text-base sm:text-lg tracking-wide shadow-2xl hover:brightness-105 active:scale-[0.98] transition-all animate-pulse-cta cursor-pointer uppercase border-b-4 border-[#C99A00]"
           >
             QUERO MEUS TREINOS AGORA
           </button>

@@ -106,7 +106,7 @@ export const UpsellModal: React.FC<UpsellModalProps> = ({ isOpen, onClose }) => 
         {/* Botão principal (grande, cor de destaque: Coral) */}
         <a
           href={checkout15Url}
-          className="block w-full py-4 px-6 rounded-2xl bg-gradient-to-r from-[#E23D2E] via-[#D63426] to-[#E23D2E] text-white font-extrabold text-sm sm:text-base tracking-wide shadow-xl hover:brightness-105 active:scale-[0.98] transition-all animate-pulse-cta uppercase border-b-4 border-[#A8261B] cursor-pointer"
+          className="block w-full py-4 px-6 rounded-2xl bg-gradient-to-r from-[#FFC60B] via-[#FFD43B] to-[#FFC60B] text-[#14110B] font-extrabold text-sm sm:text-base tracking-wide shadow-xl hover:brightness-105 active:scale-[0.98] transition-all animate-pulse-cta uppercase border-b-4 border-[#C99A00] cursor-pointer"
         >
           SIM, QUERO OS +420 POR R$ 15
         </a>

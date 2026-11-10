@@ -223,7 +223,7 @@ export const Pricing: React.FC<PricingProps> = ({ onOpenUpsell }) => {
             {/* Botão de compra direto para LINK_CHECKOUT_24 */}
             <a
               href={checkout24Url}
-              className="block w-full text-center py-4 sm:py-5 px-6 rounded-2xl bg-gradient-to-r from-[#E23D2E] via-[#D63426] to-[#E23D2E] text-white font-extrabold text-base sm:text-lg tracking-wide shadow-xl hover:brightness-105 active:scale-[0.98] transition-all animate-pulse-cta uppercase border-b-4 border-[#A8261B]"
+              className="block w-full text-center py-4 sm:py-5 px-6 rounded-2xl bg-gradient-to-r from-[#FFC60B] via-[#FFD43B] to-[#FFC60B] text-[#14110B] font-extrabold text-base sm:text-lg tracking-wide shadow-xl hover:brightness-105 active:scale-[0.98] transition-all animate-pulse-cta uppercase border-b-4 border-[#C99A00]"
             >
               QUERO OS +420 TREINOS
             </a>
