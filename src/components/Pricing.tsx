@@ -171,23 +171,23 @@ export const Pricing: React.FC<PricingProps> = ({ onOpenUpsell }) => {
               </li>
               <li className="flex items-start gap-2 text-[#D97706] font-bold">
                 <span className="shrink-0">🎁</span>
-                <span>Bônus 1: Planejamento Semanal da Areia (R$ 67)</span>
+                <span>Bônus 1: Plano de Evolução em 30 Dias (R$ 67)</span>
               </li>
               <li className="flex items-start gap-2 text-[#D97706] font-bold">
                 <span className="shrink-0">🎁</span>
-                <span>Bônus 2: 30 Aulas Montadas de 1 hora (R$ 47)</span>
+                <span>Bônus 2: Treinos Prontos para Seguir (R$ 47)</span>
               </li>
               <li className="flex items-start gap-2 text-[#D97706] font-bold">
                 <span className="shrink-0">🎁</span>
-                <span>Bônus 3: Guia Turma Mista e Aula Particular (R$ 37)</span>
+                <span>Bônus 3: Treino em Casa, 195 exercícios (R$ 37)</span>
               </li>
               <li className="flex items-start gap-2 text-[#D97706] font-bold">
                 <span className="shrink-0">🎁</span>
-                <span>Bônus 4: Plano de Evolução de 12 Semanas (R$ 97)</span>
+                <span>Bônus 4: Jogos para Treinar com a Galera (R$ 27)</span>
               </li>
               <li className="flex items-start gap-2 text-[#D97706] font-bold">
                 <span className="shrink-0">🎁</span>
-                <span>Bônus 5: Ficha de Evolução do Aluno (R$ 57)</span>
+                <span>Bônus 5: Ficha de Evolução do Jogador (R$ 57)</span>
               </li>
               <li className="flex items-start gap-2 text-emerald-700 font-bold">
                 <span className="shrink-0">💬</span>
@@ -209,9 +209,9 @@ export const Pricing: React.FC<PricingProps> = ({ onOpenUpsell }) => {
               QUERO OS 240 EXERCÍCIOS
             </a>
 
-            {/* Abaixo do botão: Economia real de R$ 305 */}
+            {/* Abaixo do botão: Economia real de R$ 235 */}
             <div className="mt-2.5 text-center text-xs font-black text-emerald-800 bg-emerald-50 py-1 px-3 rounded-full border border-emerald-200">
-              Economia real de R$ 305
+              Economia real de R$ 235
             </div>
 
             <div className="mt-2 text-center text-xs text-slate-500 font-medium flex items-center justify-center gap-1.5">

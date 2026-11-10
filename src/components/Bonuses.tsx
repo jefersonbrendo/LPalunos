@@ -1,10 +1,5 @@
 import React from 'react';
 import { scrollToPlanos } from '../utils/utm';
-import bonus01 from '../assets/images/bonus-01-planejamento.webp';
-import bonus02 from '../assets/images/bonus-02-aulas.webp';
-import bonus03 from '../assets/images/bonus-03-turma-mista.webp';
-import bonus04 from '../assets/images/bonus-04-evolucao.webp';
-import bonus05 from '../assets/images/bonus-05-ficha.webp';
 
 interface BonusItem {
   numberString: string;
@@ -20,50 +15,45 @@ interface BonusItem {
 const BONUSES: BonusItem[] = [
   {
     numberString: '01',
-    name: 'Planejamento Semanal da Areia',
-    shortName: 'Planejamento semanal',
-    desc: 'Saiba qual fundamento trabalhar em cada dia da semana, separado por nível da turma.',
+    name: 'Plano de Evolução em 30 Dias',
+    shortName: 'Plano de 30 dias',
+    desc: 'Um treino por dia, na sequência certa, do primeiro toque até jogar a partida.',
     originalPrice: 'R$ 67',
-    icon: '📅',
-    image: bonus01,
+    isNew: true,
+    icon: '🗓️',
   },
   {
     numberString: '02',
-    name: 'Aulas Montadas: 30 aulas de 1 hora',
-    shortName: '30 aulas montadas',
-    desc: 'Do aquecimento ao jogo final, na sequência certa. É só abrir e seguir.',
+    name: 'Treinos Prontos para Seguir',
+    shortName: 'Treinos prontos',
+    desc: 'Abra o treino do dia e siga, do iniciante ao avançado, sem precisar montar nada.',
     originalPrice: 'R$ 47',
     icon: '📋',
-    image: bonus02,
   },
   {
     numberString: '03',
-    name: 'Turma Mista e Aula Particular',
-    shortName: 'Turma mista e particular',
-    desc: 'Ajuste cada exercício ao nível e ao número de alunos, de 1 aluno até a turma cheia.',
+    name: 'Treino em Casa: 195 exercícios sem quadra',
+    shortName: 'Treino em casa',
+    desc: 'Bola na parede, impulsão, força e agilidade para treinar na semana em que não dá para ir à areia.',
     originalPrice: 'R$ 37',
-    icon: '👥',
-    image: bonus03,
+    icon: '🏠',
   },
   {
     numberString: '04',
-    name: 'Plano de Evolução de 12 Semanas',
-    shortName: 'Plano de 12 semanas',
-    desc: 'Um caminho pronto para levar a turma do fundamento ao jogo, semana a semana.',
-    originalPrice: 'R$ 97',
-    isNew: true,
-    icon: '🚀',
-    image: bonus04,
+    name: 'Jogos para Treinar com a Galera',
+    shortName: 'Jogos com a galera',
+    desc: 'Jogos em dupla e em grupo, com placar no app, para a resenha virar treino.',
+    originalPrice: 'R$ 27',
+    icon: '🏐',
   },
   {
     numberString: '05',
-    name: 'Ficha de Evolução do Aluno',
+    name: 'Ficha de Evolução do Jogador',
     shortName: 'Ficha de evolução',
-    desc: 'Avalie cada aluno por fundamento e mostre para ele o quanto já melhorou.',
+    desc: 'Avalie seu saque, recepção, ataque e defesa e veja o quanto você já melhorou.',
     originalPrice: 'R$ 57',
     isNew: true,
     icon: '📈',
-    image: bonus05,
   },
 ];
 
@@ -84,7 +74,7 @@ export const Bonuses: React.FC = () => {
           LEVE HOJE <span className="text-[#FFC145]">+ 5 BÔNUS</span> GRÁTIS
         </h2>
         <p className="mt-3 text-sm sm:text-base text-slate-300 font-medium">
-          Tudo o que fecha a sua rotina de professor, do planejamento da semana à evolução de cada aluno.
+          Tudo para saber o que treinar em cada dia, dentro e fora da areia, e ver a sua evolução.
         </p>
 
         {/* Lista de bônus */}
@@ -158,7 +148,7 @@ export const Bonuses: React.FC = () => {
               Valor total dos bônus
             </span>
             <span className="text-right">
-              <span className="block text-sm font-bold text-slate-400 line-through">R$ 305</span>
+              <span className="block text-sm font-bold text-slate-400 line-through">R$ 235</span>
               <span className="block text-2xl sm:text-3xl font-black text-emerald-600 leading-none">R$ 0,00</span>
             </span>
           </div>

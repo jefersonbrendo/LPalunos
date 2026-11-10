@@ -91,7 +91,7 @@ export const UpsellModal: React.FC<UpsellModalProps> = ({ isOpen, onClose }) => 
           </div>
           <div className="flex items-start gap-2 text-xs sm:text-sm text-[#D97706] font-bold">
             <span className="shrink-0">🎁</span>
-            <span><strong>Todos os 5 Bônus inclusos:</strong> Planejamento, 30 Aulas, Turma Mista, 12 Semanas e Ficha de Evolução (R$ 305 grátis)</span>
+            <span><strong>Todos os 5 Bônus inclusos:</strong> Plano de 30 Dias, Treinos Prontos, Treino em Casa, Jogos com a Galera e Ficha de Evolução (R$ 235 grátis)</span>
           </div>
           <div className="flex items-start gap-2 text-xs sm:text-sm text-slate-800 font-semibold">
             <span className="text-emerald-600 font-bold shrink-0">✅</span>
