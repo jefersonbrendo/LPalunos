@@ -190,7 +190,7 @@ export const Pricing: React.FC<PricingProps> = ({ onOpenUpsell }) => {
               </li>
               <li className="flex items-start gap-2 text-[#B87500] font-bold">
                 <span className="shrink-0">🎁</span>
-                <span>Bônus 1: Plano de Evolução em 30 Dias (R$ 67)</span>
+                <span>Bônus 1: Plano de Evolução em 15 Dias (R$ 67)</span>
               </li>
               <li className="flex items-start gap-2 text-[#B87500] font-bold">
                 <span className="shrink-0">🎁</span>

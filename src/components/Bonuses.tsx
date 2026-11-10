@@ -20,8 +20,8 @@ interface BonusItem {
 const BONUSES: BonusItem[] = [
   {
     numberString: '01',
-    name: 'Plano de Evolução em 30 Dias',
-    shortName: 'Plano de 30 dias',
+    name: 'Plano de Evolução em 15 Dias',
+    shortName: 'Plano de 15 dias',
     desc: 'Um treino por dia, na sequência certa, do primeiro toque até jogar a partida.',
     originalPrice: 'R$ 67',
     isNew: true,

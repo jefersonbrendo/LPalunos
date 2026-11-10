@@ -17,7 +17,7 @@ const FAQ_DATA: FaqItem[] = [
   },
   {
     question: 'Sou iniciante, nunca treinei. Serve para mim?',
-    answer: 'Serve. Os treinos vão do iniciante ao avançado, cada um tem uma versão mais fácil, e o Plano de 30 Dias começa do primeiro toque na bola.',
+    answer: 'Serve. Os treinos vão do iniciante ao avançado, cada um tem uma versão mais fácil, e o Plano de 15 Dias começa do primeiro toque na bola.',
   },
   {
     question: 'Já jogo há um tempo. Vou aprender algo novo?',
