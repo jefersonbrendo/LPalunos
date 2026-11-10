@@ -214,8 +214,19 @@ export const Pricing: React.FC<PricingProps> = ({ onOpenUpsell }) => {
               Economia real de R$ 235
             </div>
 
-            <div className="mt-2 text-center text-xs text-slate-500 font-medium flex items-center justify-center gap-1.5">
-              <span>🔒 Compra 100% segura • 7 dias de garantia</span>
+            <div className="mt-3 text-center text-xs text-slate-500 font-medium space-y-1">
+              <div className="flex items-center justify-center gap-3">
+                <span className="inline-flex items-center gap-1 text-slate-600">
+                  <span>🔒</span> Compra segura
+                </span>
+                <span className="text-slate-300">•</span>
+                <span className="inline-flex items-center gap-1 text-slate-600">
+                  <span>🛡️</span> Privacidade
+                </span>
+              </div>
+              <p className="text-[11px] sm:text-xs text-slate-500 flex items-center justify-center gap-1.5 pt-0.5">
+                <span>📲</span> Acesso enviado por e-mail e whatsapp após a compra
+              </p>
             </div>
           </div>
         </div>

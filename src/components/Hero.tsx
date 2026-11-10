@@ -113,11 +113,11 @@ export const Hero: React.FC = () => {
       {/* Badges / Selos lado a lado */}
       <div className="mt-4 flex items-center justify-center gap-4 sm:gap-6 text-xs sm:text-sm font-bold text-slate-700">
         <span className="flex items-center gap-1.5 text-[#0E4B75]">
-          ⚡ ACESSO IMEDIATO
+          <span className="text-emerald-600 font-black">✓</span> ACESSO VITALÍCIO
         </span>
         <span className="text-slate-300">|</span>
-        <span className="flex items-center gap-1.5 text-[#D97706]">
-          🎁 BÔNUS GRÁTIS
+        <span className="flex items-center gap-1.5 text-[#0E4B75]">
+          <span className="text-emerald-600 font-black">✓</span> FUNCIONA OFFLINE
         </span>
       </div>
     </section>
