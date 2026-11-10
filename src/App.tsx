@@ -38,7 +38,10 @@ export default function App() {
       <Features />
 
       {/* 4.1 PARA QUEM É */}
-      <ParaQuemE />
+      <ParaQuemE variante="faixa" />
+
+      {/* 4.2 PARA QUEM É: opção B (teste, escolher uma das duas) */}
+      <ParaQuemE variante="blocos" />
 
       {/* 5. BÔNUS */}
       <Bonuses />
