@@ -9,27 +9,35 @@ interface FaqItem {
 const FAQ_DATA: FaqItem[] = [
   {
     question: 'Como recebo o acesso?',
-    answer: 'Assim que o pagamento é confirmado, o acesso chega no seu e-mail [e no seu WhatsApp]. É só abrir no celular e começar.',
+    answer: 'Assim que o pagamento é confirmado, o acesso chega no seu e-mail e no seu WhatsApp. É só abrir no celular e começar.',
   },
   {
-    question: 'É de areia mesmo ou é treino de quadra adaptado?',
-    answer: 'É de areia. Os exercícios foram pensados para a areia, para turma pequena e para o espaço que você tem na praia ou na arena.',
+    question: 'Sou iniciante, nunca treinei. Serve para mim?',
+    answer: 'Serve. Os treinos vão do iniciante ao avançado, cada um tem uma versão mais fácil, e o Plano de 30 Dias começa do primeiro toque na bola.',
   },
   {
-    question: 'Serve para turma de 2, 4 ou 6 alunos?',
-    answer: 'Serve. O código de cada exercício mostra para quantos alunos ele funciona, e você filtra pelo tamanho da turma do dia.',
+    question: 'Já jogo há um tempo. Vou aprender algo novo?',
+    answer: 'Vai. São 240 treinos na areia em 15 categorias, com nível avançado e versão mais difícil de cada exercício, para você sair do mesmo treino de sempre.',
+  },
+  {
+    question: 'Preciso de alguém para treinar comigo?',
+    answer: 'Não. Cada exercício mostra para quantas pessoas serve, e tem treino para fazer sozinho, em dupla ou com a galera.',
+  },
+  {
+    question: 'Não tenho quadra perto. Consigo treinar?',
+    answer: 'Consegue. São 195 treinos para fazer em casa, com bola na parede, impulsão, força e agilidade, sem precisar de quadra.',
   },
   {
     question: 'Preciso de muito equipamento?',
-    answer: 'Não. [A maioria dos exercícios usa só bola, rede e cones ou fita de marcação.]',
-  },
-  {
-    question: 'Já dou aula há anos. Serve para mim?',
-    answer: 'Serve. O app não vem te ensinar vôlei. Ele economiza o tempo de montar a aula e traz variações para a sua turma não enjoar.',
+    answer: 'Não. Em casa, mais da metade dos treinos usa só o corpo, e os outros pedem uma bola ou uma parede. Na areia, os treinos usam bola e, em boa parte, cones para marcar o espaço, que você pode trocar por chinelos ou garrafas.',
   },
   {
     question: 'Funciona em qualquer celular?',
-    answer: '[Sim, funciona em Android e iPhone.]',
+    answer: 'Sim, funciona em Android e iPhone. E depois de aberto uma vez, funciona até sem internet na areia.',
+  },
+  {
+    question: 'É pagamento único?',
+    answer: 'Sim. Você paga uma vez e o acesso é vitalício, sem mensalidade.',
   },
   {
     question: 'Como funciona a garantia?',
