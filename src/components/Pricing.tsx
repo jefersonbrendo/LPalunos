@@ -224,8 +224,8 @@ export const Pricing: React.FC<PricingProps> = ({ onOpenUpsell }) => {
                   <span>🛡️</span> Privacidade
                 </span>
               </div>
-              <p className="text-[11px] sm:text-xs text-slate-500 flex items-center justify-center gap-1.5 pt-0.5">
-                <span>📲</span> Acesso enviado por e-mail e whatsapp após a compra
+              <p className="text-[11px] sm:text-xs text-slate-500 flex items-center justify-center pt-0.5">
+                Acesso enviado por e-mail e whatsapp após a compra
               </p>
             </div>
           </div>
