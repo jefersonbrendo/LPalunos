@@ -57,10 +57,10 @@ const BONUSES: BonusItem[] = [
   },
   {
     numberString: '05',
-    name: 'Ficha de Evolução do Jogador',
-    shortName: 'Ficha de evolução',
-    desc: 'Avalie seu saque, recepção, ataque e defesa e veja o quanto você já melhorou.',
-    originalPrice: 'R$ 57',
+    name: 'Tracker de Evolução Semanal Integrado',
+    shortName: 'Tracker de evolução',
+    desc: 'Monitore seus dias de treino direto no aplicativo. Preencha seu calendário e veja sua evolução na prática.',
+    originalPrice: 'R$ 27',
     isNew: true,
     icon: '📈',
     image: bonus05,
@@ -159,7 +159,7 @@ export const Bonuses: React.FC = () => {
               Valor total dos bônus
             </span>
             <span className="text-right">
-              <span className="block text-sm font-bold text-slate-400 line-through">R$ 235</span>
+              <span className="block text-sm font-bold text-slate-400 line-through">R$ 205</span>
               <span className="block text-2xl sm:text-3xl font-black text-emerald-600 leading-none">R$ 0,00</span>
             </span>
           </div>
