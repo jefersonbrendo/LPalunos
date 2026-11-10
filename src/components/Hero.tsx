@@ -81,7 +81,7 @@ export const Hero: React.FC = () => {
 
       {/* Subheadline */}
       <p className="mt-4 sm:mt-6 text-base sm:text-lg text-slate-700 max-w-2xl mx-auto leading-relaxed font-medium">
-        Com vídeo de cada movimento, do primeiro toque à impulsão do ataque, organizados por nível num aplicativo.
+        São 240 treinos na areia e 195 em casa, com vídeo de cada movimento, organizados por nível num aplicativo.
       </p>
 
       {/* Vídeo demonstrativo do aplicativo (Imgur a/7zDDHGV) */}

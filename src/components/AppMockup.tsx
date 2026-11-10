@@ -67,7 +67,7 @@ export const AppMockup: React.FC<AppMockupProps> = ({
             <span className="text-[#FF9F1C] text-base">🏐</span>
             <div>
               <div className="text-xs font-bold text-[#FF9F1C] font-heading tracking-wide uppercase">Código da Areia</div>
-              <div className="text-[10px] text-slate-400 leading-none">240 Exercícios Prontos</div>
+              <div className="text-[10px] text-slate-400 leading-none">+420 Treinos Prontos</div>
             </div>
           </div>
           <span className="text-[10px] font-bold px-2 py-0.5 rounded bg-[#0E4B75] text-cyan-200 border border-cyan-400/30">

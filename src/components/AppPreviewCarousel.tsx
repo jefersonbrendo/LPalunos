@@ -16,7 +16,7 @@ interface SlideItem {
 
 // Todas as telas são exibidas dentro da mesma moldura de celular (mesmo tamanho).
 const SLIDES: SlideItem[] = [
-  { id: 1, src: tela1, alt: 'Tela inicial do app Código da Areia, com 240 exercícios para treinar na areia' },
+  { id: 1, src: tela1, alt: 'Tela inicial do app Código da Areia, com +420 treinos na areia e em casa' },
   { id: 2, src: tela2, alt: 'Lista de exercícios de aquecimento, organizada por nível' },
   { id: 3, src: tela3, alt: 'Exercício aberto com a aba Como fazer: objetivo, como montar e passo a passo' },
   { id: 4, src: tela4, alt: 'Exercício de tática com o desenho da quadra, tempo, jogadores e material' },

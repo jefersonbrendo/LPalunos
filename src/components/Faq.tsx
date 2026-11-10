@@ -13,7 +13,7 @@ const FAQ_DATA: FaqItem[] = [
   },
   {
     question: 'É de vôlei de praia mesmo ou é treino de quadra adaptado?',
-    answer: 'É de vôlei de praia. Os 240 treinos foram feitos para a areia: jogo em dupla, deslocamento na areia fofa, saque e recepção com vento e side-out do jogo de praia. Não é treino de quadra adaptado.',
+    answer: 'É de vôlei de praia. Os treinos de areia foram pensados para a praia: jogo em dupla, deslocamento na areia fofa, saque e recepção com vento e side-out do jogo de praia. Não é treino de quadra adaptado.',
   },
   {
     question: 'Sou iniciante, nunca treinei. Serve para mim?',
@@ -21,7 +21,7 @@ const FAQ_DATA: FaqItem[] = [
   },
   {
     question: 'Já jogo há um tempo. Vou aprender algo novo?',
-    answer: 'Vai. São 240 treinos na areia em 15 categorias, com nível avançado e versão mais difícil de cada exercício, para você sair do mesmo treino de sempre.',
+    answer: 'Vai. São +420 treinos, 240 deles na areia em 15 categorias, com nível avançado e versão mais difícil de cada exercício, para você sair do mesmo treino de sempre.',
   },
   {
     question: 'Preciso de alguém para treinar comigo?',

@@ -27,7 +27,7 @@ const BENEFICIOS: BeneficioItem[] = [
     icon: Repeat,
     image: imgRepetir,
     beneficio: 'Você para de repetir o mesmo treino toda semana',
-    prova: '240 exercícios em 15 categorias, do aquecimento ao jogo reduzido.',
+    prova: '+420 treinos: 240 na areia, em 15 categorias, e 195 em casa.',
   },
   {
     icon: Eye,
