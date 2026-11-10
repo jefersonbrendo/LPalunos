@@ -16,7 +16,7 @@ export const TopBanner: React.FC = () => {
       className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-[#FF9F1C] via-[#F58F00] to-[#FF9F1C] text-slate-950 py-2 px-3 text-center shadow-md font-bold text-xs sm:text-sm tracking-wide border-b border-[#E07D00]/30"
     >
       <div className="max-w-4xl mx-auto flex items-center justify-center gap-1.5 leading-snug font-extrabold">
-        <span>CONDIÇÃO DE LANÇAMENTO VÁLIDA SÓ ATÉ HOJE ({todayFormatted})</span>
+        <span>CONDIÇÃO VÁLIDA SÓ ATÉ HOJE ({todayFormatted})</span>
       </div>
     </aside>
   );
