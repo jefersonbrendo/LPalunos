@@ -12,6 +12,10 @@ const FAQ_DATA: FaqItem[] = [
     answer: 'Assim que o pagamento é confirmado, o acesso chega no seu e-mail e no seu WhatsApp. É só abrir no celular e começar.',
   },
   {
+    question: 'É de vôlei de praia mesmo ou é treino de quadra adaptado?',
+    answer: 'É de vôlei de praia. Os 240 treinos foram feitos para a areia: jogo em dupla, deslocamento na areia fofa, saque e recepção com vento e side-out do jogo de praia. Não é treino de quadra adaptado.',
+  },
+  {
     question: 'Sou iniciante, nunca treinei. Serve para mim?',
     answer: 'Serve. Os treinos vão do iniciante ao avançado, cada um tem uma versão mais fácil, e o Plano de 30 Dias começa do primeiro toque na bola.',
   },
@@ -30,6 +34,10 @@ const FAQ_DATA: FaqItem[] = [
   {
     question: 'Preciso de muito equipamento?',
     answer: 'Não. Em casa, mais da metade dos treinos usa só o corpo, e os outros pedem uma bola ou uma parede. Na areia, os treinos usam bola e, em boa parte, cones para marcar o espaço, que você pode trocar por chinelos ou garrafas.',
+  },
+  {
+    question: 'Serve para quem dá aula ou para ajudar meu filho?',
+    answer: 'Serve. O app é usado por quem joga e por quem ensina: cada exercício mostra o passo a passo, o erro mais comum e os pontos de atenção, o que facilita explicar para outra pessoa.',
   },
   {
     question: 'Funciona em qualquer celular?',
