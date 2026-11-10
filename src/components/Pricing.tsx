@@ -158,15 +158,15 @@ export const Pricing: React.FC<PricingProps> = ({ onOpenUpsell }) => {
               </li>
               <li className="flex items-start gap-2 text-slate-950 font-bold">
                 <span className="text-[#FFC60B] font-bold shrink-0">✅</span>
-                <span>+195 treinos para fazer em casa, sem precisar de quadra</span>
+                <span>+200 treinos para fazer em casa, sem precisar de quadra</span>
               </li>
               <li className="flex items-start gap-2 text-slate-800 font-medium">
                 <span className="text-emerald-600 font-bold shrink-0">✅</span>
-                <span>Saque, recepção, levantamento, ataque, bloqueio e defesa</span>
+                <span>Treinos de saque, recepção, levantamento, ataque, bloqueio e defesa</span>
               </li>
               <li className="flex items-start gap-2 text-slate-800 font-medium">
                 <span className="text-emerald-600 font-bold shrink-0">✅</span>
-                <span>Animação do movimento em cada exercício</span>
+                <span>Vídeo do movimento em cada exercício</span>
               </li>
               <li className="flex items-start gap-2 text-slate-800 font-medium">
                 <span className="text-emerald-600 font-bold shrink-0">✅</span>

@@ -4,7 +4,7 @@ import bonus01 from '../assets/images/bonus-aluno-01.webp';
 import bonus02 from '../assets/images/bonus-aluno-02.webp';
 import bonus03 from '../assets/images/bonus-aluno-03.webp';
 import bonus04 from '../assets/images/bonus-aluno-04.webp';
-import bonus05 from '../assets/images/bonus_tracker_evolucao_1794288383391.jpg';
+import bonus05 from '../assets/images/bonus-aluno-05.webp';
 
 interface BonusItem {
   numberString: string;
