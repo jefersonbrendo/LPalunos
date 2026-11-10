@@ -73,7 +73,7 @@ export const Hero: React.FC = () => {
 
       {/* Main Headline */}
       <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black uppercase text-[#14110B] leading-[1.1] max-w-3xl mx-auto text-balance">
-        <span className="destaque">+420</span> treinos de vôlei de praia para evoluir{' '}
+        <span className="destaque">+420</span> treinos de vôlei de praia{' '}
         <span className="underline decoration-[#FFC60B] decoration-[4px] underline-offset-6 text-[#14110B]">
           sem depender de professor
         </span>
