@@ -69,12 +69,12 @@ export const Hero: React.FC = () => {
   return (
     <section className="relative pt-12 pb-12 sm:pt-16 sm:pb-16 px-4 max-w-4xl mx-auto text-center overflow-hidden">
       {/* Background subtle coastal atmosphere glow */}
-      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[550px] h-[360px] bg-gradient-to-b from-[#FF9F1C]/10 via-[#0E4B75]/10 to-transparent blur-3xl pointer-events-none -z-10" />
+      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[550px] h-[360px] bg-gradient-to-b from-[#FFC60B]/10 via-[#14110B]/10 to-transparent blur-3xl pointer-events-none -z-10" />
 
       {/* Main Headline */}
-      <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black uppercase text-[#0E4B75] leading-[1.1] max-w-3xl mx-auto text-balance">
-        <span className="text-[#FF9F1C] font-black">+420</span> treinos de vôlei de praia para evoluir{' '}
-        <span className="underline decoration-[#0284C7] decoration-[4px] underline-offset-6 text-[#0E4B75]">
+      <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black uppercase text-[#14110B] leading-[1.1] max-w-3xl mx-auto text-balance">
+        <span className="destaque">+420</span> treinos de vôlei de praia para evoluir{' '}
+        <span className="underline decoration-[#FFC60B] decoration-[4px] underline-offset-6 text-[#14110B]">
           mais rápido
         </span>
       </h1>
@@ -87,7 +87,7 @@ export const Hero: React.FC = () => {
       {/* Vídeo demonstrativo do aplicativo (Imgur a/7zDDHGV) */}
       <div className="my-8 sm:my-10 max-w-[280px] sm:max-w-[320px] mx-auto">
         <div className="relative rounded-[36px] p-2 bg-gradient-to-b from-slate-900 to-slate-950 shadow-2xl border-4 border-slate-700/80 overflow-hidden group">
-          <div className="absolute -inset-4 bg-gradient-to-tr from-[#FF9F1C]/25 via-[#0E4B75]/20 to-[#FF4A3F]/20 rounded-[48px] blur-xl opacity-70 pointer-events-none -z-10" />
+          <div className="absolute -inset-4 bg-gradient-to-tr from-[#FFC60B]/25 via-[#14110B]/20 to-[#E23D2E]/20 rounded-[48px] blur-xl opacity-70 pointer-events-none -z-10" />
           
           {/* Imagem do topo (provisória, em branco). Troque o bloco abaixo por
               <img src="..." alt="..." className="w-full h-auto aspect-[9/16] rounded-[28px] object-cover block" /> */}
@@ -104,7 +104,7 @@ export const Hero: React.FC = () => {
       <div className="w-full max-w-md mx-auto">
         <button
           onClick={scrollToPlanos}
-          className="w-full py-4 sm:py-5 px-6 rounded-2xl bg-gradient-to-r from-[#FF4A3F] via-[#FF3B2F] to-[#FF4A3F] text-white font-extrabold text-base sm:text-lg tracking-wide shadow-xl hover:brightness-105 active:scale-[0.98] transition-all animate-pulse-cta cursor-pointer uppercase border-b-4 border-[#C92A20]"
+          className="w-full py-4 sm:py-5 px-6 rounded-2xl bg-gradient-to-r from-[#E23D2E] via-[#D63426] to-[#E23D2E] text-white font-extrabold text-base sm:text-lg tracking-wide shadow-xl hover:brightness-105 active:scale-[0.98] transition-all animate-pulse-cta cursor-pointer uppercase border-b-4 border-[#A8261B]"
         >
           QUERO OS +420 TREINOS NO MEU CELULAR
         </button>
@@ -112,11 +112,11 @@ export const Hero: React.FC = () => {
 
       {/* Badges / Selos lado a lado */}
       <div className="mt-4 flex items-center justify-center gap-4 sm:gap-6 text-xs sm:text-sm font-bold text-slate-700">
-        <span className="flex items-center gap-1.5 text-[#0E4B75]">
+        <span className="flex items-center gap-1.5 text-[#14110B]">
           <span className="text-emerald-600 font-black">✓</span> ACESSO VITALÍCIO
         </span>
         <span className="text-slate-300">|</span>
-        <span className="flex items-center gap-1.5 text-[#0E4B75]">
+        <span className="flex items-center gap-1.5 text-[#14110B]">
           <span className="text-emerald-600 font-black">✓</span> FUNCIONA OFFLINE
         </span>
       </div>

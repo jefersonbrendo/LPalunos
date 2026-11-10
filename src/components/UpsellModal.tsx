@@ -36,7 +36,7 @@ export const UpsellModal: React.FC<UpsellModalProps> = ({ isOpen, onClose }) => 
       onClick={onClose}
     >
       <div
-        className="relative w-full max-w-lg rounded-3xl bg-white border-3 border-[#FF9F1C] p-6 sm:p-8 shadow-2xl text-center overflow-hidden"
+        className="relative w-full max-w-lg rounded-3xl bg-white border-3 border-[#FFC60B] p-6 sm:p-8 shadow-2xl text-center overflow-hidden"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Botão Fechar (X) no canto - mantém a pessoa na página */}
@@ -49,12 +49,12 @@ export const UpsellModal: React.FC<UpsellModalProps> = ({ isOpen, onClose }) => 
         </button>
 
         {/* Selo */}
-        <div className="inline-block px-3.5 py-1 rounded-full bg-[#FEF3C7] border border-[#FDE68A] text-[#B45309] text-xs font-black uppercase tracking-wide">
+        <div className="inline-block px-3.5 py-1 rounded-full bg-[#FEF3C7] border border-[#FDE68A] text-[#8F5B00] text-xs font-black uppercase tracking-wide">
           ⚠️ ESPERA, OLHA ISSO ANTES
         </div>
 
         {/* Título */}
-        <h3 className="text-xl sm:text-2xl font-black text-[#0E4B75] font-heading mt-3 uppercase text-balance leading-tight">
+        <h3 className="text-xl sm:text-2xl font-black text-[#14110B] font-heading mt-3 uppercase text-balance leading-tight">
           Troque o PDF pelo APP por só R$ 5 a mais
         </h3>
 
@@ -64,12 +64,12 @@ export const UpsellModal: React.FC<UpsellModalProps> = ({ isOpen, onClose }) => 
         </p>
 
         {/* Preço */}
-        <div className="my-4 p-3.5 rounded-2xl bg-[#F7F4EE] border border-[#E2DBC9] inline-block w-full">
+        <div className="my-4 p-3.5 rounded-2xl bg-[#F6F0E1] border border-[#E6DCC4] inline-block w-full">
           <span className="text-xs text-slate-500 font-bold block">
             Plano Completo de <span className="line-through text-slate-400">R$ 24</span> por apenas:
           </span>
           <div className="flex items-baseline justify-center gap-1.5 mt-0.5">
-            <span className="text-3xl sm:text-4xl font-black text-[#FF4A3F] font-heading">
+            <span className="text-3xl sm:text-4xl font-black text-[#E23D2E] font-heading">
               R$ 15
             </span>
             <span className="text-xs text-slate-600 font-bold">pagamento único</span>
@@ -77,8 +77,8 @@ export const UpsellModal: React.FC<UpsellModalProps> = ({ isOpen, onClose }) => 
         </div>
 
         {/* Lista resumida com tudo o que o plano de 24 tem */}
-        <div className="p-3.5 sm:p-4 rounded-2xl bg-[#FAF7F0] border border-[#E2DBC9] text-left space-y-2 mb-5">
-          <div className="text-[11px] font-black uppercase tracking-wider text-[#0E4B75] pb-1 border-b border-[#E2DBC9]">
+        <div className="p-3.5 sm:p-4 rounded-2xl bg-[#F6F0E1] border border-[#E6DCC4] text-left space-y-2 mb-5">
+          <div className="text-[11px] font-black uppercase tracking-wider text-[#14110B] pb-1 border-b border-[#E6DCC4]">
             Tudo o que você recebe nesta oferta especial:
           </div>
           <div className="flex items-start gap-2 text-xs sm:text-sm text-slate-800 font-semibold">
@@ -89,7 +89,7 @@ export const UpsellModal: React.FC<UpsellModalProps> = ({ isOpen, onClose }) => 
             <span className="text-emerald-600 font-bold shrink-0">✅</span>
             <span><strong>Animação e Filtros:</strong> veja o movimento e escolha o treino pelo fundamento e pelo seu nível</span>
           </div>
-          <div className="flex items-start gap-2 text-xs sm:text-sm text-[#D97706] font-bold">
+          <div className="flex items-start gap-2 text-xs sm:text-sm text-[#B87500] font-bold">
             <span className="shrink-0">🎁</span>
             <span><strong>Todos os 5 Bônus inclusos:</strong> Plano de 30 Dias, Treinos Prontos, Treino em Casa, Jogos com a Galera e Ficha de Evolução (R$ 235 grátis)</span>
           </div>
@@ -106,7 +106,7 @@ export const UpsellModal: React.FC<UpsellModalProps> = ({ isOpen, onClose }) => 
         {/* Botão principal (grande, cor de destaque: Coral) */}
         <a
           href={checkout15Url}
-          className="block w-full py-4 px-6 rounded-2xl bg-gradient-to-r from-[#FF4A3F] via-[#FF3B2F] to-[#FF4A3F] text-white font-extrabold text-sm sm:text-base tracking-wide shadow-xl hover:brightness-105 active:scale-[0.98] transition-all animate-pulse-cta uppercase border-b-4 border-[#C92A20] cursor-pointer"
+          className="block w-full py-4 px-6 rounded-2xl bg-gradient-to-r from-[#E23D2E] via-[#D63426] to-[#E23D2E] text-white font-extrabold text-sm sm:text-base tracking-wide shadow-xl hover:brightness-105 active:scale-[0.98] transition-all animate-pulse-cta uppercase border-b-4 border-[#A8261B] cursor-pointer"
         >
           SIM, QUERO OS +420 POR R$ 15
         </a>

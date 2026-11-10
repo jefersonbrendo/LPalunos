@@ -68,8 +68,8 @@ export const TrainerTestimonials: React.FC = () => {
 
   return (
     <section id="treinadores" className="py-12 sm:py-16 px-4 max-w-4xl mx-auto">
-      <h2 className="text-center text-3xl sm:text-4xl font-black text-[#0E4B75] tracking-tight uppercase text-balance">
-        TREINADORES QUE JÁ <span className="text-[#FF9F1C]">UTILIZARAM E APROVARAM</span>
+      <h2 className="text-center text-3xl sm:text-4xl font-black text-[#14110B] tracking-tight uppercase text-balance">
+        TREINADORES QUE JÁ <span className="destaque">UTILIZARAM E APROVARAM</span>
       </h2>
 
       <div className="mt-8 mx-auto w-full max-w-[400px]">
@@ -77,7 +77,7 @@ export const TrainerTestimonials: React.FC = () => {
         <figure
           onTouchStart={onTouchStart}
           onTouchEnd={onTouchEnd}
-          className="h-[540px] sm:h-[600px] flex items-center justify-center rounded-2xl overflow-hidden bg-white border border-[#E2DBC9] shadow-sm"
+          className="h-[540px] sm:h-[600px] flex items-center justify-center rounded-2xl overflow-hidden bg-white border border-[#E6DCC4] shadow-sm"
         >
           <img
             key={index}
@@ -96,7 +96,7 @@ export const TrainerTestimonials: React.FC = () => {
             type="button"
             onClick={() => go(-1)}
             aria-label="Depoimento anterior"
-            className="p-2.5 rounded-full bg-white border border-[#E2DBC9] shadow-sm text-[#0E4B75] active:scale-95 transition"
+            className="p-2.5 rounded-full bg-white border border-[#E6DCC4] shadow-sm text-[#14110B] active:scale-95 transition"
           >
             <ChevronLeft className="w-5 h-5" />
           </button>
@@ -104,7 +104,7 @@ export const TrainerTestimonials: React.FC = () => {
             {DEPOIMENTOS.map((_, i) => (
               <span
                 key={i}
-                className={`h-2 rounded-full transition-all ${i === index ? 'w-5 bg-[#FF4A3F]' : 'w-2 bg-[#E2DBC9]'}`}
+                className={`h-2 rounded-full transition-all ${i === index ? 'w-5 bg-[#E23D2E]' : 'w-2 bg-[#E6DCC4]'}`}
               />
             ))}
           </div>
@@ -112,7 +112,7 @@ export const TrainerTestimonials: React.FC = () => {
             type="button"
             onClick={() => go(1)}
             aria-label="Próximo depoimento"
-            className="p-2.5 rounded-full bg-white border border-[#E2DBC9] shadow-sm text-[#0E4B75] active:scale-95 transition"
+            className="p-2.5 rounded-full bg-white border border-[#E6DCC4] shadow-sm text-[#14110B] active:scale-95 transition"
           >
             <ChevronRight className="w-5 h-5" />
           </button>

@@ -63,11 +63,11 @@ export const AppPreviewCarousel: React.FC = () => {
   };
 
   return (
-    <section className="py-12 sm:py-16 px-4 bg-[#EFE9DC]/70 border-y border-[#E2DBC9]">
+    <section className="py-12 sm:py-16 px-4 bg-[#EDE5D2]/70 border-y border-[#E6DCC4]">
       <div className="max-w-4xl mx-auto text-center">
         {/* Title */}
-        <h2 className="text-3xl sm:text-4xl font-black text-[#0E4B75] tracking-tight uppercase">
-          VEJA COMO É <span className="text-[#FF9F1C]">FÁCIL DE USAR</span>
+        <h2 className="text-3xl sm:text-4xl font-black text-[#14110B] tracking-tight uppercase">
+          VEJA COMO É <span className="destaque">FÁCIL DE USAR</span>
         </h2>
 
         {/* Text */}
@@ -81,7 +81,7 @@ export const AppPreviewCarousel: React.FC = () => {
           <div className="flex items-center justify-between gap-3 mb-4">
             <button
               onClick={prevSlide}
-              className="p-2.5 rounded-full bg-white hover:bg-slate-50 text-[#0E4B75] border border-[#E2DBC9] shadow-sm transition-colors cursor-pointer"
+              className="p-2.5 rounded-full bg-white hover:bg-slate-50 text-[#14110B] border border-[#E6DCC4] shadow-sm transition-colors cursor-pointer"
               aria-label="Tela anterior"
             >
               <ChevronLeft className="w-5 h-5" />
@@ -93,7 +93,7 @@ export const AppPreviewCarousel: React.FC = () => {
                   onClick={() => setCurrentIndex(idx)}
                   className={`h-2.5 rounded-full transition-all ${
                     idx === currentIndex
-                      ? 'w-7 bg-[#FF9F1C]'
+                      ? 'w-7 bg-[#FFC60B]'
                       : 'w-2.5 bg-slate-300 hover:bg-slate-400'
                   }`}
                   aria-label={`Ir para tela ${idx + 1}`}
@@ -102,7 +102,7 @@ export const AppPreviewCarousel: React.FC = () => {
             </div>
             <button
               onClick={nextSlide}
-              className="p-2.5 rounded-full bg-white hover:bg-slate-50 text-[#0E4B75] border border-[#E2DBC9] shadow-sm transition-colors cursor-pointer"
+              className="p-2.5 rounded-full bg-white hover:bg-slate-50 text-[#14110B] border border-[#E6DCC4] shadow-sm transition-colors cursor-pointer"
               aria-label="Próxima tela"
             >
               <ChevronRight className="w-5 h-5" />
@@ -115,7 +115,7 @@ export const AppPreviewCarousel: React.FC = () => {
             onTouchStart={onTouchStart}
             onTouchEnd={onTouchEnd}
           >
-            <div className="absolute -inset-2 bg-gradient-to-tr from-[#FF9F1C]/25 via-[#0E4B75]/20 to-[#FF4A3F]/15 rounded-[48px] blur-xl opacity-70" />
+            <div className="absolute -inset-2 bg-gradient-to-tr from-[#FFC60B]/25 via-[#14110B]/20 to-[#E23D2E]/15 rounded-[48px] blur-xl opacity-70" />
             <div className="relative rounded-[40px] sm:rounded-[44px] border-[5px] border-slate-800 bg-slate-950 shadow-2xl overflow-hidden aspect-[9/17.5]">
               <img
                 key={SLIDES[currentIndex].id}

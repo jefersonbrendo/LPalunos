@@ -15,7 +15,7 @@ export const AppMockup: React.FC<AppMockupProps> = ({
     return (
       <div className="relative mx-auto w-full max-w-[243px] sm:max-w-[274px]">
         {/* Outer ambient glow */}
-        <div className="absolute -inset-3 bg-gradient-to-tr from-[#FF9F1C]/30 via-[#0E4B75]/25 to-[#FF4A3F]/20 rounded-[48px] blur-xl opacity-80 pointer-events-none"></div>
+        <div className="absolute -inset-3 bg-gradient-to-tr from-[#FFC60B]/30 via-[#14110B]/25 to-[#E23D2E]/20 rounded-[48px] blur-xl opacity-80 pointer-events-none"></div>
 
         {/* Celular da imagem enviada, recortado do fundo branco (sem moldura extra) */}
         <img
@@ -41,7 +41,7 @@ export const AppMockup: React.FC<AppMockupProps> = ({
   return (
     <div className="relative mx-auto w-full max-w-[280px] sm:max-w-[315px]">
       {/* Outer ambient glow */}
-      <div className="absolute -inset-2 bg-gradient-to-tr from-[#FF9F1C]/25 via-[#0E4B75]/20 to-[#FF4A3F]/15 rounded-[48px] blur-xl opacity-70"></div>
+      <div className="absolute -inset-2 bg-gradient-to-tr from-[#FFC60B]/25 via-[#14110B]/20 to-[#E23D2E]/15 rounded-[48px] blur-xl opacity-70"></div>
 
       {/* Phone outer frame */}
       <div className="relative rounded-[40px] sm:rounded-[44px] border-[5px] border-slate-800 bg-slate-950 shadow-2xl overflow-hidden aspect-[9/18.5] flex flex-col text-slate-100">
@@ -62,29 +62,29 @@ export const AppMockup: React.FC<AppMockupProps> = ({
         </div>
 
         {/* App Header */}
-        <div className="px-4 py-2 border-b border-slate-800/80 bg-[#0B1526] flex items-center justify-between">
+        <div className="px-4 py-2 border-b border-slate-800/80 bg-[#14110B] flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <span className="text-[#FF9F1C] text-base">🏐</span>
+            <span className="text-[#FFC60B] text-base">🏐</span>
             <div>
-              <div className="text-xs font-bold text-[#FF9F1C] font-heading tracking-wide uppercase">Código da Areia</div>
+              <div className="text-xs font-bold text-[#FFC60B] font-heading tracking-wide uppercase">Código da Areia</div>
               <div className="text-[10px] text-slate-400 leading-none">+420 Treinos Prontos</div>
             </div>
           </div>
-          <span className="text-[10px] font-bold px-2 py-0.5 rounded bg-[#0E4B75] text-cyan-200 border border-cyan-400/30">
+          <span className="text-[10px] font-bold px-2 py-0.5 rounded bg-[#14110B] text-cyan-200 border border-cyan-400/30">
             PRO
           </span>
         </div>
 
         {/* Screen Content based on state */}
-        <div className="flex-1 overflow-y-auto p-3 text-left space-y-2.5 bg-gradient-to-b from-[#0B1324] via-[#0E1A32] to-[#0A1222]">
+        <div className="flex-1 overflow-y-auto p-3 text-left space-y-2.5 bg-gradient-to-b from-[#14110B] via-[#14110B] to-[#14110B]">
           {activeScreen === 'filters' && (
             <div className="space-y-2.5">
               <div className="text-xs font-bold text-slate-200 uppercase tracking-wide">Filtros Rápidos</div>
               <div className="space-y-1.5">
-                <span className="text-[10px] text-[#FF9F1C] font-semibold">Tamanho da Turma</span>
+                <span className="text-[10px] text-[#FFC60B] font-semibold">Tamanho da Turma</span>
                 <div className="grid grid-cols-4 gap-1">
                   {['2 Alunos', '4 Alunos', '6 Alunos', '8+'].map((t, idx) => (
-                    <div key={t} className={`text-center py-1 rounded text-[10px] font-semibold border ${idx === 1 ? 'bg-[#FF9F1C] text-slate-950 border-[#FF9F1C]' : 'bg-slate-900 text-slate-300 border-slate-800'}`}>
+                    <div key={t} className={`text-center py-1 rounded text-[10px] font-semibold border ${idx === 1 ? 'bg-[#FFC60B] text-slate-950 border-[#FFC60B]' : 'bg-slate-900 text-slate-300 border-slate-800'}`}>
                       {t}
                     </div>
                   ))}
@@ -94,7 +94,7 @@ export const AppMockup: React.FC<AppMockupProps> = ({
                 <span className="text-[10px] text-cyan-400 font-semibold">Nível de Habilidade</span>
                 <div className="grid grid-cols-3 gap-1">
                   {['Iniciante', 'Intermediário', 'Avançado'].map((lvl, idx) => (
-                    <div key={lvl} className={`text-center py-1 rounded text-[10px] font-semibold border ${idx === 0 ? 'bg-[#0E4B75] text-cyan-100 border-cyan-400' : 'bg-slate-900 text-slate-300 border-slate-800'}`}>
+                    <div key={lvl} className={`text-center py-1 rounded text-[10px] font-semibold border ${idx === 0 ? 'bg-[#14110B] text-cyan-100 border-cyan-400' : 'bg-slate-900 text-slate-300 border-slate-800'}`}>
                       {lvl}
                     </div>
                   ))}
@@ -103,7 +103,7 @@ export const AppMockup: React.FC<AppMockupProps> = ({
               <div className="space-y-1.5">
                 <span className="text-[10px] text-slate-300 font-semibold">Fundamentos Selecionados</span>
                 <div className="flex flex-wrap gap-1">
-                  <span className="px-2 py-0.5 rounded text-[10px] bg-[#FF9F1C]/20 text-[#FF9F1C] border border-[#FF9F1C]/50">🏐 Manchete & Passe</span>
+                  <span className="px-2 py-0.5 rounded text-[10px] bg-[#FFC60B]/20 text-[#FFC60B] border border-[#FFC60B]/50">🏐 Manchete & Passe</span>
                   <span className="px-2 py-0.5 rounded text-[10px] bg-slate-900 text-slate-300">Toque</span>
                   <span className="px-2 py-0.5 rounded text-[10px] bg-slate-900 text-slate-300">Saque</span>
                   <span className="px-2 py-0.5 rounded text-[10px] bg-slate-900 text-slate-300">Ataque</span>
@@ -119,10 +119,10 @@ export const AppMockup: React.FC<AppMockupProps> = ({
             <div className="space-y-2">
               <div className="text-xs font-bold text-slate-200 uppercase tracking-wide">Fundamentos do Vôlei</div>
               {[
-                { name: 'Manchete & Passe', count: '40 exercícios', code: 'MAN', color: 'border-[#FF9F1C]/50 text-[#FF9F1C]' },
+                { name: 'Manchete & Passe', count: '40 exercícios', code: 'MAN', color: 'border-[#FFC60B]/50 text-[#FFC60B]' },
                 { name: 'Toque & Levantamento', count: '35 exercícios', code: 'TOQ', color: 'border-cyan-400/50 text-cyan-400' },
                 { name: 'Saque na Areia', count: '30 exercícios', code: 'SAQ', color: 'border-emerald-400/50 text-emerald-400' },
-                { name: 'Ataque (Cortada e Largada)', count: '35 exercícios', code: 'ATQ', color: 'border-[#FF4A3F]/50 text-[#FF4A3F]' },
+                { name: 'Ataque (Cortada e Largada)', count: '35 exercícios', code: 'ATQ', color: 'border-[#E23D2E]/50 text-[#E23D2E]' },
                 { name: 'Bloqueio & Leitura', count: '25 exercícios', code: 'BLQ', color: 'border-sky-400/50 text-sky-400' },
                 { name: 'Defesa & Transição', count: '35 exercícios', code: 'DEF', color: 'border-indigo-400/50 text-indigo-400' },
               ].map((item) => (

@@ -66,8 +66,8 @@ export const Features: React.FC = () => {
     <section className="py-12 sm:py-16 px-4 max-w-4xl mx-auto">
       <div className="text-center">
         {/* Title */}
-        <h2 className="text-3xl sm:text-4xl font-black text-[#0E4B75] tracking-tight uppercase text-balance">
-          O QUE MUDA NO SEU <span className="text-[#FF9F1C]">VÔLEI DE PRAIA</span>
+        <h2 className="text-3xl sm:text-4xl font-black text-[#14110B] tracking-tight uppercase text-balance">
+          O QUE MUDA NO SEU <span className="destaque">VÔLEI DE PRAIA</span>
         </h2>
         {/* Subtitle */}
         <p className="mt-2.5 text-sm sm:text-base text-slate-700 max-w-xl mx-auto leading-relaxed font-medium">
@@ -80,7 +80,7 @@ export const Features: React.FC = () => {
         {BENEFICIOS.map(({ icon: Icone, image, beneficio, prova }) => (
           <div
             key={beneficio}
-            className="p-5 sm:p-6 rounded-2xl bg-white border border-[#E2DBC9] hover:border-[#FF9F1C] hover:shadow-md transition-all duration-200 shadow-sm flex gap-4 items-start"
+            className="p-5 sm:p-6 rounded-2xl bg-white border border-[#E6DCC4] hover:border-[#FFC60B] hover:shadow-md transition-all duration-200 shadow-sm flex gap-4 items-start"
           >
             {image ? (
               <img
@@ -93,12 +93,12 @@ export const Features: React.FC = () => {
                 className="shrink-0 w-16 h-16 sm:w-20 sm:h-20 object-contain -mt-1"
               />
             ) : (
-              <div className="shrink-0 w-12 h-12 rounded-xl bg-[#FF9F1C]/15 text-[#E07D00] flex items-center justify-center">
+              <div className="shrink-0 w-12 h-12 rounded-xl bg-[#FFC60B]/15 text-[#F5A300] flex items-center justify-center">
                 <Icone className="w-6 h-6" strokeWidth={2.4} aria-hidden="true" />
               </div>
             )}
             <div className="min-w-0">
-              <h3 className="text-base sm:text-lg font-extrabold text-[#0E4B75] font-heading leading-snug">
+              <h3 className="text-base sm:text-lg font-extrabold text-[#14110B] font-heading leading-snug">
                 {beneficio}
               </h3>
               <p className="mt-1.5 text-xs sm:text-sm text-slate-500 leading-relaxed font-medium">
@@ -113,7 +113,7 @@ export const Features: React.FC = () => {
       <div className="mt-8 max-w-md mx-auto text-center">
         <button
           onClick={scrollToPlanos}
-          className="w-full py-4 px-6 rounded-2xl bg-gradient-to-r from-[#FF4A3F] via-[#FF3B2F] to-[#FF4A3F] text-white font-extrabold text-sm sm:text-base tracking-wide shadow-xl hover:brightness-105 active:scale-[0.98] transition-all animate-pulse-cta cursor-pointer uppercase border-b-4 border-[#C92A20]"
+          className="w-full py-4 px-6 rounded-2xl bg-gradient-to-r from-[#E23D2E] via-[#D63426] to-[#E23D2E] text-white font-extrabold text-sm sm:text-base tracking-wide shadow-xl hover:brightness-105 active:scale-[0.98] transition-all animate-pulse-cta cursor-pointer uppercase border-b-4 border-[#A8261B]"
         >
           QUERO TREINAR COM O APP
         </button>
