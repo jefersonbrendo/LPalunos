@@ -56,8 +56,8 @@ const BENEFICIOS: BeneficioItem[] = [
   {
     icon: Smartphone,
     image: imgCelular,
-    beneficio: 'Você chega na quadra sabendo exatamente o que fazer',
-    prova: 'Tudo no celular, com acesso na hora e vitalício.',
+    beneficio: 'Você treina sozinho durante a semana e chega no jogo diferente',
+    prova: '195 treinos em casa, com bola na parede, impulsão e agilidade, sem precisar de quadra nem de parceiro.',
   },
 ];
 

@@ -40,6 +40,14 @@ const FAQ_DATA: FaqItem[] = [
     answer: 'Serve. O app é usado por quem joga e por quem ensina: cada exercício mostra o passo a passo, o erro mais comum e os pontos de atenção, o que facilita explicar para outra pessoa.',
   },
   {
+    question: 'Sou baixinho. Vale a pena?',
+    answer: 'Vale. No vôlei de praia, recepção, defesa e leitura de jogo pesam muito, e o app tem treinos de cada um desses fundamentos, do iniciante ao avançado.',
+  },
+  {
+    question: 'Tenho vergonha de quinar a bola na frente da galera. Isso me ajuda?',
+    answer: 'Ajuda. Você pode treinar sozinho, em casa ou na parede, com os 195 treinos sem quadra, e voltar para o jogo com muito mais repetição nos fundamentos.',
+  },
+  {
     question: 'Funciona em qualquer celular?',
     answer: 'Sim, funciona em Android e iPhone. E depois de aberto uma vez, funciona até sem internet na areia.',
   },
