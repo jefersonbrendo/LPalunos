@@ -7,12 +7,12 @@ export const Closing: React.FC = () => {
       <div className="max-w-3xl mx-auto space-y-4">
         {/* Título */}
         <h2 className="text-3xl sm:text-5xl font-black text-[#0E4B75] tracking-tight uppercase font-heading text-balance">
-          SUA PRÓXIMA AULA <span className="text-[#FF9F1C]">JÁ PODE ESTAR PRONTA</span>
+          SEU PRÓXIMO TREINO <span className="text-[#FF9F1C]">JÁ PODE ESTAR PRONTO</span>
         </h2>
 
         {/* Texto */}
         <p className="text-base sm:text-xl text-slate-700 font-semibold">
-          240 exercícios de vôlei de praia no seu celular, a partir de R$ 10.
+          +420 treinos de vôlei de praia no seu celular, para treinar na areia e em casa.
         </p>
 
         {/* Botão */}
@@ -21,7 +21,7 @@ export const Closing: React.FC = () => {
             onClick={scrollToPlanos}
             className="w-full py-4 sm:py-5 px-6 rounded-2xl bg-gradient-to-r from-[#FF4A3F] via-[#FF3B2F] to-[#FF4A3F] text-white font-extrabold text-base sm:text-lg tracking-wide shadow-2xl hover:brightness-105 active:scale-[0.98] transition-all animate-pulse-cta cursor-pointer uppercase border-b-4 border-[#C92A20]"
           >
-            QUERO MINHA AULA PRONTA AGORA
+            QUERO MEUS TREINOS AGORA
           </button>
         </div>
 

@@ -106,7 +106,7 @@ export const Hero: React.FC = () => {
           onClick={scrollToPlanos}
           className="w-full py-4 sm:py-5 px-6 rounded-2xl bg-gradient-to-r from-[#FF4A3F] via-[#FF3B2F] to-[#FF4A3F] text-white font-extrabold text-base sm:text-lg tracking-wide shadow-xl hover:brightness-105 active:scale-[0.98] transition-all animate-pulse-cta cursor-pointer uppercase border-b-4 border-[#C92A20]"
         >
-          QUERO OS 240 EXERCÍCIOS NO MEU CELULAR
+          QUERO OS +420 TREINOS NO MEU CELULAR
         </button>
       </div>
 

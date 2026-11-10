@@ -58,7 +58,7 @@ export const Pricing: React.FC<PricingProps> = ({ onOpenUpsell }) => {
               </li>
               <li className="flex items-start gap-2 text-slate-800 font-medium">
                 <span className="text-emerald-600 font-bold shrink-0">✅</span>
-                <span>Código da Areia em cada exercício</span>
+                <span>Exercícios separados por fundamento</span>
               </li>
               <li className="flex items-start gap-2 text-slate-800 font-medium">
                 <span className="text-emerald-600 font-bold shrink-0">✅</span>
@@ -68,11 +68,11 @@ export const Pricing: React.FC<PricingProps> = ({ onOpenUpsell }) => {
               {/* Disabled / Strikethrough items */}
               <li className="flex items-start gap-2 text-slate-400 line-through">
                 <span className="text-rose-400 font-bold shrink-0">❌</span>
-                <span>App no celular, com filtro por nível e número de alunos</span>
+                <span>App no celular com +420 treinos</span>
               </li>
               <li className="flex items-start gap-2 text-slate-400 line-through">
                 <span className="text-rose-400 font-bold shrink-0">❌</span>
-                <span>Ataque, bloqueio, defesa e side-out</span>
+                <span>Ataque, bloqueio, defesa e levantamento</span>
               </li>
               <li className="flex items-start gap-2 text-slate-400 line-through">
                 <span className="text-rose-400 font-bold shrink-0">❌</span>
@@ -80,7 +80,11 @@ export const Pricing: React.FC<PricingProps> = ({ onOpenUpsell }) => {
               </li>
               <li className="flex items-start gap-2 text-slate-400 line-through">
                 <span className="text-rose-400 font-bold shrink-0">❌</span>
-                <span>Jogos reduzidos e aquecimentos</span>
+                <span>195 treinos para fazer em casa</span>
+              </li>
+              <li className="flex items-start gap-2 text-slate-400 line-through">
+                <span className="text-rose-400 font-bold shrink-0">❌</span>
+                <span>Treinos para fazer sozinho, em dupla ou com a galera</span>
               </li>
               <li className="flex items-start gap-2 text-slate-400 line-through">
                 <span className="text-rose-400 font-bold shrink-0">❌</span>
@@ -101,7 +105,7 @@ export const Pricing: React.FC<PricingProps> = ({ onOpenUpsell }) => {
             {/* Destaque abaixo do card básico */}
             <div className="mt-3 text-center">
               <span className="text-xs font-bold text-[#C27803] bg-[#FEF3C7] px-3 py-1 rounded-full border border-[#FDE68A] inline-block">
-                +R$ 14 e leve o APP com os 240 exercícios + 5 bônus
+                +R$ 14 e leve o APP com +420 treinos + 5 bônus
               </span>
             </div>
           </div>
@@ -125,7 +129,7 @@ export const Pricing: React.FC<PricingProps> = ({ onOpenUpsell }) => {
               Experiência Total
             </div>
             <h3 className="text-2xl sm:text-3xl font-black text-[#0E4B75] font-heading mt-0.5">
-              MÉTODO CÓDIGO DA AREIA COMPLETO
+              CÓDIGO DA AREIA COMPLETO
             </h3>
 
             {/* Preço */}
@@ -146,28 +150,43 @@ export const Pricing: React.FC<PricingProps> = ({ onOpenUpsell }) => {
             <ul className="mt-6 space-y-2 text-xs sm:text-sm text-left">
               <li className="flex items-start gap-2 text-slate-950 font-bold">
                 <span className="text-[#FF9F1C] font-bold shrink-0">✅</span>
-                <span>App no celular: escolha o exercício pelo nível e pelo número de alunos</span>
+                <span>App no celular com +420 treinos de vôlei de praia</span>
               </li>
               <li className="flex items-start gap-2 text-slate-950 font-bold">
                 <span className="text-[#FF9F1C] font-bold shrink-0">✅</span>
-                <span>240 exercícios de vôlei de praia prontos para aplicar</span>
+                <span>240 treinos na areia, do primeiro toque à impulsão do ataque</span>
+              </li>
+              <li className="flex items-start gap-2 text-slate-950 font-bold">
+                <span className="text-[#FF9F1C] font-bold shrink-0">✅</span>
+                <span>+195 treinos para fazer em casa, sem precisar de quadra</span>
               </li>
               <li className="flex items-start gap-2 text-slate-800 font-medium">
                 <span className="text-emerald-600 font-bold shrink-0">✅</span>
-                <span>Feitos para a areia, sem adaptação de treino de quadra</span>
+                <span>Saque, recepção, levantamento, ataque, bloqueio e defesa</span>
               </li>
               <li className="flex items-start gap-2 text-slate-800 font-medium">
                 <span className="text-emerald-600 font-bold shrink-0">✅</span>
-                <span>Código da Areia em cada exercício: nível, fundamento e nº de alunos</span>
+                <span>Animação do movimento em cada exercício</span>
               </li>
               <li className="flex items-start gap-2 text-slate-800 font-medium">
                 <span className="text-emerald-600 font-bold shrink-0">✅</span>
-                <span>Do iniciante ao avançado</span>
+                <span>Erro mais comum e pontos de atenção em cada treino</span>
               </li>
-
               <li className="flex items-start gap-2 text-slate-800 font-medium">
                 <span className="text-emerald-600 font-bold shrink-0">✅</span>
-                <span>Exercícios novos entram direto no app</span>
+                <span>Do iniciante ao avançado, com versão mais fácil e mais difícil</span>
+              </li>
+              <li className="flex items-start gap-2 text-slate-800 font-medium">
+                <span className="text-emerald-600 font-bold shrink-0">✅</span>
+                <span>Para treinar sozinho, em dupla ou com a galera</span>
+              </li>
+              <li className="flex items-start gap-2 text-slate-800 font-medium">
+                <span className="text-emerald-600 font-bold shrink-0">✅</span>
+                <span>Funciona offline, direto na areia</span>
+              </li>
+              <li className="flex items-start gap-2 text-slate-800 font-medium">
+                <span className="text-emerald-600 font-bold shrink-0">✅</span>
+                <span>Treinos novos entram direto no app</span>
               </li>
               <li className="flex items-start gap-2 text-[#D97706] font-bold">
                 <span className="shrink-0">🎁</span>
@@ -179,7 +198,7 @@ export const Pricing: React.FC<PricingProps> = ({ onOpenUpsell }) => {
               </li>
               <li className="flex items-start gap-2 text-[#D97706] font-bold">
                 <span className="shrink-0">🎁</span>
-                <span>Bônus 3: Treino em Casa, 195 exercícios (R$ 37)</span>
+                <span>Bônus 3: Treino em Casa, +195 exercícios (R$ 37)</span>
               </li>
               <li className="flex items-start gap-2 text-[#D97706] font-bold">
                 <span className="shrink-0">🎁</span>
@@ -206,7 +225,7 @@ export const Pricing: React.FC<PricingProps> = ({ onOpenUpsell }) => {
               href={checkout24Url}
               className="block w-full text-center py-4 sm:py-5 px-6 rounded-2xl bg-gradient-to-r from-[#FF4A3F] via-[#FF3B2F] to-[#FF4A3F] text-white font-extrabold text-base sm:text-lg tracking-wide shadow-xl hover:brightness-105 active:scale-[0.98] transition-all animate-pulse-cta uppercase border-b-4 border-[#C92A20]"
             >
-              QUERO OS 240 EXERCÍCIOS
+              QUERO OS +420 TREINOS
             </a>
 
             {/* Abaixo do botão: Economia real de R$ 235 */}

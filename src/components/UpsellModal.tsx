@@ -60,7 +60,7 @@ export const UpsellModal: React.FC<UpsellModalProps> = ({ isOpen, onClose }) => 
 
         {/* Texto */}
         <p className="mt-2.5 text-xs sm:text-sm text-slate-700 leading-relaxed text-balance font-medium">
-          Em vez de 100 exercícios em PDF, você leva o app com os 240, do iniciante ao avançado, e os 5 bônus.
+          Em vez de 100 exercícios em PDF, você leva o app com +420 treinos, na areia e em casa, do iniciante ao avançado, e os 5 bônus.
         </p>
 
         {/* Preço */}
@@ -83,11 +83,11 @@ export const UpsellModal: React.FC<UpsellModalProps> = ({ isOpen, onClose }) => 
           </div>
           <div className="flex items-start gap-2 text-xs sm:text-sm text-slate-800 font-semibold">
             <span className="text-emerald-600 font-bold shrink-0">✅</span>
-            <span><strong>App no Celular:</strong> todos os 240 exercícios da areia (do iniciante ao avançado)</span>
+            <span><strong>App no Celular:</strong> +420 treinos, 240 na areia e 195 em casa (do iniciante ao avançado)</span>
           </div>
           <div className="flex items-start gap-2 text-xs sm:text-sm text-slate-800 font-semibold">
             <span className="text-emerald-600 font-bold shrink-0">✅</span>
-            <span><strong>Diagramas e Filtros:</strong> escolha por fundamento, nível e número de alunos</span>
+            <span><strong>Animação e Filtros:</strong> veja o movimento e escolha o treino pelo fundamento e pelo seu nível</span>
           </div>
           <div className="flex items-start gap-2 text-xs sm:text-sm text-[#D97706] font-bold">
             <span className="shrink-0">🎁</span>
@@ -108,7 +108,7 @@ export const UpsellModal: React.FC<UpsellModalProps> = ({ isOpen, onClose }) => 
           href={checkout15Url}
           className="block w-full py-4 px-6 rounded-2xl bg-gradient-to-r from-[#FF4A3F] via-[#FF3B2F] to-[#FF4A3F] text-white font-extrabold text-sm sm:text-base tracking-wide shadow-xl hover:brightness-105 active:scale-[0.98] transition-all animate-pulse-cta uppercase border-b-4 border-[#C92A20] cursor-pointer"
         >
-          SIM, QUERO OS 240 POR R$ 15
+          SIM, QUERO OS +420 POR R$ 15
         </a>
 
         {/* Link de texto pequeno, sem cara de botão */}

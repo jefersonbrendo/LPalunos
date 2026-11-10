@@ -1,10 +1,10 @@
 import React from 'react';
 import { scrollToPlanos } from '../utils/utm';
-import bonus01 from '../assets/images/bonus_01_app_1794274953388.jpg';
-import bonus02 from '../assets/images/bonus_02_app_1794274955213.jpg';
-import bonus03 from '../assets/images/bonus_03_app_1794274958784.jpg';
-import bonus04 from '../assets/images/bonus_04_app_1794274961006.jpg';
-import bonus05 from '../assets/images/bonus_05_app_1794274962064.jpg';
+import bonus01 from '../assets/images/bonus-aluno-01.webp';
+import bonus02 from '../assets/images/bonus-aluno-02.webp';
+import bonus03 from '../assets/images/bonus-aluno-03.webp';
+import bonus04 from '../assets/images/bonus-aluno-04.webp';
+import bonus05 from '../assets/images/bonus-aluno-05.webp';
 
 interface BonusItem {
   numberString: string;
@@ -100,7 +100,7 @@ export const Bonuses: React.FC = () => {
                   <img
                     src={bonus.image}
                     width={300}
-                    height={435}
+                    height={402}
                     alt={`Capa do bônus ${bonus.numberString}: ${bonus.name}`}
                     loading="lazy"
                     decoding="async"
