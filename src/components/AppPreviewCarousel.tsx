@@ -6,6 +6,8 @@ import tela4 from '../assets/images/app/tela-4-movimento.webp';
 import tela5 from '../assets/images/app/tela-5-saque-areia.webp';
 import tela6 from '../assets/images/app/tela-6-impulsao.webp';
 import tela7 from '../assets/images/app/tela-7-buscar.webp';
+import tela8 from '../assets/images/app/tela-8-levantamento-areia.webp';
+import tela9 from '../assets/images/app/tela-9-saque-diagrama.webp';
 
 interface SlideItem {
   id: number;
@@ -20,6 +22,8 @@ const SLIDES: SlideItem[] = [
   { id: 3, src: tela3, alt: 'Lista de treinos com bola na parede, com nível, séries e filtro de material' },
   { id: 4, src: tela4, alt: 'Exercício aberto com a animação do movimento, a região que trabalha e a trajetória da bola' },
   { id: 5, src: tela5, alt: 'Treinos de saque na quadra de areia, com filtro por nível e número de pessoas' },
+  { id: 8, src: tela8, alt: 'Exercício de levantamento na areia com o diagrama animado da quadra, a zona alvo e a trajetória da bola' },
+  { id: 9, src: tela9, alt: 'Exercício de saque na areia com o diagrama mostrando as zonas alvo na diagonal e na paralela' },
   { id: 6, src: tela6, alt: 'Treinos de impulsão do nível avançado para fazer em casa' },
   { id: 7, src: tela7, alt: 'Busca de treinos no app' },
 ];
