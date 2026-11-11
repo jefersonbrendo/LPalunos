@@ -4,7 +4,7 @@ import { scrollToPlanos } from '../utils/utm';
 
 export const Hero: React.FC = () => {
   return (
-    <section className="relative pt-12 pb-12 sm:pt-16 sm:pb-16 px-4 max-w-4xl mx-auto text-center overflow-hidden">
+    <section className="relative pt-6 pb-12 sm:pt-10 sm:pb-16 px-4 max-w-4xl mx-auto text-center overflow-hidden">
       {/* Background subtle coastal atmosphere glow */}
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[550px] h-[360px] bg-gradient-to-b from-[#FFC60B]/10 via-[#14110B]/10 to-transparent blur-3xl pointer-events-none -z-10" />
 
