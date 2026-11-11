@@ -1,16 +1,46 @@
 import React from 'react';
 import { scrollToPlanos } from '../utils/utm';
+import fotoIniciante from '../assets/images/perfis/mikasa-iniciante.webp';
+import fotoGalera from '../assets/images/perfis/mikasa-galera.webp';
+import fotoTreinoCasa from '../assets/images/perfis/mikasa-treino-casa.webp';
+import fotoIntermediario from '../assets/images/perfis/mikasa-intermediario.webp';
+import fotoProfessor from '../assets/images/perfis/mikasa-professor.webp';
 
 /**
  * "Para quem é": blocos em grade (alternando escuro e claro) para a pessoa
  * se reconhecer num dos perfis.
  */
 const PERFIS = [
-  { emoji: '🌱', titulo: 'Está começando', texto: 'e quer aprender os fundamentos do jeito certo, desde o primeiro toque.' },
-  { emoji: '🏐', titulo: 'Joga com a galera', texto: 'e quer parar de ser o alvo do saque e o elo fraco da dupla.' },
-  { emoji: '🏠', titulo: 'Não tem quadra nem parceiro todo dia', texto: 'e quer continuar treinando em casa, até na parede.' },
-  { emoji: '🔥', titulo: 'Já joga, mas travou', texto: 'e quer sair do mesmo treino de sempre, com desafios do seu nível.' },
-  { emoji: '📋', titulo: 'Dá aula', texto: 'e quer treino pronto, escolhido pelo número de pessoas e pelo nível da turma.' },
+  {
+    foto: fotoIniciante,
+    alt: 'Iniciante treinando os fundamentos do futevôlei na areia',
+    titulo: 'Está começando',
+    texto: 'e quer aprender os fundamentos do jeito certo, desde o primeiro toque.',
+  },
+  {
+    foto: fotoGalera,
+    alt: 'Amigos jogando futevôlei em dupla na quadra de areia',
+    titulo: 'Joga com a galera',
+    texto: 'e quer parar de ser o alvo do saque e o elo fraco da dupla.',
+  },
+  {
+    foto: fotoTreinoCasa,
+    alt: 'Praticante treinando controle de bola de futevôlei em casa na parede',
+    titulo: 'Não tem quadra nem parceiro todo dia',
+    texto: 'e quer continuar treinando em casa, até na parede.',
+  },
+  {
+    foto: fotoIntermediario,
+    alt: 'Jogador intermediário executando ataque técnico de futevôlei na rede',
+    titulo: 'Já joga, mas travou',
+    texto: 'e quer sair do mesmo treino de sempre, com desafios do seu nível.',
+  },
+  {
+    foto: fotoProfessor,
+    alt: 'Professor de futevôlei orientando turma de alunos na quadra de areia',
+    titulo: 'Dá aula',
+    texto: 'e quer treino pronto, escolhido pelo número de pessoas e pelo nível da turma.',
+  },
 ];
 
 export const ParaQuemE: React.FC = () => {
@@ -30,7 +60,14 @@ export const ParaQuemE: React.FC = () => {
                 escuro ? 'bg-[#14110B] text-white' : 'bg-white text-[#14110B] border border-[#E6DCC4]'
               } ${i === PERFIS.length - 1 ? 'col-span-2' : ''}`}
             >
-              <span aria-hidden="true" className="text-3xl sm:text-4xl">{p.emoji}</span>
+              <img
+                src={p.foto}
+                alt={p.alt}
+                loading="lazy"
+                decoding="async"
+                referrerPolicy="no-referrer"
+                className="w-11 h-11 sm:w-14 sm:h-14 rounded-xl object-cover shrink-0 shadow-sm"
+              />
               <strong className={`text-base sm:text-xl font-black uppercase leading-tight ${escuro ? 'text-[#FFC60B]' : ''}`}>
                 {p.titulo}
               </strong>
