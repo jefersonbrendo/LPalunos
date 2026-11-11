@@ -1,11 +1,11 @@
 import React, { useEffect, useRef } from 'react';
 import tela1 from '../assets/images/app/tela-1-inicio.webp';
-import tela2 from '../assets/images/app/tela-2-aquecimento.webp';
-import tela3 from '../assets/images/app/tela-3-como-fazer.webp';
-import tela4 from '../assets/images/app/tela-4-tatica.webp';
-import tela5 from '../assets/images/app/tela-5-buscar.webp';
-import tela6 from '../assets/images/app/tela-6-sozinho-dupla.webp';
-import tela7 from '../assets/images/app/tela-7-salvos.webp';
+import tela2 from '../assets/images/app/tela-2-em-casa.webp';
+import tela3 from '../assets/images/app/tela-3-com-bola.webp';
+import tela4 from '../assets/images/app/tela-4-movimento.webp';
+import tela5 from '../assets/images/app/tela-5-saque-areia.webp';
+import tela6 from '../assets/images/app/tela-6-impulsao.webp';
+import tela7 from '../assets/images/app/tela-7-buscar.webp';
 
 interface SlideItem {
   id: number;
@@ -15,13 +15,13 @@ interface SlideItem {
 
 // Todas as telas são exibidas dentro da mesma moldura de celular (mesmo tamanho).
 const SLIDES: SlideItem[] = [
-  { id: 1, src: tela1, alt: 'Tela inicial do app Código da Areia, com +420 treinos na areia e em casa' },
-  { id: 2, src: tela2, alt: 'Lista de exercícios de aquecimento, organizada por nível' },
-  { id: 3, src: tela3, alt: 'Exercício aberto com a aba Como fazer: objetivo, como montar e passo a passo' },
-  { id: 4, src: tela4, alt: 'Exercício de tática com o desenho da quadra, tempo, jogadores e material' },
-  { id: 5, src: tela5, alt: 'Busca de exercícios com filtro por nível' },
-  { id: 6, src: tela6, alt: 'Categoria Sozinho/Dupla com rotinas para treinar sem professor' },
-  { id: 7, src: tela7, alt: 'Lista de exercícios salvos' },
+  { id: 1, src: tela1, alt: 'Tela inicial do app Código da Areia: treino do dia, semana de treinos e treinos prontos' },
+  { id: 2, src: tela2, alt: 'Treinos em casa: com bola, impulsão, força, agilidade, coordenação e mobilidade' },
+  { id: 3, src: tela3, alt: 'Lista de treinos com bola na parede, com nível, séries e filtro de material' },
+  { id: 4, src: tela4, alt: 'Exercício aberto com a animação do movimento, a região que trabalha e a trajetória da bola' },
+  { id: 5, src: tela5, alt: 'Treinos de saque na quadra de areia, com filtro por nível e número de pessoas' },
+  { id: 6, src: tela6, alt: 'Treinos de impulsão do nível avançado para fazer em casa' },
+  { id: 7, src: tela7, alt: 'Busca de treinos no app' },
 ];
 
 // Três cópias da sequência: a do meio é a "real", as das pontas cobrem o
@@ -160,16 +160,16 @@ export const AppPreviewCarousel: React.FC = () => {
               className="relative shrink-0 w-[190px] sm:w-[230px]"
               aria-hidden={i < SLIDES.length || i >= SLIDES.length * 2 ? true : undefined}
             >
-              <div className="relative rounded-[32px] sm:rounded-[36px] border-[5px] border-slate-800 bg-slate-950 shadow-xl overflow-hidden aspect-[9/17.5]">
+              <div className="relative rounded-[32px] sm:rounded-[36px] border-[5px] border-slate-800 bg-slate-950 shadow-xl overflow-hidden aspect-[640/1338]">
                 <img
                   src={s.src}
                   width={640}
-                  height={1316}
+                  height={1338}
                   alt={i >= SLIDES.length && i < SLIDES.length * 2 ? s.alt : ''}
                   loading={i < SLIDES.length + 3 ? 'eager' : 'lazy'}
                   decoding="async"
                   draggable={false}
-                  className="absolute inset-0 w-full h-full object-fill pointer-events-none"
+                  className="absolute inset-0 w-full h-full object-cover pointer-events-none"
                 />
               </div>
             </div>
