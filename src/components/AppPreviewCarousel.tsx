@@ -1,5 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
+import React, { useEffect, useRef } from 'react';
 import tela1 from '../assets/images/app/tela-1-inicio.webp';
 import tela2 from '../assets/images/app/tela-2-aquecimento.webp';
 import tela3 from '../assets/images/app/tela-3-como-fazer.webp';
@@ -25,46 +24,115 @@ const SLIDES: SlideItem[] = [
   { id: 7, src: tela7, alt: 'Lista de exercícios salvos' },
 ];
 
+// Três cópias da sequência: a do meio é a "real", as das pontas cobrem o
+// deslocamento. Quando passa de uma cópia inteira, o deslocamento volta uma
+// cópia sem que nada mude na tela, então o carrossel nunca "reinicia".
+const FAIXA = [...SLIDES, ...SLIDES, ...SLIDES];
+const VELOCIDADE = 32; // px por segundo
+
 export const AppPreviewCarousel: React.FC = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const touchStartX = useRef<number | null>(null);
+  const trilhoRef = useRef<HTMLDivElement>(null);
+  const areaRef = useRef<HTMLDivElement>(null);
+  const estado = useRef({
+    offset: 0,
+    largura: 0, // largura de uma cópia da sequência
+    segurando: false,
+    inicioX: 0,
+    inicioOffset: 0,
+    visivel: true,
+  });
 
-  // Pré-carrega a tela anterior e a próxima para a troca ser instantânea
   useEffect(() => {
-    const vizinhas = [
-      SLIDES[(currentIndex + 1) % SLIDES.length],
-      SLIDES[(currentIndex - 1 + SLIDES.length) % SLIDES.length],
-    ];
-    vizinhas.forEach((s) => {
-      const img = new Image();
-      img.src = s.src;
+    const trilho = trilhoRef.current;
+    const area = areaRef.current;
+    if (!trilho || !area) return;
+    const e = estado.current;
+    const reduzir = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    const medir = () => {
+      const nova = trilho.scrollWidth / 3;
+      if (!nova) return;
+      // mantém a posição relativa ao trocar o tamanho da tela
+      const proporcao = e.largura ? e.offset / e.largura : -1;
+      e.largura = nova;
+      e.offset = proporcao * nova;
+      aplicar();
+    };
+    // offset fica sempre entre -2 cópias e -1 cópia (exclusive)
+    const normalizar = () => {
+      if (!e.largura) return;
+      while (e.offset <= -2 * e.largura) e.offset += e.largura;
+      while (e.offset > -e.largura) e.offset -= e.largura;
+    };
+    const aplicar = () => {
+      normalizar();
+      trilho.style.transform = `translate3d(${e.offset}px,0,0)`;
+    };
+
+    let ultimo = performance.now();
+    let raf = 0;
+    const quadro = (agora: number) => {
+      const dt = Math.min(0.05, (agora - ultimo) / 1000);
+      ultimo = agora;
+      if (!e.segurando && e.visivel && !reduzir) {
+        e.offset -= VELOCIDADE * dt;
+        aplicar();
+      }
+      raf = requestAnimationFrame(quadro);
+    };
+
+    // Segurar pausa; arrastar move para os lados; soltar continua de onde parou.
+    const baixar = (ev: PointerEvent) => {
+      e.segurando = true;
+      e.inicioX = ev.clientX;
+      e.inicioOffset = e.offset;
+      area.setPointerCapture(ev.pointerId);
+    };
+    const mover = (ev: PointerEvent) => {
+      if (!e.segurando) return;
+      e.offset = e.inicioOffset + (ev.clientX - e.inicioX);
+      aplicar();
+      e.inicioOffset = e.offset;
+      e.inicioX = ev.clientX;
+    };
+    const soltar = () => {
+      e.segurando = false;
+      ultimo = performance.now();
+    };
+
+    area.addEventListener('pointerdown', baixar);
+    area.addEventListener('pointermove', mover);
+    area.addEventListener('pointerup', soltar);
+    area.addEventListener('pointercancel', soltar);
+    area.addEventListener('lostpointercapture', soltar);
+
+    // Só anima quando a seção está na tela (economiza bateria e CPU).
+    const obs = new IntersectionObserver(([en]) => {
+      e.visivel = en.isIntersecting;
+      ultimo = performance.now();
     });
-  }, [currentIndex]);
+    obs.observe(area);
 
-  const prevSlide = () => {
-    setCurrentIndex((prev) => (prev === 0 ? SLIDES.length - 1 : prev - 1));
-  };
+    const ro = new ResizeObserver(medir);
+    ro.observe(trilho);
+    medir();
+    raf = requestAnimationFrame(quadro);
 
-  const nextSlide = () => {
-    setCurrentIndex((prev) => (prev === SLIDES.length - 1 ? 0 : prev + 1));
-  };
-
-  // Deslizar com o dedo no celular
-  const onTouchStart = (e: React.TouchEvent) => {
-    touchStartX.current = e.touches[0].clientX;
-  };
-  const onTouchEnd = (e: React.TouchEvent) => {
-    if (touchStartX.current === null) return;
-    const dx = e.changedTouches[0].clientX - touchStartX.current;
-    touchStartX.current = null;
-    if (Math.abs(dx) < 40) return;
-    if (dx < 0) nextSlide();
-    else prevSlide();
-  };
+    return () => {
+      cancelAnimationFrame(raf);
+      obs.disconnect();
+      ro.disconnect();
+      area.removeEventListener('pointerdown', baixar);
+      area.removeEventListener('pointermove', mover);
+      area.removeEventListener('pointerup', soltar);
+      area.removeEventListener('pointercancel', soltar);
+      area.removeEventListener('lostpointercapture', soltar);
+    };
+  }, []);
 
   return (
-    <section className="py-12 sm:py-16 px-4 bg-[#EDE5D2]/70 border-y border-[#E6DCC4]">
-      <div className="max-w-4xl mx-auto text-center">
+    <section className="py-12 sm:py-16 bg-[#EDE5D2]/70 border-y border-[#E6DCC4] overflow-hidden">
+      <div className="max-w-4xl mx-auto text-center px-4">
         {/* Title */}
         <h2 className="text-3xl sm:text-4xl font-black text-[#14110B] tracking-tight uppercase">
           VEJA COMO É <span className="destaque">FÁCIL DE USAR</span>
@@ -74,64 +142,42 @@ export const AppPreviewCarousel: React.FC = () => {
         <p className="mt-3 text-sm sm:text-base text-slate-700 max-w-xl mx-auto leading-relaxed font-medium">
           Escolha o que quer treinar, abra o exercício e siga o passo a passo com a animação do movimento. Tudo em poucos toques.
         </p>
+      </div>
 
-        {/* Carousel Container */}
-        <div className="mt-8 relative max-w-md mx-auto">
-          {/* Navigation Arrows */}
-          <div className="flex items-center justify-between gap-3 mb-4">
-            <button
-              onClick={prevSlide}
-              className="p-2.5 rounded-full bg-white hover:bg-slate-50 text-[#14110B] border border-[#E6DCC4] shadow-sm transition-colors cursor-pointer"
-              aria-label="Tela anterior"
+      {/* Carrossel infinito: segure para pausar, arraste para os lados */}
+      <div
+        ref={areaRef}
+        className="mt-8 relative cursor-grab active:cursor-grabbing select-none"
+        style={{ touchAction: 'pan-y' }}
+        role="region"
+        aria-roledescription="carrossel"
+        aria-label="Telas do aplicativo. Segure para pausar e arraste para os lados."
+      >
+        <div ref={trilhoRef} className="flex gap-4 sm:gap-6 w-max py-4 will-change-transform">
+          {FAIXA.map((s, i) => (
+            <div
+              key={`${s.id}-${i}`}
+              className="relative shrink-0 w-[190px] sm:w-[230px]"
+              aria-hidden={i < SLIDES.length || i >= SLIDES.length * 2 ? true : undefined}
             >
-              <ChevronLeft className="w-5 h-5" />
-            </button>
-            <div className="flex items-center gap-2">
-              {SLIDES.map((_, idx) => (
-                <button
-                  key={idx}
-                  onClick={() => setCurrentIndex(idx)}
-                  className={`h-2.5 rounded-full transition-all ${
-                    idx === currentIndex
-                      ? 'w-7 bg-[#FFC60B]'
-                      : 'w-2.5 bg-slate-300 hover:bg-slate-400'
-                  }`}
-                  aria-label={`Ir para tela ${idx + 1}`}
+              <div className="relative rounded-[32px] sm:rounded-[36px] border-[5px] border-slate-800 bg-slate-950 shadow-xl overflow-hidden aspect-[9/17.5]">
+                <img
+                  src={s.src}
+                  width={640}
+                  height={1316}
+                  alt={i >= SLIDES.length && i < SLIDES.length * 2 ? s.alt : ''}
+                  loading={i < SLIDES.length + 3 ? 'eager' : 'lazy'}
+                  decoding="async"
+                  draggable={false}
+                  className="absolute inset-0 w-full h-full object-fill pointer-events-none"
                 />
-              ))}
+              </div>
             </div>
-            <button
-              onClick={nextSlide}
-              className="p-2.5 rounded-full bg-white hover:bg-slate-50 text-[#14110B] border border-[#E6DCC4] shadow-sm transition-colors cursor-pointer"
-              aria-label="Próxima tela"
-            >
-              <ChevronRight className="w-5 h-5" />
-            </button>
-          </div>
-
-          {/* Celular com a tela ativa (mesmo tamanho para todas as telas) */}
-          <div
-            className="relative mx-auto w-full max-w-[280px] sm:max-w-[315px]"
-            onTouchStart={onTouchStart}
-            onTouchEnd={onTouchEnd}
-          >
-            <div className="absolute -inset-2 bg-gradient-to-tr from-[#FFC60B]/25 via-[#14110B]/20 to-[#E23D2E]/15 rounded-[48px] blur-xl opacity-70" />
-            <div className="relative rounded-[40px] sm:rounded-[44px] border-[5px] border-slate-800 bg-slate-950 shadow-2xl overflow-hidden aspect-[9/17.5]">
-              <img
-                key={SLIDES[currentIndex].id}
-                src={SLIDES[currentIndex].src}
-                width={640}
-                height={1316}
-                alt={SLIDES[currentIndex].alt}
-                loading={currentIndex === 0 ? 'eager' : 'lazy'}
-                decoding="async"
-                draggable={false}
-                className="absolute inset-0 w-full h-full object-fill select-none"
-              />
-            </div>
-          </div>
+          ))}
         </div>
       </div>
+
+      <p className="mt-3 text-center text-xs text-slate-500 px-4">Segure para pausar · arraste para os lados</p>
     </section>
   );
 };
