@@ -15,6 +15,9 @@ export const LINKS = {
   // Checkout do Plano Completo com +420 treinos + bônus (R$ 24)
   CHECKOUT_24: 'https://pay.lowify.com.br/go.php?offer=902de29f',
 
+  // Checkout do desconto da roleta (back redirect): Completo de R$ 24 por R$ 14
+  CHECKOUT_14_ROLETA: 'https://pay.lowify.com.br/checkout?product_id=nIMeMH',
+
   // Link do WhatsApp de suporte (ex: https://wa.me/5511999999999?text=...)
   WHATSAPP: 'https://wa.me/5500000000000?text=Ol%C3%A1%21+Tenho+d%C3%BAvidas+sobre+o+C%C3%B3digo+da+Areia',
 

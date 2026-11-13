@@ -6,6 +6,15 @@ import {defineConfig} from 'vite';
 export default defineConfig(() => {
   return {
     plugins: [react(), tailwindcss()],
+    build: {
+      rollupOptions: {
+        // Duas páginas: a landing (index.html) e a roleta do back redirect (roleta.html -> /roleta)
+        input: {
+          main: path.resolve(__dirname, 'index.html'),
+          roleta: path.resolve(__dirname, 'roleta.html'),
+        },
+      },
+    },
     resolve: {
       alias: {
         '@': path.resolve(__dirname, '.'),
