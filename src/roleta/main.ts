@@ -12,16 +12,23 @@ import { buildUrlWithParams } from '../utils/utm';
 
 const FATIAS = [
   { rotulo: ['41%', 'OFF'], cor: '#E23D2E', texto: '#fff', premio: true },
-  { rotulo: ['TENTE', 'DE NOVO'], cor: '#14110B', texto: '#FFC60B' },
+  { rotulo: ['VOCÊ', 'PERDEU'], cor: '#14110B', texto: '#FFC60B' },
   { rotulo: ['10%', 'OFF'], cor: '#FFC60B', texto: '#14110B' },
   { rotulo: ['20%', 'OFF'], cor: '#F6F0E1', texto: '#14110B' },
   { rotulo: ['41%', 'OFF'], cor: '#E23D2E', texto: '#fff', premio: true },
-  { rotulo: ['TENTE', 'DE NOVO'], cor: '#14110B', texto: '#FFC60B' },
+  { rotulo: ['VOCÊ', 'PERDEU'], cor: '#14110B', texto: '#FFC60B' },
   { rotulo: ['10%', 'OFF'], cor: '#FFC60B', texto: '#14110B' },
   { rotulo: ['20%', 'OFF'], cor: '#F6F0E1', texto: '#14110B' },
 ];
-const PREMIO = 0; // índice da fatia em que a roleta para
-const DURACAO_GIRO_MS = 5200;
+const PREMIO = 0; // índice da fatia em que a roleta para (41%)
+/**
+ * A roleta para colada na divisa entre o 41% e a fatia preta "VOCÊ PERDEU" que vem logo depois.
+ * Girando no sentido horário, o ponteiro atravessa a fatia preta e entra no 41% só no último instante.
+ * MARGEM_GRAUS é quanto ela entra no 41%: 1,2° dá uns 2 a 3 px de folga na borda da roda.
+ */
+const MARGEM_GRAUS = 1.2;
+const ANGULO_FINAL = 360 * 6 - PREMIO * (360 / 8) - 360 / 8 / 2 + MARGEM_GRAUS;
+const DURACAO_GIRO_MS = 6500;
 const MINUTOS_RESERVA = 10;
 const CHAVE = 'cda-roleta-desconto-ate';
 
@@ -153,8 +160,7 @@ function montar(): void {
   const salvo = ler();
   if (salvo) {
     girou = true;
-    const anguloFinal = 360 * 6 - PREMIO * (360 / FATIAS.length);
-    roda.style.transform = `rotate(${anguloFinal}deg)`;
+    roda.style.transform = `rotate(${ANGULO_FINAL}deg)`;
     mostrarResultado(salvo);
     return;
   }
@@ -164,9 +170,9 @@ function montar(): void {
     girou = true;
     botoes.forEach((b) => (b.disabled = true));
     const reduzir = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    const anguloFinal = 360 * 6 - PREMIO * (360 / FATIAS.length);
-    roda.style.transition = `transform ${reduzir ? 600 : DURACAO_GIRO_MS}ms cubic-bezier(.15,.85,.2,1)`;
-    roda.style.transform = `rotate(${anguloFinal}deg)`;
+    // desacelera bem no final, para o ponteiro "se arrastar" pela fatia preta antes de cair no 41%
+    roda.style.transition = `transform ${reduzir ? 600 : DURACAO_GIRO_MS}ms cubic-bezier(.12,.75,.08,1)`;
+    roda.style.transform = `rotate(${ANGULO_FINAL}deg)`;
     window.setTimeout(() => {
       const ate = Date.now() + MINUTOS_RESERVA * 60_000;
       gravar(ate);
