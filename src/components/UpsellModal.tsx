@@ -55,7 +55,7 @@ export const UpsellModal: React.FC<UpsellModalProps> = ({ isOpen, onClose }) => 
 
         {/* Título */}
         <h3 className="text-xl sm:text-2xl font-black text-[#14110B] font-heading mt-3 uppercase text-balance leading-tight">
-          Troque o PDF pelo APP por só R$ 5 a mais
+          Troque o PDF pelo APP por só R$ 7 a mais
         </h3>
 
         {/* Texto */}
