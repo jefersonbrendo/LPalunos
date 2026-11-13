@@ -5,20 +5,20 @@ import { buildUrlWithParams } from '../utils/utm';
 
 /**
  * Roleta de desconto do back redirect.
- * A roleta sempre para em 41% OFF: o Completo sai de R$ 24 por R$ 14 (checkout próprio).
+ * A roleta sempre para em R$ 10 OFF: o Completo sai de R$ 24 por R$ 14 (checkout próprio).
  * O desconto fica reservado por 10 minutos, contados de verdade para cada pessoa
  * (guardado no navegador). Quando o tempo acaba, o botão volta para o checkout normal de R$ 24.
  */
 
 const FATIAS = [
-  { rotulo: ['41%', 'OFF'], cor: '#E23D2E', texto: '#fff', premio: true },
-  { rotulo: ['SEM', 'DESCONTO'], cor: '#14110B', texto: '#fff' },
-  { rotulo: ['10%', 'OFF'], cor: '#FFC60B', texto: '#14110B' },
-  { rotulo: ['20%', 'OFF'], cor: '#0E7C66', texto: '#fff' },
-  { rotulo: ['41%', 'OFF'], cor: '#E23D2E', texto: '#fff', premio: true },
-  { rotulo: ['SEM', 'DESCONTO'], cor: '#14110B', texto: '#fff' },
-  { rotulo: ['10%', 'OFF'], cor: '#FFC60B', texto: '#14110B' },
-  { rotulo: ['20%', 'OFF'], cor: '#0E7C66', texto: '#fff' },
+  { rotulo: ['R$ 10', 'OFF'], cor: '#E23D2E', texto: '#fff', premio: true },
+  { rotulo: ['TENTE', 'DE NOVO'], cor: '#14110B', texto: '#FFC60B' },
+  { rotulo: ['R$ 3', 'OFF'], cor: '#FFC60B', texto: '#14110B' },
+  { rotulo: ['R$ 5', 'OFF'], cor: '#F6F0E1', texto: '#14110B' },
+  { rotulo: ['R$ 10', 'OFF'], cor: '#E23D2E', texto: '#fff', premio: true },
+  { rotulo: ['TENTE', 'DE NOVO'], cor: '#14110B', texto: '#FFC60B' },
+  { rotulo: ['R$ 3', 'OFF'], cor: '#FFC60B', texto: '#14110B' },
+  { rotulo: ['R$ 5', 'OFF'], cor: '#F6F0E1', texto: '#14110B' },
 ];
 const PREMIO = 0; // índice da fatia em que a roleta para
 const DURACAO_GIRO_MS = 5200;
@@ -59,19 +59,20 @@ function svgRoleta(): string {
     const [x1, y1] = pt(a1);
     const meio = i * ang;
     const [tx, ty] = pt(meio, r * 0.64);
-    const grande = f.rotulo[0].length <= 4;
-    return `<path d="M${c},${c} L${x0},${y0} A${r},${r} 0 0 1 ${x1},${y1} Z" fill="${f.cor}" stroke="#14110B" stroke-width="3"/>
+    const grande = f.rotulo[0].startsWith('R$');
+    return `<path d="M${c},${c} L${x0},${y0} A${r},${r} 0 0 1 ${x1},${y1} Z" fill="${f.cor}" stroke="#14110B" stroke-width="2.5"/>
       <g transform="translate(${tx} ${ty}) rotate(${meio})" fill="${f.texto}" text-anchor="middle" font-weight="900">
-        <text y="${grande ? -2 : -3}" font-size="${grande ? 24 : 13}">${f.rotulo[0]}</text>
-        <text y="${grande ? 16 : 13}" font-size="${grande ? 12 : 11}">${f.rotulo[1]}</text>
+        <text y="${grande ? -1 : -3}" font-size="${grande ? 21 : 13}">${f.rotulo[0]}</text>
+        <text y="${grande ? 16 : 12}" font-size="${grande ? 12 : 12}">${f.rotulo[1]}</text>
       </g>`;
   }).join('');
   const luzes = Array.from({ length: 16 }, (_, i) => {
-    const [x, y] = pt(i * 22.5, r + 1);
-    return `<circle cx="${x}" cy="${y}" r="3.2" fill="${i % 2 ? '#FFC60B' : '#fff'}"/>`;
+    const [x, y] = pt(i * 22.5, r + 6);
+    return `<circle cx="${x}" cy="${y}" r="3" fill="${i % 2 ? '#14110B' : '#FFF8DC'}"/>`;
   }).join('');
   return `<svg viewBox="0 0 320 320" aria-hidden="true">
-    <circle cx="${c}" cy="${c}" r="${r + 8}" fill="#14110B"/>
+    <circle cx="${c}" cy="${c}" r="${r + 9}" fill="#F5A300"/>
+    <circle cx="${c}" cy="${c}" r="${r + 3}" fill="#14110B"/>
     <g class="roda">${fatias}</g>${luzes}
   </svg>`;
 }
@@ -84,28 +85,31 @@ function formatar(ms: number): string {
 function montar(): void {
   const raiz = document.getElementById('roleta')!;
   raiz.innerHTML = `
-    <div class="faixa">⚠️ ESPERA! NÃO SAIA AINDA</div>
+    <div class="faixa">🏐 Antes de ir, gire a roleta</div>
     <main class="pagina">
-      <span class="selo">🎁 PRESENTE LIBERADO</span>
-      <h1>VOCÊ GANHOU UM <span class="destaque">GIRO NA ROLETA</span> DE DESCONTOS</h1>
-      <button class="dica" type="button">👇 TOQUE PARA GIRAR</button>
+      <h1>SEU TREINO PODE SAIR <span class="destaque">MAIS BARATO</span></h1>
+      <p class="sub">Um giro só, para quem chegou até aqui. Toque em GIRAR e veja quanto você ganha de desconto no Código da Areia Completo.</p>
       <div class="roleta">
         <span class="ponteiro" aria-hidden="true"></span>
         ${svgRoleta()}
         <button class="centro" type="button" aria-label="Girar a roleta">GIRAR</button>
       </div>
+      <button class="dica" type="button">GIRAR A ROLETA</button>
     </main>
     <div class="fundo" hidden></div>
     <section class="resultado" hidden aria-live="polite">
-      <p class="parabens">🎉 PARABÉNS, VOCÊ GANHOU</p>
-      <p class="off">41% OFF</p>
-      <p class="produto">no Código da Areia Completo</p>
-      <p class="precos"><s>R$ 24</s> <strong>R$ 14</strong></p>
-      <p class="economia">Você economiza R$ 10</p>
-      <ul class="itens">${ITENS.map((t) => `<li>${t}</li>`).join('')}</ul>
-      <p class="tempo">Seu desconto fica reservado por <strong class="relogio">10:00</strong></p>
-      <a class="cta" href="#">PEGAR MEU DESCONTO</a>
-      <p class="seguro">🔒 Pagamento seguro · Garantia de 7 dias · Acesso na hora</p>
+      <div class="topo-resultado">
+        <p class="parabens">SEU DESCONTO SAIU</p>
+        <p class="off"><span class="destaque">R$ 10 OFF</span></p>
+        <p class="produto">no Código da Areia Completo</p>
+      </div>
+      <div class="corpo-resultado">
+        <p class="precos"><s>R$ 24</s> <strong>R$ 14</strong> <span>pagamento único</span></p>
+        <ul class="itens">${ITENS.map((t) => `<li>${t}</li>`).join('')}</ul>
+        <p class="tempo">⏱️ Desconto guardado para você por <strong class="relogio">10:00</strong></p>
+        <a class="cta" href="#">QUERO POR R$ 14</a>
+        <p class="seguro">🔒 Pagamento seguro · Garantia de 7 dias · Acesso na hora no WhatsApp</p>
+      </div>
     </section>`;
 
   const roda = raiz.querySelector<SVGGElement>('.roda')!;
@@ -130,12 +134,11 @@ function montar(): void {
       const falta = ate - Date.now();
       if (falta <= 0) {
         window.clearInterval(intervalo);
-        tempo.innerHTML = 'O tempo do desconto acabou. O Completo voltou para R$ 24.';
+        tempo.textContent = 'O tempo do desconto acabou. O Completo voltou para R$ 24.';
         resultado.classList.add('expirou');
         const precos = resultado.querySelector<HTMLElement>('.precos');
-        if (precos) precos.innerHTML = '<strong>R$ 24</strong>';
-        const economia = resultado.querySelector<HTMLElement>('.economia');
-        if (economia) economia.hidden = true;
+        if (precos) precos.innerHTML = '<strong>R$ 24</strong> <span>pagamento único</span>';
+
         cta.textContent = 'QUERO O COMPLETO POR R$ 24';
         cta.href = linkNormal;
         return;
