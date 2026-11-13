@@ -5,20 +5,20 @@ import { buildUrlWithParams } from '../utils/utm';
 
 /**
  * Roleta de desconto do back redirect.
- * A roleta sempre para em R$ 10 OFF: o Completo sai de R$ 24 por R$ 14 (checkout próprio).
+ * A roleta sempre para em 41% OFF: o Completo sai de R$ 24 por R$ 14 (checkout próprio).
  * O desconto fica reservado por 10 minutos, contados de verdade para cada pessoa
  * (guardado no navegador). Quando o tempo acaba, o botão volta para o checkout normal de R$ 24.
  */
 
 const FATIAS = [
-  { rotulo: ['R$ 10', 'OFF'], cor: '#E23D2E', texto: '#fff', premio: true },
+  { rotulo: ['41%', 'OFF'], cor: '#E23D2E', texto: '#fff', premio: true },
   { rotulo: ['TENTE', 'DE NOVO'], cor: '#14110B', texto: '#FFC60B' },
-  { rotulo: ['R$ 3', 'OFF'], cor: '#FFC60B', texto: '#14110B' },
-  { rotulo: ['R$ 5', 'OFF'], cor: '#F6F0E1', texto: '#14110B' },
-  { rotulo: ['R$ 10', 'OFF'], cor: '#E23D2E', texto: '#fff', premio: true },
+  { rotulo: ['10%', 'OFF'], cor: '#FFC60B', texto: '#14110B' },
+  { rotulo: ['20%', 'OFF'], cor: '#F6F0E1', texto: '#14110B' },
+  { rotulo: ['41%', 'OFF'], cor: '#E23D2E', texto: '#fff', premio: true },
   { rotulo: ['TENTE', 'DE NOVO'], cor: '#14110B', texto: '#FFC60B' },
-  { rotulo: ['R$ 3', 'OFF'], cor: '#FFC60B', texto: '#14110B' },
-  { rotulo: ['R$ 5', 'OFF'], cor: '#F6F0E1', texto: '#14110B' },
+  { rotulo: ['10%', 'OFF'], cor: '#FFC60B', texto: '#14110B' },
+  { rotulo: ['20%', 'OFF'], cor: '#F6F0E1', texto: '#14110B' },
 ];
 const PREMIO = 0; // índice da fatia em que a roleta para
 const DURACAO_GIRO_MS = 5200;
@@ -59,10 +59,10 @@ function svgRoleta(): string {
     const [x1, y1] = pt(a1);
     const meio = i * ang;
     const [tx, ty] = pt(meio, r * 0.64);
-    const grande = f.rotulo[0].startsWith('R$');
+    const grande = f.rotulo[0].endsWith('%');
     return `<path d="M${c},${c} L${x0},${y0} A${r},${r} 0 0 1 ${x1},${y1} Z" fill="${f.cor}" stroke="#14110B" stroke-width="2.5"/>
       <g transform="translate(${tx} ${ty}) rotate(${meio})" fill="${f.texto}" text-anchor="middle" font-weight="900">
-        <text y="${grande ? -1 : -3}" font-size="${grande ? 21 : 13}">${f.rotulo[0]}</text>
+        <text y="${grande ? -1 : -3}" font-size="${grande ? 24 : 13}">${f.rotulo[0]}</text>
         <text y="${grande ? 16 : 12}" font-size="${grande ? 12 : 12}">${f.rotulo[1]}</text>
       </g>`;
   }).join('');
@@ -100,7 +100,7 @@ function montar(): void {
     <section class="resultado" hidden aria-live="polite">
       <div class="topo-resultado">
         <p class="parabens">SEU DESCONTO SAIU</p>
-        <p class="off"><span class="destaque">R$ 10 OFF</span></p>
+        <p class="off"><span class="destaque">41% OFF</span></p>
         <p class="produto">no Código da Areia Completo</p>
       </div>
       <div class="corpo-resultado">
