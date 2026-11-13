@@ -27,7 +27,7 @@ export const UpsellModal: React.FC<UpsellModalProps> = ({ isOpen, onClose }) => 
 
   if (!isOpen) return null;
 
-  const checkoutUpsellUrl = buildUrlWithParams(LINKS.CHECKOUT_15);
+  const checkoutUpsellUrl = buildUrlWithParams(LINKS.CHECKOUT_17);
   const checkout10Url = buildUrlWithParams(LINKS.CHECKOUT_10);
 
   return (
