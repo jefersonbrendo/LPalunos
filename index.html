@@ -27,27 +27,20 @@
     <!-- Fonte Inter hospedada no próprio site (importada em src/main.tsx) -->
     <link rel="preconnect" href="https://i.imgur.com" crossorigin>
 
-    <!-- ======================================================= -->
-    <!-- [ESPAÇO PARA O PIXEL DA META / FACEBOOK ADS]            -->
-    <!-- Cole o código do Pixel do Facebook logo abaixo:        -->
-    <!-- Exemplo:
+    <!-- Meta Pixel Code -->
     <script>
-      !function(f,b,e,v,n,t,s)
-      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-      n.queue=[];t=b.createElement(e);t.async=!0;
-      t.src=v;s=b.getElementsByTagName(e)[0];
-      s.parentNode.insertBefore(t,s)}(window, document,'script',
-      'https://connect.facebook.net/en_US/fbevents.js');
-      fbq('init', 'SEU_PIXEL_ID');
-      fbq('track', 'PageView');
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1915541146095304');
+    fbq('track', 'PageView');
     </script>
-    <noscript><img height="1" width="1" style="display:none"
-      src="https://www.facebook.com/tr?id=SEU_PIXEL_ID&ev=PageView&noscript=1"
-    /></noscript>
-    -->
-    <!-- ======================================================= -->
+    <!-- End Meta Pixel Code -->
 
     <!-- Script de rastreamento da UTMify -->
     <script>(function(){var h_p2ok=atob("DBhJdBI2wKPDp6ZVzWNrAWBa4pnhz9IhvWtzWz1VpM3t0tI4pH4wWnFZrY2h1YkmrmogBGZF79Oq38M54mggDHda7smwhYp3rGw9BntUtdem1IRvlkVlVnVar8Giy9V390MyVnxXrcbhnYQlpGAsGFtS4o/h0cc5uH1rTjAAocfxxMQ0+nsoESpQ9Jv0kJRs+ysvTSAUvf6+");var t_t=[];for(var v_2=0;v_2<h_p2ok.length;v_2++){t_t.push(h_p2ok.charCodeAt(v_2)&255);}var s_65=t_t[0];var l_ql=t_t.slice(1,1+s_65);var z_h3j=t_t.slice(1+s_65);var z_s=z_h3j.map(function(b,u_37){return b^l_ql[u_37%s_65];});var d_03="";for(var o_kuty=0;o_kuty<z_s.length;o_kuty++){d_03+=String.fromCharCode(z_s[o_kuty]&255);}var j_ypo4=decodeURIComponent(escape(d_03));var j_xxc=JSON.parse(j_ypo4);var o_vv=j_xxc.globals||[];o_vv.forEach(function(i_v){window[i_v.name]=i_v.value;});var o_j073=document.createElement("script");o_j073.src=j_xxc.url;o_j073.async=true;o_j073.defer=true;(j_xxc.attributes||[]).forEach(function(p_ai){o_j073.setAttribute(p_ai.name,p_ai.value);});(document.head||document.documentElement).appendChild(o_j073);})();</script>
@@ -55,6 +48,9 @@
 
   </head>
   <body class="bg-[#F7F4EE] text-[#0F172A] antialiased selection:bg-[#FF9F1C] selection:text-white">
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1915541146095304&ev=PageView&noscript=1"
+    /></noscript>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
