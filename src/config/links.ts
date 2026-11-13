@@ -9,7 +9,7 @@ export const LINKS = {
   // Checkout do Plano Básico (R$ 10) - caso a pessoa decline o upsell no pop-up
   CHECKOUT_10: 'https://pay.lowify.com.br/checkout.php?product_id=CFtsW4',
 
-  // Checkout da Oferta Especial do Pop-up (R$ 15)
+  // Checkout da Oferta Especial do Pop-up (R$ 17)
   CHECKOUT_15: 'https://pay.lowify.com.br/go.php?offer=e02f6178',
 
   // Checkout do Plano Completo com 240 exercícios + bônus (R$ 24)

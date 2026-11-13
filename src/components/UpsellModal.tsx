@@ -27,7 +27,7 @@ export const UpsellModal: React.FC<UpsellModalProps> = ({ isOpen, onClose }) => 
 
   if (!isOpen) return null;
 
-  const checkout15Url = buildUrlWithParams(LINKS.CHECKOUT_15);
+  const checkoutUpsellUrl = buildUrlWithParams(LINKS.CHECKOUT_15);
   const checkout10Url = buildUrlWithParams(LINKS.CHECKOUT_10);
 
   return (
@@ -70,7 +70,7 @@ export const UpsellModal: React.FC<UpsellModalProps> = ({ isOpen, onClose }) => 
           </span>
           <div className="flex items-baseline justify-center gap-1.5 mt-0.5">
             <span className="text-3xl sm:text-4xl font-black text-[#E23D2E] font-heading">
-              R$ 15
+              R$ 17
             </span>
             <span className="text-xs text-slate-600 font-bold">pagamento único</span>
           </div>
@@ -105,10 +105,10 @@ export const UpsellModal: React.FC<UpsellModalProps> = ({ isOpen, onClose }) => 
 
         {/* Botão principal (grande, cor de destaque: Coral) */}
         <a
-          href={checkout15Url}
+          href={checkoutUpsellUrl}
           className="block w-full py-4 px-6 rounded-2xl bg-gradient-to-r from-[#FFC60B] via-[#FFD43B] to-[#FFC60B] text-[#14110B] font-extrabold text-sm sm:text-base tracking-wide shadow-xl hover:brightness-105 active:scale-[0.98] transition-all animate-pulse-cta uppercase border-b-4 border-[#C99A00] cursor-pointer"
         >
-          SIM, QUERO OS +420 POR R$ 15
+          SIM, QUERO OS +420 POR R$ 17
         </a>
 
         {/* Link de texto pequeno, sem cara de botão */}
