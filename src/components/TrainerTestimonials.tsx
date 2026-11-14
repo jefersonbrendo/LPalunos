@@ -85,6 +85,7 @@ export const TrainerTestimonials: React.FC = () => {
             width={item.w}
             height={item.h}
             alt={item.alt}
+            loading="lazy"
             decoding="async"
             className="block w-full h-full object-contain"
           />
