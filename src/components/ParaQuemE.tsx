@@ -13,31 +13,31 @@ import fotoProfessor from '../assets/images/perfis/mikasa-professor.webp';
 const PERFIS = [
   {
     foto: fotoIniciante,
-    alt: 'Iniciante treinando os fundamentos do futevôlei na areia',
+    alt: 'Iniciante treinando os fundamentos do vôlei de praia na areia',
     titulo: 'Está começando',
     texto: 'e quer aprender os fundamentos do jeito certo, desde o primeiro toque.',
   },
   {
     foto: fotoGalera,
-    alt: 'Amigos jogando futevôlei em dupla na quadra de areia',
+    alt: 'Amigos jogando vôlei de praia em dupla na quadra de areia',
     titulo: 'Joga com a galera',
     texto: 'e quer parar de ser o alvo do saque e o elo fraco da dupla.',
   },
   {
     foto: fotoTreinoCasa,
-    alt: 'Praticante treinando controle de bola de futevôlei em casa na parede',
+    alt: 'Praticante treinando controle de bola de vôlei em casa na parede',
     titulo: 'Não tem quadra nem parceiro todo dia',
     texto: 'e quer continuar treinando em casa, até na parede.',
   },
   {
     foto: fotoIntermediario,
-    alt: 'Jogador intermediário executando ataque técnico de futevôlei na rede',
+    alt: 'Jogador intermediário executando ataque no vôlei de praia na rede',
     titulo: 'Já joga, mas travou',
     texto: 'e quer sair do mesmo treino de sempre, com desafios do seu nível.',
   },
   {
     foto: fotoProfessor,
-    alt: 'Professor de futevôlei orientando turma de alunos na quadra de areia',
+    alt: 'Professor de vôlei de praia orientando turma de alunos na quadra de areia',
     titulo: 'Dá aula',
     texto: 'e quer treino pronto, escolhido pelo número de pessoas e pelo nível da turma.',
   },
@@ -54,26 +54,34 @@ export const ParaQuemE: React.FC = () => {
         {PERFIS.map((p, i) => {
           const escuro = i % 3 === 0;
           return (
-            <li
-              key={p.titulo}
-              className={`rounded-3xl p-4 sm:p-6 flex flex-col gap-2 ${
-                escuro ? 'bg-[#14110B] text-white' : 'bg-white text-[#14110B] border border-[#E6DCC4]'
-              } ${i === PERFIS.length - 1 ? 'col-span-2' : ''}`}
-            >
-              <img
-                src={p.foto}
-                alt={p.alt}
-                loading="lazy"
-                decoding="async"
-                referrerPolicy="no-referrer"
-                className="w-11 h-11 sm:w-14 sm:h-14 rounded-xl object-cover shrink-0 shadow-sm"
-              />
-              <strong className={`text-base sm:text-xl font-black uppercase leading-tight ${escuro ? 'text-[#FFC60B]' : ''}`}>
-                {p.titulo}
-              </strong>
-              <span className={`text-xs sm:text-sm leading-relaxed ${escuro ? 'text-white/75' : 'text-slate-600'}`}>
-                {p.texto}
-              </span>
+            <li key={p.titulo} className={i === PERFIS.length - 1 ? 'col-span-2' : ''}>
+              {/* O card inteiro é tocável e leva aos planos (as pessoas já tocavam nele esperando isso) */}
+              <button
+                type="button"
+                onClick={scrollToPlanos}
+                aria-label={`${p.titulo}: ver os planos`}
+                className={`w-full h-full text-left rounded-3xl p-4 sm:p-6 flex flex-col gap-2 cursor-pointer transition-transform active:scale-[0.98] hover:-translate-y-0.5 ${
+                  escuro ? 'bg-[#14110B] text-white' : 'bg-white text-[#14110B] border border-[#E6DCC4]'
+                }`}
+              >
+                <img
+                  src={p.foto}
+                  alt={p.alt}
+                  loading="lazy"
+                  decoding="async"
+                  referrerPolicy="no-referrer"
+                  className="w-11 h-11 sm:w-14 sm:h-14 rounded-xl object-cover shrink-0 shadow-sm"
+                />
+                <strong className={`text-base sm:text-xl font-black uppercase leading-tight ${escuro ? 'text-[#FFC60B]' : ''}`}>
+                  {p.titulo}
+                </strong>
+                <span className={`text-xs sm:text-sm leading-relaxed ${escuro ? 'text-white/75' : 'text-slate-600'}`}>
+                  {p.texto}
+                </span>
+                <span className={`mt-auto pt-1 text-xs font-black uppercase tracking-wide ${escuro ? 'text-[#FFC60B]' : 'text-[#B87500]'}`}>
+                  Ver planos →
+                </span>
+              </button>
             </li>
           );
         })}
