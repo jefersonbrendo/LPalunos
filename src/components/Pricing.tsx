@@ -150,9 +150,10 @@ export const Pricing: React.FC<PricingProps> = ({ onOpenUpsell }) => {
             <ul className="mt-5 space-y-2.5 text-sm sm:text-base text-left">
               {[
                 'App com +420 treinos de vôlei de praia',
-                '240 treinos na areia e 195 em casa, sem precisar de quadra',
+                '240 treinos na areia e 195 em casa',
                 'Animação do movimento em cada exercício',
                 'Treinos de saque, recepção, levantamento, ataque, bloqueio e defesa',
+                'Do iniciante ao avançado, sozinho ou com a galera',
               ].map((item) => (
                 <li key={item} className="flex items-start gap-2 text-slate-950 font-bold">
                   <span className="shrink-0">✅</span>
