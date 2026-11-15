@@ -152,7 +152,7 @@ export const Pricing: React.FC<PricingProps> = ({ onOpenUpsell }) => {
                 'App com +420 treinos de vôlei de praia',
                 '240 treinos na areia e 195 em casa, sem precisar de quadra',
                 'Animação do movimento em cada exercício',
-                'Do iniciante ao avançado, sozinho ou com a galera',
+                'Treinos de saque, recepção, levantamento, ataque, bloqueio e defesa',
               ].map((item) => (
                 <li key={item} className="flex items-start gap-2 text-slate-950 font-bold">
                   <span className="shrink-0">✅</span>
