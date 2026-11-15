@@ -146,71 +146,22 @@ export const Pricing: React.FC<PricingProps> = ({ onOpenUpsell }) => {
               </div>
             </div>
 
-            {/* Features list */}
-            <ul className="mt-6 space-y-2 text-xs sm:text-sm text-left">
-              <li className="flex items-start gap-2 text-slate-950 font-bold">
-                <span className="text-[#FFC60B] font-bold shrink-0">✅</span>
-                <span>App no celular com +420 treinos de vôlei de praia</span>
-              </li>
-              <li className="flex items-start gap-2 text-slate-950 font-bold">
-                <span className="text-[#FFC60B] font-bold shrink-0">✅</span>
-                <span>240 treinos na areia, do primeiro toque à impulsão do ataque</span>
-              </li>
-              <li className="flex items-start gap-2 text-slate-950 font-bold">
-                <span className="text-[#FFC60B] font-bold shrink-0">✅</span>
-                <span>+200 treinos para fazer em casa, sem precisar de quadra</span>
-              </li>
-              <li className="flex items-start gap-2 text-slate-800 font-medium">
-                <span className="text-emerald-600 font-bold shrink-0">✅</span>
-                <span>Treinos de saque, recepção, levantamento, ataque, bloqueio e defesa</span>
-              </li>
-              <li className="flex items-start gap-2 text-slate-800 font-medium">
-                <span className="text-emerald-600 font-bold shrink-0">✅</span>
-                <span>Vídeo do movimento em cada exercício</span>
-              </li>
-              <li className="flex items-start gap-2 text-slate-800 font-medium">
-                <span className="text-emerald-600 font-bold shrink-0">✅</span>
-                <span>Erro mais comum e pontos de atenção em cada treino</span>
-              </li>
-              <li className="flex items-start gap-2 text-slate-800 font-medium">
-                <span className="text-emerald-600 font-bold shrink-0">✅</span>
-                <span>Do iniciante ao avançado, com versão mais fácil e mais difícil</span>
-              </li>
-              <li className="flex items-start gap-2 text-slate-800 font-medium">
-                <span className="text-emerald-600 font-bold shrink-0">✅</span>
-                <span>Para treinar sozinho, em dupla ou com a galera</span>
-              </li>
-              <li className="flex items-start gap-2 text-slate-800 font-medium">
-                <span className="text-emerald-600 font-bold shrink-0">✅</span>
-                <span>Funciona offline, direto na areia</span>
-              </li>
-              <li className="flex items-start gap-2 text-slate-800 font-medium">
-                <span className="text-emerald-600 font-bold shrink-0">✅</span>
-                <span>Treinos novos entram direto no app</span>
-              </li>
-              <li className="flex items-start gap-2 text-[#B87500] font-bold">
+            {/* Lista enxuta: só o que decide a compra (os bônus estão detalhados na seção de bônus) */}
+            <ul className="mt-5 space-y-2.5 text-sm sm:text-base text-left">
+              {[
+                'App com +420 treinos de vôlei de praia',
+                '240 treinos na areia e 195 em casa, sem precisar de quadra',
+                'Animação do movimento em cada exercício',
+                'Do iniciante ao avançado, sozinho ou com a galera',
+              ].map((item) => (
+                <li key={item} className="flex items-start gap-2 text-slate-950 font-bold">
+                  <span className="shrink-0">✅</span>
+                  <span>{item}</span>
+                </li>
+              ))}
+              <li className="flex items-start gap-2 text-[#B87500] font-black">
                 <span className="shrink-0">🎁</span>
-                <span>Bônus 1: Plano de Evolução em 15 Dias (R$ 67)</span>
-              </li>
-              <li className="flex items-start gap-2 text-[#B87500] font-bold">
-                <span className="shrink-0">🎁</span>
-                <span>Bônus 2: Treinos Prontos para Seguir (R$ 47)</span>
-              </li>
-              <li className="flex items-start gap-2 text-[#B87500] font-bold">
-                <span className="shrink-0">🎁</span>
-                <span>Bônus 3: Treino em Casa, +195 exercícios (R$ 37)</span>
-              </li>
-              <li className="flex items-start gap-2 text-[#B87500] font-bold">
-                <span className="shrink-0">🎁</span>
-                <span>Bônus 4: Jogos para Treinar com a Galera (R$ 27)</span>
-              </li>
-              <li className="flex items-start gap-2 text-[#B87500] font-bold">
-                <span className="shrink-0">🎁</span>
-                <span>Bônus 5: Tracker de Evolução Semanal Integrado (R$ 27)</span>
-              </li>
-              <li className="flex items-start gap-2 text-emerald-700 font-bold">
-                <span className="shrink-0">💬</span>
-                <span>Suporte direto no WhatsApp</span>
+                <span>+ 5 bônus inclusos (valem R$ 205)</span>
               </li>
               <li className="flex items-start gap-2 text-[#14110B] font-black">
                 <span className="shrink-0">⚡</span>
@@ -219,7 +170,7 @@ export const Pricing: React.FC<PricingProps> = ({ onOpenUpsell }) => {
             </ul>
           </div>
 
-          <div className="mt-8 pt-4 border-t border-slate-200">
+          <div className="mt-6 pt-4 border-t border-slate-200">
             {/* Botão de compra direto para LINK_CHECKOUT_24 */}
             <a
               href={checkout24Url}
