@@ -162,7 +162,7 @@ export const Pricing: React.FC<PricingProps> = ({ onOpenUpsell }) => {
               ))}
               <li className="flex items-start gap-2 text-[#B87500] font-black">
                 <span className="shrink-0">🎁</span>
-                <span>+ 5 bônus inclusos (valem R$ 205)</span>
+                <span>+ 5 bônus inclusos (valem R$ 225)</span>
               </li>
               <li className="flex items-start gap-2 text-[#14110B] font-black">
                 <span className="shrink-0">⚡</span>
@@ -180,9 +180,9 @@ export const Pricing: React.FC<PricingProps> = ({ onOpenUpsell }) => {
               QUERO OS +420 TREINOS
             </a>
 
-            {/* Abaixo do botão: Economia real de R$ 205 */}
+            {/* Abaixo do botão: Economia real de R$ 225 */}
             <div className="mt-2.5 text-center text-xs font-black text-emerald-800 bg-emerald-50 py-1 px-3 rounded-full border border-emerald-200">
-              Economia real de R$ 205
+              Economia real de R$ 225
             </div>
 
             <div className="mt-3 text-center text-xs text-slate-500 font-medium space-y-1">

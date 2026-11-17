@@ -12,8 +12,8 @@ const FAQ_DATA: FaqItem[] = [
     answer: 'Assim que o pagamento é confirmado, o acesso chega no seu e-mail e no seu WhatsApp. É só abrir no celular e começar.',
   },
   {
-    question: 'É de vôlei de praia mesmo ou é treino de quadra adaptado?',
-    answer: 'É de vôlei de praia. Os treinos de areia foram pensados para a praia: jogo em dupla, deslocamento na areia fofa, saque e recepção com vento e side-out do jogo de praia. Não é treino de quadra adaptado.',
+    question: 'Serve para vôlei de praia e também para vôlei de quadra?',
+    answer: 'Funciona para ambos! Tanto para quem joga vôlei de praia quanto para quem joga vôlei de quadra. Os treinos trabalham todos os fundamentos (saque, recepção, levantamento, ataque, bloqueio e defesa), controle de bola, impulsão e agilidade para você evoluir na areia e na quadra.',
   },
   {
     question: 'Sou iniciante, nunca treinei. Serve para mim?',

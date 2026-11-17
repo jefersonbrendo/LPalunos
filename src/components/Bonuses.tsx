@@ -20,6 +20,16 @@ interface BonusItem {
 const BONUSES: BonusItem[] = [
   {
     numberString: '01',
+    name: 'Desafio Impulsão 21 Dias',
+    shortName: 'Desafio Impulsão 21 Dias',
+    desc: 'Para você subir mais na bola e parar de atacar de baixo para cima. São 21 dias treinando perna explosiva e passada certa, e no fim você mede seu alcance na parede.',
+    originalPrice: 'R$ 47',
+    isNew: true,
+    icon: '🚀',
+    image: bonus04,
+  },
+  {
+    numberString: '02',
     name: 'Plano de Evolução em 15 Dias',
     shortName: 'Plano de 15 dias',
     desc: 'Um treino por dia, na sequência certa, do primeiro toque até jogar a partida.',
@@ -29,7 +39,7 @@ const BONUSES: BonusItem[] = [
     image: bonus01,
   },
   {
-    numberString: '02',
+    numberString: '03',
     name: 'Treinos Prontos para Seguir',
     shortName: 'Treinos prontos',
     desc: 'Abra o treino do dia e siga, do iniciante ao avançado, sem precisar montar nada.',
@@ -38,22 +48,13 @@ const BONUSES: BonusItem[] = [
     image: bonus02,
   },
   {
-    numberString: '03',
+    numberString: '04',
     name: 'Treino em Casa: 195 exercícios sem quadra',
     shortName: 'Treino em casa',
     desc: 'Bola na parede, impulsão, força e agilidade para treinar na semana em que não dá para ir à areia.',
     originalPrice: 'R$ 37',
     icon: '🏠',
     image: bonus03,
-  },
-  {
-    numberString: '04',
-    name: 'Jogos para Treinar com a Galera',
-    shortName: 'Jogos com a galera',
-    desc: 'Jogos em dupla e em grupo, com placar no app, para a resenha virar treino.',
-    originalPrice: 'R$ 27',
-    icon: '🏐',
-    image: bonus04,
   },
   {
     numberString: '05',
@@ -163,7 +164,7 @@ export const Bonuses: React.FC = () => {
               Valor total dos bônus
             </span>
             <span className="text-right">
-              <span className="block text-sm font-bold text-slate-400 line-through">R$ 205</span>
+              <span className="block text-sm font-bold text-slate-400 line-through">R$ 225</span>
               <span className="block text-2xl sm:text-3xl font-black text-emerald-600 leading-none">R$ 0,00</span>
             </span>
           </div>

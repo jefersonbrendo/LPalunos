@@ -1,12 +1,13 @@
 import React, { useRef, useState } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
-import depoimento1 from '../assets/images/depoimentos/depoimento-1.webp';
-import depoimento2 from '../assets/images/depoimentos/depoimento-2-novo.webp';
-import depoimento3 from '../assets/images/depoimentos/depoimento-3-novo.webp';
-import depoimento4 from '../assets/images/depoimentos/depoimento-4-novo.webp';
+import depoimento1 from '../assets/images/depoimentos/depoimento-app-1.webp';
+import depoimento2 from '../assets/images/depoimentos/depoimento-app-2.webp';
+import depoimento3 from '../assets/images/depoimentos/depoimento-app-3.webp';
+import depoimento4 from '../assets/images/depoimentos/depoimento-app-4.webp';
+import depoimento5 from '../assets/images/depoimentos/depoimento-app-5-v2.webp';
 
 /**
- * DEPOIMENTOS DE TREINADORES (prints reais de WhatsApp)
+ * DEPOIMENTOS (prints reais de quem treina com o app)
  *
  * Para adicionar um print: coloque o arquivo (webp) em src/assets/images/depoimentos/,
  * importe aqui em cima e inclua um novo item na lista DEPOIMENTOS
@@ -22,27 +23,33 @@ interface Depoimento {
 const DEPOIMENTOS: Depoimento[] = [
   {
     src: depoimento1,
-    alt: 'Conversa de WhatsApp em que um treinador agradece pelo material, diz que ficou mais fácil planejar os treinos e que já aplicou com a turma na areia',
+    alt: 'Conversa de WhatsApp em que um aluno agradece pelo conteúdo, conta que usa há quase 2 semanas os treinos de impulsão e elogia o bom direcionamento',
     w: 800,
-    h: 820,
+    h: 1074,
   },
   {
     src: depoimento2,
-    alt: 'Conversa de WhatsApp elogiando a organização do material e a facilidade de acessar direto na quadra de areia',
-    w: 800,
-    h: 1159,
+    alt: 'Conversa de WhatsApp em que um praticante conta que fechou a semana 3 dos treinos de impulsão em casa sem peso e sentiu que estava mais leve jogando na areia',
+    w: 719,
+    h: 1012,
   },
   {
     src: depoimento3,
-    alt: 'Conversa de WhatsApp em que um jogador amador parabeniza pela qualidade do material e conta que está ajudando demais nos treinos de fim de semana com os amigos na praia',
-    w: 800,
-    h: 1159,
+    alt: 'Conversa de WhatsApp em que um aluno diz que intercala os exercícios em casa com os treinos na areia e que o pessoal do racha já notou a evolução na defesa e no condicionamento',
+    w: 719,
+    h: 1000,
   },
   {
     src: depoimento4,
-    alt: 'Conversa de WhatsApp em que um praticante conta que já começou a usar o material nos treinos da pelada e recomenda para todo mundo do time',
+    alt: 'Conversa de WhatsApp em que um praticante conta que já está com 14 dias seguidos no tracker do app, treinando 15 minutos em casa nos dias sem quadra',
     w: 800,
-    h: 763,
+    h: 1036,
+  },
+  {
+    src: depoimento5,
+    alt: 'Conversa em que um aluno elogia as mais de 420 opções de exercícios do app e conta que o jogo subiu de nível treinando em casa na semana e na areia no fim de semana',
+    w: 800,
+    h: 1069,
   },
 ];
 
@@ -77,7 +84,7 @@ export const TrainerTestimonials: React.FC = () => {
         <figure
           onTouchStart={onTouchStart}
           onTouchEnd={onTouchEnd}
-          className="h-[540px] sm:h-[600px] flex items-center justify-center rounded-2xl overflow-hidden bg-white border border-[#E6DCC4] shadow-sm"
+          className="h-[540px] sm:h-[600px] flex items-center justify-center rounded-2xl overflow-hidden bg-[#14110B] border border-[#E6DCC4] shadow-sm"
         >
           <img
             key={index}
