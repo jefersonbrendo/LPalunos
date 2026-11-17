@@ -69,21 +69,25 @@ const BONUSES: BonusItem[] = [
 
 export const Bonuses: React.FC = () => {
   return (
-    <section className="relative py-14 sm:py-20 px-4 bg-[#0B2A44] overflow-hidden">
-      {/* Brilho de fundo */}
-      <div className="absolute -top-24 left-1/2 -translate-x-1/2 w-[620px] h-[320px] bg-[#FF9F1C]/20 blur-3xl rounded-full pointer-events-none" />
+    <section className="relative py-14 sm:py-20 px-4 bg-[#FFC60B] overflow-hidden">
+      {/* Listras de fundo: a seção muda de cor para quebrar o padrão da rolagem */}
+      <div
+        aria-hidden="true"
+        className="absolute inset-0 pointer-events-none"
+        style={{ background: 'repeating-linear-gradient(-45deg, transparent 0 22px, rgba(255,255,255,.14) 22px 44px)' }}
+      />
 
       <div className="relative max-w-2xl mx-auto text-center">
         {/* Selo */}
-        <div className="inline-flex items-center gap-1.5 px-4 py-1 rounded-full bg-[#FF9F1C] text-[#0B2A44] text-xs font-black uppercase tracking-wider mb-3 shadow-md">
+        <div className="inline-flex items-center gap-1.5 px-4 py-1 rounded-full bg-[#14110B] text-[#FFC60B] text-xs font-black uppercase tracking-wider mb-3 shadow-md">
           ⭐ BÔNUS EXCLUSIVOS
         </div>
 
         {/* Título */}
-        <h2 className="text-3xl sm:text-5xl font-black text-white tracking-tight uppercase leading-tight">
-          LEVE HOJE <span className="text-[#FFC145]">+ 5 BÔNUS</span> GRÁTIS
+        <h2 className="text-3xl sm:text-5xl font-black text-[#14110B] tracking-tight uppercase leading-tight">
+          LEVE HOJE <span className="bg-[#14110B] text-[#FFC60B] px-1.5 [box-decoration-break:clone] [-webkit-box-decoration-break:clone]">+ 5 BÔNUS</span> GRÁTIS
         </h2>
-        <p className="mt-3 text-sm sm:text-base text-slate-300 font-medium">
+        <p className="mt-3 text-sm sm:text-base text-[#3d3520] font-semibold">
           Tudo para saber o que treinar em cada dia, dentro e fora da areia, e ver a sua evolução.
         </p>
 
@@ -92,7 +96,7 @@ export const Bonuses: React.FC = () => {
           {BONUSES.map((bonus) => (
             <div
               key={bonus.numberString}
-              className="relative flex items-stretch gap-3 sm:gap-4 p-3 sm:p-4 rounded-2xl bg-white/[0.06] border border-white/10 hover:border-[#FFC145]/60 transition-colors"
+              className="relative flex items-stretch gap-3 sm:gap-4 p-3 sm:p-4 rounded-2xl bg-white border-2 border-[#14110B] shadow-[4px_4px_0_#14110B]"
             >
               {/* Bloco do número / capa */}
               {bonus.image ? (
@@ -124,17 +128,17 @@ export const Bonuses: React.FC = () => {
                     Novo
                   </span>
                 )}
-                <h3 className="text-[15px] sm:text-lg font-extrabold text-white leading-snug">
+                <h3 className="text-[15px] sm:text-lg font-extrabold text-[#14110B] leading-snug">
                   {bonus.name}
                 </h3>
-                <p className="mt-1 text-xs sm:text-sm text-slate-300 leading-relaxed">
+                <p className="mt-1 text-xs sm:text-sm text-[#4b4537] leading-relaxed">
                   {bonus.desc}
                 </p>
                 <div className="mt-2 flex items-center gap-2">
-                  <span className="text-xs sm:text-sm font-semibold text-slate-400 line-through">
+                  <span className="text-xs sm:text-sm font-semibold text-[#8a8170] line-through">
                     {bonus.originalPrice}
                   </span>
-                  <span className="text-[11px] sm:text-xs font-black uppercase tracking-wide bg-emerald-400 text-[#0B2A44] px-2 py-0.5 rounded-md">
+                  <span className="text-[11px] sm:text-xs font-black uppercase tracking-wide bg-[#E23D2E] text-white px-2 py-0.5 rounded-md">
                     Hoje grátis
                   </span>
                 </div>
@@ -144,7 +148,7 @@ export const Bonuses: React.FC = () => {
         </div>
 
         {/* Total em formato de "comprovante" */}
-        <div className="mt-8 rounded-2xl bg-white text-left shadow-xl overflow-hidden">
+        <div className="mt-8 rounded-2xl bg-white text-left border-2 border-[#14110B] shadow-[4px_4px_0_#14110B] overflow-hidden">
           <div className="px-5 pt-5 pb-3 space-y-1.5 text-sm">
             {BONUSES.map((bonus) => (
               <div key={bonus.numberString} className="flex justify-between gap-3 text-slate-600">
@@ -155,7 +159,7 @@ export const Bonuses: React.FC = () => {
           </div>
           <div className="mx-5 border-t-2 border-dashed border-slate-200" />
           <div className="px-5 py-4 flex items-center justify-between">
-            <span className="text-xs sm:text-sm font-black uppercase tracking-wider text-[#0E4B75]">
+            <span className="text-xs sm:text-sm font-black uppercase tracking-wider text-[#14110B]">
               Valor total dos bônus
             </span>
             <span className="text-right">
@@ -169,13 +173,13 @@ export const Bonuses: React.FC = () => {
         <div className="mt-6 space-y-2">
           <button
             onClick={scrollToPlanos}
-            className="w-full py-4 px-6 rounded-2xl bg-gradient-to-r from-[#FFC60B] via-[#FFD43B] to-[#FFC60B] text-[#14110B] font-extrabold text-sm sm:text-base tracking-wide shadow-xl hover:brightness-105 active:scale-[0.98] transition-all animate-pulse-cta cursor-pointer uppercase border-b-4 border-[#C99A00]"
+            className="w-full py-4 px-6 rounded-2xl bg-[#14110B] text-[#FFC60B] font-extrabold text-sm sm:text-base tracking-wide shadow-xl hover:brightness-105 active:scale-[0.98] transition-all animate-pulse-cta cursor-pointer uppercase border-b-4 border-black"
           >
             QUERO OS 5 BÔNUS JUNTO
           </button>
-          <div className="text-xs sm:text-sm font-bold text-slate-300 flex items-center justify-center gap-4 pt-1">
+          <div className="text-xs sm:text-sm font-bold text-[#3d3520] flex items-center justify-center gap-4 pt-1">
             <span>⚡ Acesso imediato</span>
-            <span className="text-slate-500">|</span>
+            <span className="text-[#8a8170]">|</span>
             <span>♾️ Vitalício</span>
           </div>
         </div>
