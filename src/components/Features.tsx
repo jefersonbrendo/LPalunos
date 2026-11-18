@@ -27,12 +27,12 @@ const BENEFICIOS: BeneficioItem[] = [
     icon: Repeat,
     image: imgRepetir,
     beneficio: 'Você para de repetir o mesmo treino toda semana',
-    prova: '+420 treinos: 240 na areia, em 15 categorias, e 195 em casa.',
+    prova: '+420 treinos: 240 na areia, 120 na quadra e 195 em casa.',
   },
   {
     icon: Eye,
     image: imgEntender,
-    beneficio: 'Você entende o exercício antes de entrar na areia',
+    beneficio: 'Você entende o exercício antes de entrar na quadra ou na areia',
     prova: 'O diagrama animado mostra onde cada um fica e para onde vai a bola.',
   },
   {
