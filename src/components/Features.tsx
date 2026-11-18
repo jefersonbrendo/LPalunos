@@ -67,7 +67,7 @@ export const Features: React.FC = () => {
       <div className="text-center">
         {/* Title */}
         <h2 className="text-3xl sm:text-4xl font-black text-[#14110B] tracking-tight uppercase text-balance">
-          O QUE MUDA NO SEU <span className="destaque">VÔLEI DE PRAIA</span>
+          O QUE MUDA NO SEU <span className="destaque">VÔLEI</span>
         </h2>
         {/* Subtitle */}
         <p className="mt-2.5 text-sm sm:text-base text-slate-700 max-w-xl mx-auto leading-relaxed font-medium">

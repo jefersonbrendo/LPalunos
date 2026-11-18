@@ -41,7 +41,7 @@ const FAQ_DATA: FaqItem[] = [
   },
   {
     question: 'Sou baixinho. Vale a pena?',
-    answer: 'Vale. No vôlei de praia, recepção, defesa e leitura de jogo pesam muito, e o app tem treinos de cada um desses fundamentos, do iniciante ao avançado.',
+    answer: 'Vale. No vôlei de quadra e de praia, recepção, defesa e leitura de jogo pesam muito, e o app tem treinos de cada um desses fundamentos, do iniciante ao avançado.',
   },
   {
     question: 'Tenho vergonha de quinar a bola na frente da galera. Isso me ajuda?',
@@ -49,7 +49,7 @@ const FAQ_DATA: FaqItem[] = [
   },
   {
     question: 'Funciona em qualquer celular?',
-    answer: 'Sim, funciona em Android e iPhone. E depois de aberto uma vez, funciona até sem internet na areia.',
+    answer: 'Sim, funciona em Android e iPhone. E depois de aberto uma vez, funciona até sem internet na quadra ou na areia.',
   },
   {
     question: 'É pagamento único?',

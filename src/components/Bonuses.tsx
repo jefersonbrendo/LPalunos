@@ -89,7 +89,7 @@ export const Bonuses: React.FC = () => {
           LEVE HOJE <span className="bg-[#14110B] text-[#FFC60B] px-1.5 [box-decoration-break:clone] [-webkit-box-decoration-break:clone]">+ 5 BÔNUS</span> GRÁTIS
         </h2>
         <p className="mt-3 text-sm sm:text-base text-[#3d3520] font-semibold">
-          Tudo para saber o que treinar em cada dia, dentro e fora da areia, e ver a sua evolução.
+          Tudo para saber o que treinar em cada dia, dentro e fora da quadra, e ver a sua evolução.
         </p>
 
         {/* Lista de bônus */}

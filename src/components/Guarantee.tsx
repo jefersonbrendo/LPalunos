@@ -20,10 +20,10 @@ export const Guarantee: React.FC = () => {
           {/* Texto principal */}
           <div className="flex-1 space-y-3">
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black text-[#14110B] font-heading uppercase">
-              TESTE NA AREIA POR <span className="destaque">7 DIAS</span>
+              <span className="destaque">TESTE POR 7 DIAS</span>
             </h2>
             <p className="text-sm sm:text-base text-slate-700 leading-relaxed font-medium">
-              Use os treinos por 7 dias, na areia ou em casa. Se não for para você, devolvemos 100% do valor. Sem burocracia e sem perguntas.
+              Use os treinos por 7 dias, na quadra, na areia ou em casa. Se não for para você, devolvemos 100% do valor. Sem burocracia e sem perguntas.
             </p>
           </div>
         </div>
