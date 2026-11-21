@@ -30,8 +30,8 @@ const BONUSES: BonusItem[] = [
   },
   {
     numberString: '02',
-    name: 'Plano de Evolução em 15 Dias',
-    shortName: 'Plano de 15 dias',
+    name: 'Plano de Evolução em 21 Dias',
+    shortName: 'Plano de 21 dias',
     desc: 'Um treino por dia, na sequência certa, do primeiro toque até jogar a partida.',
     originalPrice: 'R$ 67',
     isNew: true,
