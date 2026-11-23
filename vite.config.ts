@@ -8,10 +8,11 @@ export default defineConfig(() => {
     plugins: [react(), tailwindcss()],
     build: {
       rollupOptions: {
-        // Duas páginas: a landing (index.html) e a roleta do back redirect (roleta.html -> /roleta)
+        // Páginas: a landing (index.html), a roleta do back redirect (/roleta) e a página de impulsão (/impulsao)
         input: {
           main: path.resolve(__dirname, 'index.html'),
           roleta: path.resolve(__dirname, 'roleta.html'),
+          impulsao: path.resolve(__dirname, 'impulsao.html'),
         },
       },
     },

@@ -13,8 +13,11 @@ import { Faq } from './components/Faq';
 import { Closing } from './components/Closing';
 import { Footer } from './components/Footer';
 import { UpsellModal } from './components/UpsellModal';
+import { HeroImpulsao } from './components/HeroImpulsao';
+import { ImpulsaoConteudo } from './components/ImpulsaoConteudo';
 
-export default function App() {
+/** variante 'impulsao' = página /impulsao, para quem chega pelos criativos de impulsão. */
+export default function App({ variante }: { variante?: 'impulsao' } = {}) {
   const [isUpsellModalOpen, setIsUpsellModalOpen] = useState(false);
 
   return (
@@ -26,7 +29,14 @@ export default function App() {
       <div className="h-9 sm:h-10" />
 
       {/* 2. TOPO (HERO) */}
-      <Hero />
+      {variante === 'impulsao' ? (
+        <>
+          <HeroImpulsao />
+          <ImpulsaoConteudo />
+        </>
+      ) : (
+        <Hero />
+      )}
 
       {/* 3. PRÉVIA DO APP */}
       <AppPreviewCarousel />
