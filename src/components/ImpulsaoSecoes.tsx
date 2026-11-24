@@ -1,6 +1,7 @@
 import React from 'react';
 import { DEPOIMENTOS, type Depoimento } from './TrainerTestimonials';
 import { FaixaDepoimentos } from './FaixaDepoimentos';
+import printRacha from '../assets/images/impulsao/depo-racha-bloqueio.webp';
 import { scrollToPlanos } from '../utils/utm';
 
 /**
@@ -17,6 +18,13 @@ const PROVA_TOPO: Depoimento[] = [
     w: 640,
     h: 1138,
     foto: true,
+  },
+  {
+    src: printRacha,
+    alt: 'Print de WhatsApp: no racha, o time adversário perguntou o que ele estava tomando; o salto no bloqueio e no saque viagem mudou, treinando em casa, sem academia',
+    legenda: 'Salto no bloqueio mudou da água pro vinho, treinando em casa',
+    w: 640,
+    h: 741,
   },
   {
     src: '/assets/aistudio/345e0c5a-cb66-4e6d-b198-060ee0f66bed_0ed160f6.jpg',
