@@ -49,7 +49,7 @@ export const ProvaImpulsao: React.FC = () => (
 /* ---------- 2. DORES DE QUADRA ---------- */
 const DORES = [
   { emoji: '🧱', titulo: 'Toma block toda vez que sobe para atacar', texto: 'Ou já sobe sabendo que a bola vai bater na rede.' },
-  { emoji: '🫠', titulo: 'Tem que passar porque não alcança para bater', texto: 'Enquanto o cara do outro lado sobe e crava a bola no meio da quadra.' },
+  { emoji: '🫠', titulo: 'Perde o tempo da bola e tem que passar de qualquer jeito', texto: 'Enquanto o cara do outro lado sobe e crava a bola no meio da quadra.' },
   { emoji: '🎯', titulo: 'O time adversário já sabe onde mandar a bola', texto: 'No bloqueio você não chega, então eles atacam sempre do seu lado.' },
   { emoji: '🥵', titulo: 'No terceiro set, você nem sai do chão', texto: 'A perna pesa, a impulsão some, e a galera percebe.' },
 ];
