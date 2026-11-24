@@ -53,7 +53,8 @@ export const ImpulsaoConteudo: React.FC = () => {
       <section className="py-12 sm:py-16 px-4 bg-[#14110B] text-white">
         <div className="max-w-3xl mx-auto">
           <div className="text-center">
-            <h2 className="text-3xl sm:text-4xl font-black uppercase tracking-tight leading-tight">
+            <span className="block text-xs font-black uppercase tracking-wider text-[#FFC60B]">Como você recebe no app</span>
+            <h2 className="mt-1 text-3xl sm:text-4xl font-black uppercase tracking-tight leading-tight">
               Tudo de impulsão <span className="text-[#FFC60B]">num lugar só</span>
             </h2>
             <p className="mt-3 text-sm sm:text-base text-[#CFC6B2] max-w-xl mx-auto leading-relaxed font-medium">

@@ -28,7 +28,7 @@ export const Footer: React.FC = () => {
 
         {/* Aviso Legal */}
         <p className="text-[11px] text-slate-500 max-w-lg mx-auto pt-1 leading-normal font-medium">
-          Aviso: os resultados dependem da aplicação de cada profissional.
+          Aviso: os resultados dependem da dedicação e da prática de cada um.
         </p>
       </div>
     </footer>

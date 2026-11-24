@@ -1,18 +1,25 @@
 import React from 'react';
 import { scrollToPlanos } from '../utils/utm';
 
-export const Closing: React.FC = () => {
+export const Closing: React.FC<{ variante?: 'impulsao' }> = ({ variante }) => {
+  const impulsao = variante === 'impulsao';
   return (
     <section className="py-14 sm:py-20 px-4 bg-[#EDE5D2]/60 text-center border-t border-[#E6DCC4]">
       <div className="max-w-3xl mx-auto space-y-4">
         {/* Título */}
         <h2 className="text-3xl sm:text-5xl font-black text-[#14110B] tracking-tight uppercase font-heading text-balance">
-          SEU PRÓXIMO TREINO <span className="destaque">JÁ PODE ESTAR PRONTO</span>
+          {impulsao ? (
+            <>SEU PRÓXIMO SALTO <span className="destaque">COMEÇA HOJE</span></>
+          ) : (
+            <>SEU PRÓXIMO TREINO <span className="destaque">JÁ PODE ESTAR PRONTO</span></>
+          )}
         </h2>
 
         {/* Texto */}
         <p className="text-base sm:text-xl text-slate-700 font-semibold">
-          +420 treinos de vôlei de praia no seu celular, para treinar na areia e em casa.
+          {impulsao
+            ? '29 exercícios de salto, o treino pronto de impulsão e o Desafio 21 Dias, junto com +420 treinos de vôlei no seu celular.'
+            : '+420 treinos de vôlei no seu celular, para treinar na areia, na quadra e em casa.'}
         </p>
 
         {/* Botão */}
@@ -21,7 +28,7 @@ export const Closing: React.FC = () => {
             onClick={scrollToPlanos}
             className="w-full py-4 sm:py-5 px-6 rounded-2xl bg-gradient-to-r from-[#FFC60B] via-[#FFD43B] to-[#FFC60B] text-[#14110B] font-extrabold text-base sm:text-lg tracking-wide shadow-2xl hover:brightness-105 active:scale-[0.98] transition-all animate-pulse-cta cursor-pointer uppercase border-b-4 border-[#C99A00]"
           >
-            QUERO MEUS TREINOS AGORA
+            {impulsao ? 'QUERO TREINAR MINHA IMPULSÃO' : 'QUERO MEUS TREINOS AGORA'}
           </button>
         </div>
 
