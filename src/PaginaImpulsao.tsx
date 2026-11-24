@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { UpsellModal } from './components/UpsellModal';
 import { TopBanner } from './components/TopBanner';
 import { HeroImpulsao } from './components/HeroImpulsao';
 import { ProvaImpulsao, DoresImpulsao, JornadaImpulsao } from './components/ImpulsaoSecoes';
@@ -13,10 +14,12 @@ import { Footer } from './components/Footer';
 /**
  * Página /impulsao: landing própria para os criativos de impulsão.
  * Ordem modelada nas páginas de impulsão validadas (Salte Mais, Programa Jump, Plano Futevôlei):
- * topo → prova → dores → caminho → como recebe → para quem é → bônus → garantia → oferta única
+ * topo → prova → dores → caminho → como recebe → para quem é → bônus → garantia → planos (básico e completo)
  * → mais prova com botão → FAQ de impulsão → fechamento.
  */
 export default function PaginaImpulsao() {
+  const [upsellAberto, setUpsellAberto] = useState(false);
+
   return (
     <div className="min-h-screen bg-[#F6F0E1] text-[#14110B] flex flex-col font-sans selection:bg-[#FFC60B] selection:text-[#14110B]">
       <TopBanner />
@@ -30,11 +33,14 @@ export default function PaginaImpulsao() {
       <ParaQuemImpulsao />
       <BonusImpulsao />
       <Guarantee />
-      <OfertaImpulsao />
+      <OfertaImpulsao onOpenUpsell={() => setUpsellAberto(true)} />
       <TrainerTestimonials comCta titulo={<>MAIS GENTE <span className="destaque">TREINANDO COM O APP</span></>} />
       <Faq itens={FAQ_IMPULSAO} />
       <Closing variante="impulsao" />
       <Footer />
+
+      {/* Pop-up do básico: oferece o completo por R$ 17 antes do checkout de R$ 10 */}
+      <UpsellModal impulsao isOpen={upsellAberto} onClose={() => setUpsellAberto(false)} />
     </div>
   );
 }

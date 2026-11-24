@@ -133,64 +133,138 @@ export const BonusImpulsao: React.FC = () => (
   </section>
 );
 
-/* ---------- OFERTA ÚNICA ---------- */
+/* ---------- PLANOS: BÁSICO (PDF) E COMPLETO ---------- */
 const NO_ACESSO = [
   'Exercícios de salto com a animação de cada movimento',
   'Treino pronto de impulsão para ataque e bloqueio',
   'Do iniciante ao avançado, em casa e sem academia',
 ];
 
-export const OfertaImpulsao: React.FC = () => {
+const BASICO_TEM = [
+  '+100 exercícios em PDF: manchete, toque e saque',
+  'Exercícios separados por fundamento',
+  'Acesso vitalício + garantia de 7 dias',
+];
+
+const BASICO_NAO_TEM = [
+  'Exercícios de salto e treinos de impulsão',
+  'Desafio Impulsão 21 Dias',
+  'App no celular com a animação do movimento',
+  'Bônus exclusivos',
+];
+
+export const OfertaImpulsao: React.FC<{ onOpenUpsell: () => void }> = ({ onOpenUpsell }) => {
   const checkout = buildUrlWithParams(LINKS.CHECKOUT_24);
 
   return (
-    <section id="planos" className="py-14 sm:py-20 px-4 max-w-xl mx-auto scroll-mt-12">
+    <section id="planos" className="py-14 sm:py-20 px-4 max-w-5xl mx-auto scroll-mt-12">
       <h2 className="text-center text-3xl sm:text-5xl font-black text-[#14110B] tracking-tight uppercase text-balance">
-        Comece <span className="destaque">hoje</span>
+        Escolha <span className="destaque">seu acesso</span>
       </h2>
       <p className="mt-2 text-center text-sm sm:text-base text-slate-600 font-medium">Pagamento único • Acesso imediato</p>
 
-      <div className="mt-8 rounded-3xl bg-white border-2 border-[#FFC60B] p-6 sm:p-8 shadow-xl">
-        <ul className="space-y-2.5 text-sm sm:text-base">
-          {NO_ACESSO.map((t) => (
-            <li key={t} className="flex items-start gap-2 font-bold text-slate-950">
-              <span className="shrink-0">✅</span>
-              <span>{t}</span>
-            </li>
-          ))}
-          {BONUS.map((b) => (
-            <li key={b.nome} className="flex items-start gap-2 font-bold text-[#B87500]">
-              <span className="shrink-0">🎁</span>
-              <span>
-                {b.nome} <span className="text-slate-400 line-through font-medium">(R$ {b.valor})</span>
+      <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-6 items-stretch max-w-4xl mx-auto">
+        {/* ===== BÁSICO ===== */}
+        <div className="order-2 md:order-1 rounded-3xl bg-white border border-[#E6DCC4] p-6 sm:p-8 flex flex-col justify-between shadow-sm">
+          <div>
+            <span className="inline-block mb-2 text-xs font-black uppercase tracking-wide px-3 py-1 rounded-full bg-slate-100 text-slate-600 border border-slate-200">
+              📄 VERSÃO PDF
+            </span>
+            <h3 className="text-2xl font-black text-[#14110B] mt-1">BÁSICO</h3>
+            <div className="mt-4 pb-4 border-b border-slate-200">
+              <span className="text-xs text-slate-400 line-through block font-medium">De R$ 47</span>
+              <div className="flex items-baseline gap-1 mt-0.5">
+                <span className="text-xs font-bold text-slate-600">por</span>
+                <span className="text-3xl sm:text-4xl font-black text-[#14110B]">R$ 10</span>
+                <span className="text-[11px] text-slate-500 font-medium">à vista</span>
+              </div>
+            </div>
+            <ul className="mt-6 space-y-2.5 text-xs sm:text-sm text-left">
+              {BASICO_TEM.map((t) => (
+                <li key={t} className="flex items-start gap-2 text-slate-800 font-medium">
+                  <span className="shrink-0">✅</span>
+                  <span>{t}</span>
+                </li>
+              ))}
+              {BASICO_NAO_TEM.map((t) => (
+                <li key={t} className="flex items-start gap-2 text-slate-400 line-through">
+                  <span className="shrink-0">❌</span>
+                  <span>{t}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div className="mt-8 pt-4 border-t border-slate-200">
+            <button
+              onClick={onOpenUpsell}
+              className="w-full py-4 px-6 rounded-2xl bg-[#14110B] hover:bg-[#2A251A] text-white font-bold text-sm sm:text-base tracking-wide transition-all active:scale-[0.98] cursor-pointer shadow-md"
+            >
+              COMEÇAR COM O BÁSICO
+            </button>
+            <div className="mt-3 text-center">
+              <span className="text-xs font-bold text-[#B87500] bg-[#FEF3C7] px-3 py-1 rounded-full border border-[#FDE68A] inline-block">
+                +R$ 14 e leve os treinos de impulsão + bônus
               </span>
-            </li>
-          ))}
-          <li className="flex items-start gap-2 font-black text-[#14110B]">
-            <span className="shrink-0">⚡</span>
-            <span>Acesso vitalício + garantia de 7 dias</span>
-          </li>
-        </ul>
-
-        <div className="mt-6 pt-5 border-t border-slate-200 text-center">
-          <p className="text-sm text-slate-500 font-medium">
-            Só os bônus valem <span className="line-through">R$ {TOTAL_BONUS}</span>
-          </p>
-          <p className="mt-1 text-xs font-bold text-[#14110B]">hoje, tudo por apenas</p>
-          <p className="text-5xl sm:text-6xl font-black text-[#E23D2E] leading-none mt-1">R$ 24</p>
-          <p className="mt-1 text-xs text-slate-600 font-medium">à vista, pagamento único</p>
+            </div>
+          </div>
         </div>
 
-        <a
-          href={checkout}
-          className="mt-6 block w-full text-center py-4 sm:py-5 px-6 rounded-2xl bg-gradient-to-r from-[#FFC60B] via-[#FFD43B] to-[#FFC60B] text-[#14110B] font-extrabold text-base sm:text-lg tracking-wide shadow-xl hover:brightness-105 active:scale-[0.98] transition-all animate-pulse-cta uppercase border-b-4 border-[#C99A00]"
-        >
-          QUERO TREINAR MINHA IMPULSÃO
-        </a>
-
-        <div className="mt-3 text-center text-xs text-slate-500 font-medium space-y-1">
-          <p>🔒 Compra segura • 🛡️ Privacidade</p>
-          <p>Acesso enviado por e-mail e WhatsApp após a compra</p>
+        {/* ===== COMPLETO ===== */}
+        <div className="order-1 md:order-2 relative rounded-3xl bg-white border-3 border-[#FFC60B] p-6 sm:p-8 flex flex-col justify-between shadow-[0_10px_35px_rgba(255,198,11,0.22)] md:-translate-y-2">
+          <div className="absolute -top-3.5 left-1/2 -translate-x-1/2">
+            <span className="bg-gradient-to-r from-[#FFC60B] via-[#F5A300] to-[#FFC60B] text-slate-950 text-xs sm:text-sm font-black uppercase px-4 py-1 rounded-full shadow-md whitespace-nowrap">
+              ⭐ MAIS ESCOLHIDO
+            </span>
+          </div>
+          <div>
+            <span className="inline-block mt-2 text-xs font-black uppercase tracking-wide px-3 py-1 rounded-full bg-[#FFF3C4] text-[#14110B] border border-[#FFC60B]">
+              📲 VERSÃO APP
+            </span>
+            <h3 className="text-2xl sm:text-3xl font-black text-[#14110B] mt-1">IMPULSÃO COMPLETO</h3>
+            <div className="mt-4 pb-4 border-b border-amber-200">
+              <span className="text-xs text-slate-400 line-through block font-medium">De R$ 97</span>
+              <div className="flex items-baseline gap-1 mt-0.5">
+                <span className="text-xs font-bold text-[#14110B]">por apenas</span>
+                <span className="text-4xl sm:text-5xl font-black text-[#E23D2E]">R$ 24</span>
+                <span className="text-xs text-slate-600 font-medium">à vista</span>
+              </div>
+            </div>
+            <ul className="mt-5 space-y-2.5 text-sm sm:text-base text-left">
+              {NO_ACESSO.map((t) => (
+                <li key={t} className="flex items-start gap-2 font-bold text-slate-950">
+                  <span className="shrink-0">✅</span>
+                  <span>{t}</span>
+                </li>
+              ))}
+              {BONUS.map((b) => (
+                <li key={b.nome} className="flex items-start gap-2 font-bold text-[#B87500]">
+                  <span className="shrink-0">🎁</span>
+                  <span>
+                    {b.nome} <span className="text-slate-400 line-through font-medium">(R$ {b.valor})</span>
+                  </span>
+                </li>
+              ))}
+              <li className="flex items-start gap-2 font-black text-[#14110B]">
+                <span className="shrink-0">⚡</span>
+                <span>Acesso vitalício + garantia de 7 dias</span>
+              </li>
+            </ul>
+          </div>
+          <div className="mt-6 pt-4 border-t border-slate-200">
+            <a
+              href={checkout}
+              className="block w-full text-center py-4 sm:py-5 px-6 rounded-2xl bg-gradient-to-r from-[#FFC60B] via-[#FFD43B] to-[#FFC60B] text-[#14110B] font-extrabold text-base sm:text-lg tracking-wide shadow-xl hover:brightness-105 active:scale-[0.98] transition-all animate-pulse-cta uppercase border-b-4 border-[#C99A00]"
+            >
+              QUERO TREINAR MINHA IMPULSÃO
+            </a>
+            <div className="mt-2.5 text-center text-xs font-black text-emerald-800 bg-emerald-50 py-1 px-3 rounded-full border border-emerald-200">
+              Bônus de R$ {TOTAL_BONUS} inclusos
+            </div>
+            <div className="mt-3 text-center text-xs text-slate-500 font-medium space-y-1">
+              <p>🔒 Compra segura • 🛡️ Privacidade</p>
+              <p>Acesso enviado por e-mail e WhatsApp após a compra</p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
