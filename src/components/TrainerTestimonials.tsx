@@ -19,6 +19,8 @@ export interface Depoimento {
   alt: string;
   /** Resultado ou cena do print, em uma linha, mostrado embaixo dele. */
   legenda: string;
+  /** Foto (não print): preenche o card em vez de ficar centralizada no fundo preto. */
+  foto?: boolean;
   w: number;
   h: number;
 }
@@ -66,13 +68,20 @@ interface Props {
   titulo?: React.ReactNode;
   /** Mostra um botão para os planos embaixo do carrossel. */
   comCta?: boolean;
+  /** Lista própria de depoimentos (ex.: provas de impulsão no topo da /impulsao). */
+  itens?: Depoimento[];
+  /** Etiqueta pequena acima do título (ex.: "Resultados"). */
+  rotulo?: string;
+  /** id da seção, quando a página usa mais de um carrossel. */
+  id?: string;
 }
 
-export const TrainerTestimonials: React.FC<Props> = ({ titulo, comCta }) => {
+export const TrainerTestimonials: React.FC<Props> = ({ titulo, comCta, itens, rotulo, id }) => {
+  const lista = itens ?? DEPOIMENTOS;
   // Depois dos planos começa no 3º print: os 2 primeiros já aparecem no topo da /impulsao
-  const [index, setIndex] = useState(comCta ? 2 : 0);
+  const [index, setIndex] = useState(comCta && !itens ? 2 : 0);
   const touchStartX = useRef<number | null>(null);
-  const total = DEPOIMENTOS.length;
+  const total = lista.length;
 
   const go = (dir: number) => setIndex((i) => (i + dir + total) % total);
 
@@ -86,12 +95,15 @@ export const TrainerTestimonials: React.FC<Props> = ({ titulo, comCta }) => {
     if (Math.abs(dx) > 40) go(dx < 0 ? 1 : -1);
   };
 
-  const item = DEPOIMENTOS[index];
-  const next = DEPOIMENTOS[(index + 1) % total];
+  const item = lista[index];
+  const next = lista[(index + 1) % total];
 
   return (
-    <section id={comCta ? 'mais-depoimentos' : 'treinadores'} className="py-12 sm:py-16 px-4 max-w-4xl mx-auto">
-      <h2 className="text-center text-3xl sm:text-4xl font-black text-[#14110B] tracking-tight uppercase text-balance">
+    <section id={id ?? (comCta ? 'mais-depoimentos' : 'treinadores')} className="py-12 sm:py-16 px-4 max-w-4xl mx-auto">
+      {rotulo && (
+        <span className="block text-center text-xs font-black uppercase tracking-wider text-[#E23D2E]">{rotulo}</span>
+      )}
+      <h2 className={`${rotulo ? 'mt-1 ' : ''}="text-center text-3xl sm:text-4xl font-black text-[#14110B] tracking-tight uppercase text-balance`}>
         {titulo ?? (
           <>
             QUEM JÁ ESTÁ <span className="destaque">TREINANDO COM O APP</span>
@@ -114,7 +126,7 @@ export const TrainerTestimonials: React.FC<Props> = ({ titulo, comCta }) => {
             alt={item.alt}
             loading="lazy"
             decoding="async"
-            className="block w-full h-full object-contain"
+            className={`block w-full h-full ${item.foto ? 'object-cover' : 'object-contain'}`}
           />
         </figure>
         <p className="mt-3 text-center text-sm sm:text-base font-black text-[#14110B]">
@@ -132,7 +144,7 @@ export const TrainerTestimonials: React.FC<Props> = ({ titulo, comCta }) => {
             <ChevronLeft className="w-5 h-5" />
           </button>
           <div className="flex items-center gap-2" aria-hidden="true">
-            {DEPOIMENTOS.map((_, i) => (
+            {lista.map((_, i) => (
               <span
                 key={i}
                 className={`h-2 rounded-full transition-all ${i === index ? 'w-5 bg-[#E23D2E]' : 'w-2 bg-[#E6DCC4]'}`}
