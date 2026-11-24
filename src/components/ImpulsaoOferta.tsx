@@ -18,6 +18,7 @@ const PERFIS = [
   { emoji: '🏖️', titulo: 'Joga na areia', texto: 'onde o pé afunda e sair do chão custa mais.' },
   { emoji: '🏟️', titulo: 'Joga na quadra', texto: 'e quer chegar mais alto no ataque e no bloqueio.' },
   { emoji: '🏠', titulo: 'Não tem academia', texto: 'e quer treinar em casa, só com o corpo e uma parede.' },
+  { emoji: '🏋️', titulo: 'Treina na academia', texto: 'e quer um treino de academia feito para pular mais.' },
   { emoji: '📏', titulo: 'É baixinho', texto: 'e quer compensar a altura com o salto.' },
 ];
 
@@ -138,6 +139,7 @@ const NO_ACESSO = [
   'Exercícios de salto com a animação de cada movimento',
   'Treino pronto de impulsão para ataque e bloqueio',
   'Do iniciante ao avançado, em casa e sem academia',
+  'Também tem treinos de academia para a impulsão',
 ];
 
 const BASICO_TEM = [
@@ -282,7 +284,7 @@ export const FAQ_IMPULSAO: FaqItem[] = [
   },
   {
     question: 'Preciso de academia ou de peso?',
-    answer: 'Não. Os exercícios de salto usam o peso do corpo, e o treino pronto de impulsão para ataque e bloqueio dá para fazer em casa, só com uma parede.',
+    answer: 'Não precisa. Os exercícios de salto usam o peso do corpo, e o treino pronto de impulsão para ataque e bloqueio dá para fazer em casa, só com uma parede. E se você treina na academia, o app também tem treinos de academia para a sua impulsão.',
   },
   {
     question: 'Quanto tempo leva cada treino?',
