@@ -24,7 +24,7 @@ export const HeroImpulsao: React.FC = () => {
       </h1>
 
       <p className="mt-4 sm:mt-6 text-base sm:text-lg text-slate-700 max-w-2xl mx-auto leading-relaxed font-medium">
-        Exercícios de salto com a animação de cada movimento e treino pronto para ataque e bloqueio, tudo no app.
+        Exercícios de salto com vídeo de cada movimento e treino pronto para ataque e bloqueio, tudo no app.
       </p>
 
       <div className="my-8 sm:my-10 mx-auto max-w-md">
