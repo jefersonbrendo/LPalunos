@@ -4,13 +4,27 @@ import { HeroImpulsao } from './components/HeroImpulsao';
 import { ImpulsaoConteudo } from './components/ImpulsaoConteudo';
 import { ProvaImpulsao, DoresImpulsao, JornadaImpulsao } from './components/ImpulsaoSecoes';
 import { ParaQuemImpulsao, BonusImpulsao, OfertaImpulsao, FAQ_IMPULSAO } from './components/ImpulsaoOferta';
-import { DEPOIMENTOS } from './components/TrainerTestimonials';
+import { DEPOIMENTOS, type Depoimento } from './components/TrainerTestimonials';
 import { FaixaDepoimentos } from './components/FaixaDepoimentos';
+import fotoLorenzo from './assets/images/impulsao/depo-lorenzo.webp';
 import { Guarantee } from './components/Guarantee';
 import { Faq } from './components/Faq';
 import { Closing } from './components/Closing';
 import { Footer } from './components/Footer';
 import { UpsellModal } from './components/UpsellModal';
+
+// Segunda faixa de depoimentos: foto do Lorenzo + os prints que não aparecem no topo
+const MAIS_DEPOIMENTOS: Depoimento[] = [
+  {
+    src: fotoLorenzo,
+    alt: 'Lorenzo atacando por cima do bloqueio numa quadra de vôlei',
+    legenda: 'Lorenzo, 1,70 de altura, começou há 1 mês',
+    w: 640,
+    h: 961,
+    foto: true,
+  },
+  ...DEPOIMENTOS.slice(2),
+];
 
 export default function PaginaImpulsao() {
   const [isUpsellModalOpen, setIsUpsellModalOpen] = useState(false);
@@ -51,7 +65,7 @@ export default function PaginaImpulsao() {
       <FaixaDepoimentos
         id="mais-depoimentos"
         comCta
-        itens={DEPOIMENTOS.slice(2)}
+        itens={MAIS_DEPOIMENTOS}
         titulo={<>MAIS GENTE <span className="destaque">TREINANDO COM O APP</span></>}
       />
 
