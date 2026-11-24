@@ -11,13 +11,43 @@ import { scrollToPlanos } from '../utils/utm';
 const PROVA_TOPO = DEPOIMENTOS.slice(0, 2);
 
 export const ProvaImpulsao: React.FC = () => (
-  <section className="py-12 sm:py-16 px-4 max-w-4xl mx-auto">
+  <section className="py-12 sm:py-16 px-4 max-w-6xl mx-auto">
     <span className="block text-center text-xs font-black uppercase tracking-wider text-[#E23D2E]">Resultados</span>
     <h2 className="mt-1 text-center text-3xl sm:text-4xl font-black text-[#14110B] tracking-tight uppercase text-balance">
       Quem já está <span className="destaque">treinando impulsão</span>
     </h2>
 
-    <div className="mt-8 grid grid-cols-2 gap-3 sm:gap-6 max-w-2xl mx-auto">
+    <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 max-w-5xl mx-auto">
+      <figure className="flex flex-col">
+        <div className="rounded-2xl overflow-hidden bg-[#14110B] border border-[#E6DCC4] shadow-md">
+          <img
+            src="/assets/aistudio/560304279_18390628129131754_7658984777542539434_n_2245e9dc.jpg"
+            alt="Vitoria Ferreira jogando vôlei"
+            loading="lazy"
+            decoding="async"
+            className="block w-full h-auto object-cover max-h-[520px]"
+          />
+        </div>
+        <figcaption className="mt-2 text-center text-xs sm:text-sm font-black text-[#14110B] leading-snug">
+          <span className="bg-[#FFC60B] px-2 py-1 rounded-md box-decoration-clone">Vitoria Ferreira, 1,64 de altura, começou há 2 meses</span>
+        </figcaption>
+      </figure>
+
+      <figure className="flex flex-col">
+        <div className="rounded-2xl overflow-hidden bg-[#14110B] border border-[#E6DCC4] shadow-md">
+          <img
+            src="/assets/aistudio/345e0c5a-cb66-4e6d-b198-060ee0f66bed_0ed160f6.jpg"
+            alt="Arthur Lima jogando vôlei de praia"
+            loading="lazy"
+            decoding="async"
+            className="block w-full h-auto object-cover max-h-[520px]"
+          />
+        </div>
+        <figcaption className="mt-2 text-center text-xs sm:text-sm font-black text-[#14110B] leading-snug">
+          <span className="bg-[#FFC60B] px-2 py-1 rounded-md box-decoration-clone">Arthur Lima, 1,78 de altura, começou há 1 mês</span>
+        </figcaption>
+      </figure>
+
       {PROVA_TOPO.map((d) => (
         <figure key={d.src} className="flex flex-col">
           <div className="rounded-2xl overflow-hidden bg-[#14110B] border border-[#E6DCC4] shadow-sm">
