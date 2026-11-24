@@ -19,12 +19,12 @@ export const HeroImpulsao: React.FC = () => {
       </div>
 
       <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black uppercase text-[#14110B] leading-[1.1] max-w-3xl mx-auto text-balance">
-        <span className="destaque">Aumente seu alcance</span> no salto{' '}
+        <span className="destaque">Aumente sua impulsão</span>{' '}
         <span className="underline decoration-[#FFC60B] decoration-[4px] underline-offset-6">em 21 dias</span>
       </h1>
 
       <p className="mt-4 sm:mt-6 text-base sm:text-lg text-slate-700 max-w-2xl mx-auto leading-relaxed font-medium">
-        Exercícios de salto com vídeo de cada movimento e treino pronto para ataque e bloqueio, tudo no app.
+        Exercícios de impulsão com vídeo de cada movimento e treino pronto para ataque e bloqueio, tudo no app.
       </p>
 
       <div className="my-8 sm:my-10 mx-auto max-w-md">
