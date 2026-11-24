@@ -48,17 +48,17 @@ export const ProvaImpulsao: React.FC = () => (
 
 /* ---------- 2. DORES DE QUADRA ---------- */
 const DORES = [
-  { emoji: '🧱', titulo: 'Você sobe, mas a bola fica no bloqueio', texto: 'Ataca bem, só que a mão do bloqueador chega antes.' },
-  { emoji: '📉', titulo: 'O ataque sai de baixo para cima', texto: 'Sem altura, a bola vai fraca, na rede ou na mão de quem defende.' },
-  { emoji: '⏱️', titulo: 'Chega atrasado no bloqueio', texto: 'Quando o pé sai do chão, a bola já passou.' },
-  { emoji: '🦵', titulo: 'No fim do set a perna não sobe mais', texto: 'O primeiro salto é bom; do meio do jogo para frente, não.' },
+  { emoji: '🧱', titulo: 'Toma toco toda vez que sobe para atacar', texto: 'E já entra na rede sabendo que a bola vai voltar.' },
+  { emoji: '🫠', titulo: 'Tem que largar porque não alcança para bater', texto: 'Enquanto o cara do outro lado sobe e crava a bola no chão.' },
+  { emoji: '🎯', titulo: 'O time adversário já sabe onde mandar a bola', texto: 'No bloqueio você não chega, então eles atacam sempre do seu lado.' },
+  { emoji: '🥵', titulo: 'No terceiro set, você nem sai do chão', texto: 'A perna pesa, o salto some, e a galera percebe.' },
 ];
 
 export const DoresImpulsao: React.FC = () => (
   <section className="py-12 sm:py-16 px-4 bg-[#EDE5D2]/60 border-y border-[#E6DCC4]">
     <div className="max-w-3xl mx-auto">
       <h2 className="text-center text-3xl sm:text-4xl font-black text-[#14110B] tracking-tight uppercase text-balance">
-        Você sente isso <span className="destaque">no jogo?</span>
+        Isso já aconteceu com você <span className="destaque">no racha?</span>
       </h2>
 
       <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
@@ -74,7 +74,7 @@ export const DoresImpulsao: React.FC = () => (
       </div>
 
       <p className="mt-8 text-center text-base sm:text-lg font-semibold text-[#14110B] leading-relaxed max-w-2xl mx-auto text-balance">
-        Não é só altura nem vontade. <span className="destaque">Impulsão se treina fora do jogo</span>, com perna explosiva e passada certa, e dá para fazer em casa.
+        Não é altura. <span className="destaque">Quem sobe mais treinou o salto fora do jogo</span>, e dá para fazer isso em casa.
       </p>
     </div>
   </section>
