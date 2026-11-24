@@ -19,12 +19,13 @@ export const HeroImpulsao: React.FC = () => {
       </div>
 
       <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black uppercase text-[#14110B] leading-[1.1] max-w-3xl mx-auto text-balance">
-        <span className="destaque">29 exercícios</span> de salto para você subir mais na bola{' '}
+        <span className="destaque">Aumente seu alcance</span> no salto{' '}
         <span className="underline decoration-[#FFC60B] decoration-[4px] underline-offset-6">em 21 dias</span>
       </h1>
 
       <p className="mt-4 sm:mt-6 text-base sm:text-lg text-slate-700 max-w-2xl mx-auto leading-relaxed font-medium">
-        Com a animação de cada salto, um treino pronto para ataque e bloqueio e o Desafio Impulsão 21 Dias, tudo no app,{' '}
+        <strong className="text-[#14110B]">Marque na parede no dia 1 e meça de novo no dia 21.</strong>{' '}
+        São 29 exercícios de salto com animação, um treino pronto para ataque e bloqueio e o Desafio Impulsão 21 Dias, tudo no app,{' '}
         <strong className="text-[#14110B]">por R$ 24 em pagamento único</strong>.
       </p>
 
