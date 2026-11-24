@@ -141,9 +141,14 @@ export const BonusImpulsao: React.FC = () => (
                 </span>
                 <h3 className="mt-1.5 text-lg sm:text-xl font-black text-white leading-snug">{b.nome}</h3>
                 <p className="mt-1.5 text-xs sm:text-sm text-[#DDD5C4] font-medium leading-relaxed">{b.texto}</p>
-                <div className="mt-2.5 flex items-center gap-2 text-xs font-black">
-                  <span className="text-white/45 line-through">R$ {b.valor}</span>
-                  <span className="px-2.5 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-400/30">
+                <div className="mt-3 pt-2.5 border-t border-white/10 flex flex-wrap items-center gap-x-2.5 gap-y-1.5">
+                  <span className="text-xs font-semibold text-[#CFC6B2]">
+                    De{' '}
+                    <span className="text-base font-black text-white/80 line-through decoration-[#E23D2E] decoration-2">
+                      R$ {b.valor}
+                    </span>
+                  </span>
+                  <span className="inline-flex items-center px-3 py-1 rounded-full bg-emerald-500 text-[#14110B] text-xs font-black uppercase tracking-wide shadow-sm">
                     HOJE GRÁTIS
                   </span>
                 </div>
@@ -160,17 +165,44 @@ export const BonusImpulsao: React.FC = () => (
                 decoding="async"
                 className="w-24 shrink-0 rounded-xl object-cover aspect-[3/4]"
               />
-              <div className="min-w-0">
-                <h3 className="font-black text-[#14110B] leading-snug">{b.nome}</h3>
-                <p className="mt-1 text-xs sm:text-sm text-slate-700 font-medium leading-relaxed">{b.texto}</p>
-                <p className="mt-2 text-xs font-black">
-                  <span className="text-slate-400 line-through mr-2">R$ {b.valor}</span>
-                  <span className="text-emerald-700">HOJE GRÁTIS</span>
-                </p>
+              <div className="min-w-0 flex-1 flex flex-col justify-between self-stretch">
+                <div>
+                  <h3 className="font-black text-[#14110B] leading-snug">{b.nome}</h3>
+                  <p className="mt-1 text-xs sm:text-sm text-slate-700 font-medium leading-relaxed">{b.texto}</p>
+                </div>
+                <div className="mt-3 pt-2 border-t border-slate-100 flex flex-wrap items-center gap-x-2 gap-y-1">
+                  <span className="text-xs font-semibold text-slate-500">
+                    De{' '}
+                    <span className="text-sm font-black text-slate-600 line-through decoration-[#E23D2E] decoration-2">
+                      R$ {b.valor}
+                    </span>
+                  </span>
+                  <span className="inline-flex items-center px-2.5 py-0.5 rounded-full bg-emerald-600 text-white text-[11px] font-black uppercase tracking-wide shadow-2xs">
+                    HOJE GRÁTIS
+                  </span>
+                </div>
               </div>
             </div>
           )
         )}
+      </div>
+
+      {/* Barra de ancoragem do valor total dos bônus */}
+      <div className="mt-6 rounded-2xl bg-[#14110B] text-white px-5 py-4 sm:px-6 sm:py-5 shadow-xl flex flex-col sm:flex-row items-center justify-between gap-3 text-center sm:text-left">
+        <div>
+          <span className="block text-[11px] font-black uppercase tracking-wider text-[#FFC60B]">
+            Valor total dos 5 bônus
+          </span>
+          <p className="mt-0.5 text-sm sm:text-base text-[#DDD5C4] font-medium">
+            Separados, esses bônus custariam{' '}
+            <strong className="text-white text-lg sm:text-xl font-black line-through decoration-[#E23D2E] decoration-2">
+              R$ {TOTAL_BONUS}
+            </strong>
+          </p>
+        </div>
+        <span className="shrink-0 inline-flex items-center px-4 py-2 rounded-xl bg-emerald-500 text-[#14110B] text-xs sm:text-sm font-black uppercase tracking-wide shadow-md">
+          🎁 TUDO GRÁTIS HOJE
+        </span>
       </div>
     </div>
   </section>
