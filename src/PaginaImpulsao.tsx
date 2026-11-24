@@ -4,7 +4,8 @@ import { HeroImpulsao } from './components/HeroImpulsao';
 import { ImpulsaoConteudo } from './components/ImpulsaoConteudo';
 import { ProvaImpulsao, DoresImpulsao, JornadaImpulsao } from './components/ImpulsaoSecoes';
 import { ParaQuemImpulsao, BonusImpulsao, OfertaImpulsao, FAQ_IMPULSAO } from './components/ImpulsaoOferta';
-import { TrainerTestimonials } from './components/TrainerTestimonials';
+import { DEPOIMENTOS } from './components/TrainerTestimonials';
+import { FaixaDepoimentos } from './components/FaixaDepoimentos';
 import { Guarantee } from './components/Guarantee';
 import { Faq } from './components/Faq';
 import { Closing } from './components/Closing';
@@ -47,8 +48,10 @@ export default function PaginaImpulsao() {
       <OfertaImpulsao onOpenUpsell={() => setIsUpsellModalOpen(true)} />
 
       {/* 10. MAIS DEPOIMENTOS DE QUEM TREINA */}
-      <TrainerTestimonials
+      <FaixaDepoimentos
+        id="mais-depoimentos"
         comCta
+        itens={DEPOIMENTOS.slice(2)}
         titulo={<>MAIS GENTE <span className="destaque">TREINANDO COM O APP</span></>}
       />
 

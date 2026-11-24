@@ -1,6 +1,6 @@
 import React from 'react';
 import { DEPOIMENTOS, type Depoimento } from './TrainerTestimonials';
-import { useFaixaInfinita } from '../hooks/useFaixaInfinita';
+import { FaixaDepoimentos } from './FaixaDepoimentos';
 import { scrollToPlanos } from '../utils/utm';
 
 /**
@@ -29,62 +29,14 @@ const PROVA_TOPO: Depoimento[] = [
   ...DEPOIMENTOS.slice(0, 2),
 ];
 
-// Três cópias da sequência (ver useFaixaInfinita).
-const FAIXA_PROVA = [...PROVA_TOPO, ...PROVA_TOPO, ...PROVA_TOPO];
-
-/** Faixa que anda sozinha para o lado, igual ao carrossel das telas do app. */
-export const ProvaImpulsao: React.FC = () => {
-  const { trilhoRef, areaRef } = useFaixaInfinita(32);
-  const n = PROVA_TOPO.length;
-
-  return (
-    <section id="prova-impulsao" className="py-12 sm:py-16 overflow-hidden">
-      <div className="max-w-4xl mx-auto text-center px-4">
-        <span className="block text-xs font-black uppercase tracking-wider text-[#E23D2E]">Resultados</span>
-        <h2 className="mt-1 text-3xl sm:text-4xl font-black text-[#14110B] tracking-tight uppercase text-balance">
-          Quem já está <span className="destaque">treinando impulsão</span>
-        </h2>
-      </div>
-
-      {/* Carrossel infinito: segure para pausar, arraste para os lados */}
-      <div
-        ref={areaRef}
-        className="mt-8 relative cursor-grab active:cursor-grabbing select-none"
-        style={{ touchAction: 'pan-y' }}
-        role="region"
-        aria-roledescription="carrossel"
-        aria-label="Fotos e depoimentos de quem treina impulsão. Segure para pausar e arraste para os lados."
-      >
-        <div ref={trilhoRef} className="flex gap-4 sm:gap-6 w-max py-2 will-change-transform">
-          {FAIXA_PROVA.map((d, i) => {
-            const real = i >= n && i < n * 2;
-            return (
-              <figure key={`${d.src}-${i}`} className="shrink-0 w-[220px] sm:w-[250px] flex flex-col" aria-hidden={real ? undefined : true}>
-                <div className="h-[380px] sm:h-[430px] rounded-2xl overflow-hidden bg-[#14110B] border border-[#E6DCC4] shadow-md">
-                  <img
-                    src={d.src}
-                    width={d.w}
-                    height={d.h}
-                    alt={real ? d.alt : ''}
-                    loading={i < n * 2 ? 'eager' : 'lazy'}
-                    decoding="async"
-                    draggable={false}
-                    className={`block w-full h-full pointer-events-none ${d.foto ? 'object-cover' : 'object-contain'}`}
-                  />
-                </div>
-                <figcaption className="mt-3 text-center text-xs sm:text-sm font-black text-[#14110B] leading-snug">
-                  <span className="bg-[#FFC60B] px-1.5 py-0.5 rounded-md box-decoration-clone">{d.legenda}</span>
-                </figcaption>
-              </figure>
-            );
-          })}
-        </div>
-      </div>
-
-      <p className="mt-3 text-center text-xs text-slate-500 px-4">Segure para pausar · arraste para os lados</p>
-    </section>
-  );
-};
+export const ProvaImpulsao: React.FC = () => (
+  <FaixaDepoimentos
+    id="prova-impulsao"
+    rotulo="Resultados"
+    itens={PROVA_TOPO}
+    titulo={<>Quem já está <span className="destaque">treinando impulsão</span></>}
+  />
+);
 
 /* ---------- 2. DORES DE QUADRA ---------- */
 const DORES = [
