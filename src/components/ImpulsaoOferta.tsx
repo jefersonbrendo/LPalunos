@@ -56,6 +56,7 @@ interface Bonus {
   imagem: string;
   w: number;
   h: number;
+  destaque?: boolean;
 }
 
 const BONUS: Bonus[] = [
@@ -66,6 +67,7 @@ const BONUS: Bonus[] = [
     imagem: capaDesafio,
     w: 300,
     h: 402,
+    destaque: true,
   },
   {
     nome: 'Guia de Aterrissagem Segura',
@@ -118,27 +120,57 @@ export const BonusImpulsao: React.FC = () => (
       </h2>
 
       <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-4">
-        {BONUS.map((b) => (
-          <div key={b.nome} className="rounded-2xl bg-white p-4 shadow-lg flex gap-4 items-start">
-            <img
-              src={b.imagem}
-              width={b.w}
-              height={b.h}
-              alt={b.nome}
-              loading="lazy"
-              decoding="async"
-              className="w-24 shrink-0 rounded-xl object-cover aspect-[3/4]"
-            />
-            <div className="min-w-0">
-              <h3 className="font-black text-[#14110B] leading-snug">{b.nome}</h3>
-              <p className="mt-1 text-xs sm:text-sm text-slate-700 font-medium leading-relaxed">{b.texto}</p>
-              <p className="mt-2 text-xs font-black">
-                <span className="text-slate-400 line-through mr-2">R$ {b.valor}</span>
-                <span className="text-emerald-700">HOJE GRÁTIS</span>
-              </p>
+        {BONUS.map((b) =>
+          b.destaque ? (
+            <div
+              key={b.nome}
+              className="sm:col-span-2 rounded-2xl bg-[#14110B] text-white p-4 sm:p-6 shadow-xl ring-2 ring-white/20 flex gap-4 sm:gap-6 items-start sm:items-center"
+            >
+              <img
+                src={b.imagem}
+                width={b.w}
+                height={b.h}
+                alt={b.nome}
+                loading="lazy"
+                decoding="async"
+                className="w-24 sm:w-32 shrink-0 rounded-xl object-cover aspect-[3/4] shadow-lg ring-2 ring-[#FFC60B]"
+              />
+              <div className="min-w-0 flex-1">
+                <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-[#FFC60B] text-[#14110B] text-[11px] font-black uppercase tracking-wider">
+                  🔥 Bônus Principal
+                </span>
+                <h3 className="mt-1.5 text-lg sm:text-xl font-black text-white leading-snug">{b.nome}</h3>
+                <p className="mt-1.5 text-xs sm:text-sm text-[#DDD5C4] font-medium leading-relaxed">{b.texto}</p>
+                <div className="mt-2.5 flex items-center gap-2 text-xs font-black">
+                  <span className="text-white/45 line-through">R$ {b.valor}</span>
+                  <span className="px-2.5 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-400/30">
+                    HOJE GRÁTIS
+                  </span>
+                </div>
+              </div>
             </div>
-          </div>
-        ))}
+          ) : (
+            <div key={b.nome} className="rounded-2xl bg-white p-4 shadow-lg flex gap-4 items-start">
+              <img
+                src={b.imagem}
+                width={b.w}
+                height={b.h}
+                alt={b.nome}
+                loading="lazy"
+                decoding="async"
+                className="w-24 shrink-0 rounded-xl object-cover aspect-[3/4]"
+              />
+              <div className="min-w-0">
+                <h3 className="font-black text-[#14110B] leading-snug">{b.nome}</h3>
+                <p className="mt-1 text-xs sm:text-sm text-slate-700 font-medium leading-relaxed">{b.texto}</p>
+                <p className="mt-2 text-xs font-black">
+                  <span className="text-slate-400 line-through mr-2">R$ {b.valor}</span>
+                  <span className="text-emerald-700">HOJE GRÁTIS</span>
+                </p>
+              </div>
+            </div>
+          )
+        )}
       </div>
     </div>
   </section>
