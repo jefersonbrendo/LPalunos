@@ -1,5 +1,5 @@
 import React from 'react';
-import telaLista from '../assets/images/impulsao/impulsao-lista.webp';
+import fotoHero from '../assets/images/impulsao/impulsao-hero-areia.webp';
 import { scrollToPlanos } from '../utils/utm';
 
 const CHECKS = [
@@ -27,18 +27,16 @@ export const HeroImpulsao: React.FC = () => {
         Exercícios de salto com a animação de cada movimento e treino pronto para ataque e bloqueio, tudo no app.
       </p>
 
-      <div className="my-8 sm:my-10 mx-auto w-[230px] sm:w-[260px]">
-        <div className="relative rounded-[38px] bg-[#14110B] p-[9px] shadow-2xl rotate-[-2deg]">
-          <img
-            src={telaLista}
-            width={540}
-            height={1169}
-            alt="Lista de exercícios de impulsão no app Código da Areia, com filtro por nível"
-            fetchPriority="high"
-            decoding="async"
-            className="block w-full h-auto rounded-[30px]"
-          />
-        </div>
+      <div className="my-8 sm:my-10 mx-auto max-w-md">
+        <img
+          src={fotoHero}
+          width={800}
+          height={800}
+          alt="Celular na mão, numa quadra de areia, com a tela de impulsão do app Código da Areia"
+          fetchPriority="high"
+          decoding="async"
+          className="w-full h-auto aspect-square rounded-3xl object-cover shadow-2xl block"
+        />
       </div>
 
       <ul className="mb-6 mx-auto max-w-sm space-y-2 text-left text-sm sm:text-base font-semibold text-[#14110B]">
