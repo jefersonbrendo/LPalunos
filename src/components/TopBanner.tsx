@@ -1,6 +1,8 @@
 import React, { useMemo } from 'react';
 
-export const TopBanner: React.FC = () => {
+export const TopBanner: React.FC<{ prefixo?: string }> = ({
+  prefixo = 'CONDIÇÃO VÁLIDA SÓ ATÉ HOJE',
+}) => {
   // Gera automaticamente a data de hoje no formato dd/mm/aaaa
   const todayFormatted = useMemo(() => {
     const now = new Date();
@@ -16,7 +18,7 @@ export const TopBanner: React.FC = () => {
       className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-[#FFC60B] via-[#F5A300] to-[#FFC60B] text-slate-950 py-2 px-3 text-center shadow-md font-bold text-xs sm:text-sm tracking-wide border-b border-[#F5A300]/30"
     >
       <div className="max-w-4xl mx-auto flex items-center justify-center gap-1.5 leading-snug font-extrabold">
-        <span>CONDIÇÃO VÁLIDA SÓ ATÉ HOJE ({todayFormatted})</span>
+        <span>{prefixo} ({todayFormatted})</span>
       </div>
     </aside>
   );

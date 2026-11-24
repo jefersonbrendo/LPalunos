@@ -32,7 +32,7 @@ export default function PaginaImpulsao() {
   return (
     <div className="min-h-screen bg-[#F6F0E1] text-[#14110B] flex flex-col font-sans selection:bg-[#FFC60B] selection:text-[#14110B]">
       {/* 1. FAIXA FIXA NO TOPO */}
-      <TopBanner />
+      <TopBanner prefixo="PROMOÇÃO VÁLIDA SÓ ATÉ HOJE" />
 
       {/* Espaçador para compensar a faixa fixa */}
       <div className="h-9 sm:h-10" />
