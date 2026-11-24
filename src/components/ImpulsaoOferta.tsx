@@ -61,7 +61,7 @@ interface Bonus {
 const BONUS: Bonus[] = [
   {
     nome: 'Desafio Impulsão 21 Dias',
-    texto: 'Nada de inventar treino. Você abre o app, faz o treino do dia e pronto: em 21 dias você sai do chão de outro jeito, e a marca na parede prova.',
+    texto: 'Um programa fechado de 21 dias, só de impulsão. Cada treino prepara o seguinte: a primeira semana constrói a base, a segunda deixa a perna explosiva e a terceira junta tudo na passada de ataque. No último dia, você mede na parede e vê o quanto subiu.',
     valor: 47,
     imagem: capaDesafio,
     w: 300,
