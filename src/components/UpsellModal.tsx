@@ -30,7 +30,9 @@ export const UpsellModal: React.FC<UpsellModalProps> = ({ isOpen, onClose, impul
   if (!isOpen) return null;
 
   const checkoutUpsellUrl = buildUrlWithParams(LINKS.CHECKOUT_17);
-  const checkout10Url = buildUrlWithParams(LINKS.CHECKOUT_10);
+  // Na /impulsao o básico é o PDF de impulsão; sem link configurado, a opção some.
+  const link10 = impulsao ? LINKS.CHECKOUT_10_IMPULSAO : LINKS.CHECKOUT_10;
+  const checkout10Url = link10 ? buildUrlWithParams(link10) : '';
 
   return (
     <div
@@ -63,7 +65,7 @@ export const UpsellModal: React.FC<UpsellModalProps> = ({ isOpen, onClose, impul
         {/* Texto */}
         <p className="mt-2.5 text-xs sm:text-sm text-slate-700 leading-relaxed text-balance font-medium">
           {impulsao
-            ? 'O PDF não tem os treinos de salto. Por só R$ 7 a mais, você leva os treinos de impulsão, o Desafio Impulsão 21 Dias e o app completo de vôlei.'
+            ? 'Em vez do PDF de salto, você leva o app com a animação de cada salto, o treino pronto de ataque e bloqueio, o Desafio Impulsão 21 Dias e o app completo de vôlei.'
             : 'Em vez de 100 exercícios em PDF, você leva o app com +420 treinos, na areia e em casa, do iniciante ao avançado, e os 5 bônus.'}
         </p>
 
@@ -124,14 +126,16 @@ export const UpsellModal: React.FC<UpsellModalProps> = ({ isOpen, onClose, impul
         </a>
 
         {/* Link de texto pequeno, sem cara de botão */}
-        <div className="mt-4">
-          <a
-            href={checkout10Url}
-            className="text-[11px] sm:text-xs text-slate-500 hover:text-slate-800 underline transition-colors cursor-pointer font-medium"
-          >
-            Não, quero só o básico de R$ 10
-          </a>
-        </div>
+        {checkout10Url && (
+          <div className="mt-4">
+            <a
+              href={checkout10Url}
+              className="text-[11px] sm:text-xs text-slate-500 hover:text-slate-800 underline transition-colors cursor-pointer font-medium"
+            >
+              {impulsao ? 'Não, quero só o PDF de R$ 10' : 'Não, quero só o básico de R$ 10'}
+            </a>
+          </div>
+        )}
       </div>
     </div>
   );

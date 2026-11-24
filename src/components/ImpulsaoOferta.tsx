@@ -141,16 +141,15 @@ const NO_ACESSO = [
 ];
 
 const BASICO_TEM = [
-  '+100 exercícios em PDF: manchete, toque e saque',
-  'Exercícios separados por fundamento',
+  'Exercícios de salto em PDF, com imagem',
+  'Separados por nível',
   'Acesso vitalício + garantia de 7 dias',
 ];
 
 const BASICO_NAO_TEM = [
-  'Exercícios de salto e treinos de impulsão',
-  'Desafio Impulsão 21 Dias',
-  'App no celular com a animação do movimento',
-  'Bônus exclusivos',
+  'Animação do movimento',
+  'Treino pronto e Desafio Impulsão 21 Dias',
+  'App completo e bônus',
 ];
 
 export const OfertaImpulsao: React.FC<{ onOpenUpsell: () => void }> = ({ onOpenUpsell }) => {
@@ -170,7 +169,7 @@ export const OfertaImpulsao: React.FC<{ onOpenUpsell: () => void }> = ({ onOpenU
             <span className="inline-block mb-2 text-xs font-black uppercase tracking-wide px-3 py-1 rounded-full bg-slate-100 text-slate-600 border border-slate-200">
               📄 VERSÃO PDF
             </span>
-            <h3 className="text-2xl font-black text-[#14110B] mt-1">BÁSICO</h3>
+            <h3 className="text-2xl font-black text-[#14110B] mt-1">IMPULSÃO EM PDF</h3>
             <div className="mt-4 pb-4 border-b border-slate-200">
               <span className="text-xs text-slate-400 line-through block font-medium">De R$ 47</span>
               <div className="flex items-baseline gap-1 mt-0.5">
@@ -199,11 +198,11 @@ export const OfertaImpulsao: React.FC<{ onOpenUpsell: () => void }> = ({ onOpenU
               onClick={onOpenUpsell}
               className="w-full py-4 px-6 rounded-2xl bg-[#14110B] hover:bg-[#2A251A] text-white font-bold text-sm sm:text-base tracking-wide transition-all active:scale-[0.98] cursor-pointer shadow-md"
             >
-              COMEÇAR COM O BÁSICO
+              COMEÇAR COM O PDF
             </button>
             <div className="mt-3 text-center">
               <span className="text-xs font-bold text-[#B87500] bg-[#FEF3C7] px-3 py-1 rounded-full border border-[#FDE68A] inline-block">
-                +R$ 14 e leve os treinos de impulsão + bônus
+                +R$ 14 e leve o app, o treino pronto e o Desafio
               </span>
             </div>
           </div>
