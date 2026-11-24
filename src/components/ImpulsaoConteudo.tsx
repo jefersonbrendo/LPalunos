@@ -17,14 +17,14 @@ interface Bloco {
 const BLOCOS: Bloco[] = [
   {
     etiqueta: 'No app',
-    titulo: '29 exercícios de salto',
+    titulo: '29 exercícios de impulsão',
     texto: 'Do salto no lugar ao salto agrupado, separados em iniciante, intermediário e avançado. Você começa no seu nível e vai subindo.',
     imagem: telaNiveis,
     alt: 'Exercícios de impulsão do nível avançado no app: afundo com salto, salto agrupado, salto com meia-volta',
   },
   {
     etiqueta: 'No app',
-    titulo: 'Cada salto com o passo a passo',
+    titulo: 'Cada exercício de impulsão com o passo a passo',
     texto: 'A animação mostra a posição inicial, a passada e o salto, a região que trabalha e tem câmera lenta para você copiar o movimento.',
     imagem: telaExercicio,
     alt: 'Exercício Aproximação e salto de ataque aberto no app, com a animação do movimento',

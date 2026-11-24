@@ -19,7 +19,7 @@ const PERFIS = [
   { emoji: '🏟️', titulo: 'Joga na quadra', texto: 'e quer chegar mais alto no ataque e no bloqueio.' },
   { emoji: '🏠', titulo: 'Não tem academia', texto: 'e quer treinar em casa, só com o corpo e uma parede.' },
   { emoji: '🏋️', titulo: 'Treina na academia', texto: 'e quer um treino de academia feito para pular mais.' },
-  { emoji: '📏', titulo: 'É baixinho', texto: 'e quer compensar a altura com o salto.' },
+  { emoji: '📏', titulo: 'É baixinho', texto: 'e quer compensar a altura com a impulsão.' },
 ];
 
 export const ParaQuemImpulsao: React.FC = () => (
@@ -70,8 +70,8 @@ const BONUS: Bonus[] = [
   },
   {
     nome: 'App completo de vôlei',
-    naOferta: 'App completo de vôlei: saque, recepção, levantamento, ataque e defesa, para evoluir o resto do seu jogo junto com o salto',
-    texto: 'Além do salto, treinos de saque, recepção, levantamento, ataque, bloqueio e defesa, na areia, na quadra e em casa. Pular mais e chegar certo na bola.',
+    naOferta: 'App completo de vôlei: saque, recepção, levantamento, ataque e defesa, para evoluir o resto do seu jogo junto com a impulsão',
+    texto: 'Além da impulsão, treinos de saque, recepção, levantamento, ataque, bloqueio e defesa, na areia, na quadra e em casa. Pular mais e chegar certo na bola.',
     valor: 97,
     imagem: fotoApp,
     w: 800,
@@ -107,7 +107,7 @@ export const BonusImpulsao: React.FC = () => (
     <div className="relative max-w-3xl mx-auto">
       <span className="block text-center text-xs font-black uppercase tracking-wider text-[#14110B]">⭐ Bônus</span>
       <h2 className="mt-1 text-center text-3xl sm:text-4xl font-black text-[#14110B] tracking-tight uppercase text-balance">
-        Junto com os treinos de salto, você leva
+        Junto com os treinos de impulsão, você leva
       </h2>
 
       <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -139,14 +139,14 @@ export const BonusImpulsao: React.FC = () => (
 
 /* ---------- PLANOS: BÁSICO (PDF) E COMPLETO ---------- */
 const NO_ACESSO = [
-  'Exercícios de salto com a animação de cada movimento',
+  'Exercícios de impulsão com a animação de cada movimento',
   'Treinos de academia para a impulsão',
   'Treino pronto de impulsão para ataque e bloqueio',
   'Do iniciante ao avançado, em casa e na academia',
 ];
 
 const BASICO_TEM = [
-  'Exercícios de salto em PDF, com imagem',
+  'Exercícios de impulsão em PDF, com imagem',
   'Separados por nível',
   'Acesso vitalício + garantia de 7 dias',
 ];
@@ -287,7 +287,7 @@ export const FAQ_IMPULSAO: FaqItem[] = [
   },
   {
     question: 'Preciso de academia ou de peso?',
-    answer: 'Não precisa. Os exercícios de salto usam o peso do corpo, e o treino pronto de impulsão para ataque e bloqueio dá para fazer em casa, só com uma parede. E se você treina na academia, o app tem treinos de academia feitos para a impulsão.',
+    answer: 'Não precisa. Os exercícios de impulsão usam o peso do corpo, e o treino pronto de impulsão para ataque e bloqueio dá para fazer em casa, só com uma parede. E se você treina na academia, o app tem treinos de academia feitos para a impulsão.',
   },
   {
     question: 'Quanto tempo leva cada treino?',
@@ -295,19 +295,19 @@ export const FAQ_IMPULSAO: FaqItem[] = [
   },
   {
     question: 'Serve para vôlei de praia e de quadra?',
-    answer: 'Serve. O treino de salto vale para os dois, e o treino pronto é de ataque e bloqueio. No app completo, que vem de bônus, ainda tem treinos na areia, na quadra e em casa.',
+    answer: 'Serve. O treino de impulsão vale para os dois, e o treino pronto é de ataque e bloqueio. No app completo, que vem de bônus, ainda tem treinos na areia, na quadra e em casa.',
   },
   {
     question: 'Sou iniciante. Consigo fazer?',
-    answer: 'Consegue. Os saltos são separados em iniciante, intermediário e avançado, e cada um tem a animação do movimento para você copiar.',
+    answer: 'Consegue. Os exercícios de impulsão são separados em iniciante, intermediário e avançado, e cada um tem a animação do movimento para você copiar.',
   },
   {
     question: 'Sou baixinho. Vale a pena?',
-    answer: 'Vale. Quem não tem altura depende ainda mais do salto para chegar na bola, e é isso que esses treinos trabalham.',
+    answer: 'Vale. Quem não tem altura depende ainda mais da impulsão para chegar na bola, e é isso que esses treinos trabalham.',
   },
   {
     question: 'Tenho mais de 35 anos ou já senti dor no joelho. Posso fazer?',
-    answer: 'Salto é exercício de impacto. Se você tem mais de 35 anos, sente dor no joelho ou no tornozelo ou está parado há muito tempo, fale com um médico antes de começar. No app, os saltos são separados por nível, para você começar pelos mais leves.',
+    answer: 'Treino de impulsão é exercício de impacto. Se você tem mais de 35 anos, sente dor no joelho ou no tornozelo ou está parado há muito tempo, fale com um médico antes de começar. No app, os exercícios são separados por nível, para você começar pelos mais leves.',
   },
   {
     question: 'Funciona em qualquer celular?',

@@ -51,7 +51,7 @@ const DORES = [
   { emoji: '🧱', titulo: 'Toma toco toda vez que sobe para atacar', texto: 'E já entra na rede sabendo que a bola vai voltar.' },
   { emoji: '🫠', titulo: 'Tem que passar porque não alcança para bater', texto: 'Enquanto o cara do outro lado sobe e crava a bola no meio da quadra.' },
   { emoji: '🎯', titulo: 'O time adversário já sabe onde mandar a bola', texto: 'No bloqueio você não chega, então eles atacam sempre do seu lado.' },
-  { emoji: '🥵', titulo: 'No terceiro set, você nem sai do chão', texto: 'A perna pesa, o salto some, e a galera percebe.' },
+  { emoji: '🥵', titulo: 'No terceiro set, você nem sai do chão', texto: 'A perna pesa, a impulsão some, e a galera percebe.' },
 ];
 
 export const DoresImpulsao: React.FC = () => (
@@ -74,7 +74,7 @@ export const DoresImpulsao: React.FC = () => (
       </div>
 
       <p className="mt-8 text-center text-base sm:text-lg font-semibold text-[#14110B] leading-relaxed max-w-2xl mx-auto text-balance">
-        Não é altura. <span className="destaque">Quem sobe mais treinou o salto fora do jogo</span>, e dá para fazer isso em casa.
+        Não é altura. <span className="destaque">Quem sobe mais treinou a impulsão fora do jogo</span>, e dá para fazer isso em casa.
       </p>
     </div>
   </section>
@@ -83,7 +83,7 @@ export const DoresImpulsao: React.FC = () => (
 /* ---------- 3. JORNADA ATÉ O SALTO MAIS ALTO ---------- */
 const ETAPAS = [
   { etapa: 'Dia 1', titulo: 'Marque seu alcance', texto: 'Antes de começar, você marca na parede até onde alcança no salto.' },
-  { etapa: 'Nível iniciante', titulo: 'Base do salto', texto: 'Começa pelos saltos mais simples, como o salto no lugar, para pegar o movimento certo.' },
+  { etapa: 'Nível iniciante', titulo: 'Base da impulsão', texto: 'Começa pelos saltos mais simples, como o salto no lugar, para pegar o movimento certo.' },
   { etapa: 'Intermediário e avançado', titulo: 'Perna explosiva e passada', texto: 'Sobe para saltos mais difíceis, como o agrupado e o salto com meia-volta, e treina a aproximação de ataque.' },
   { etapa: 'Dia 21', titulo: 'Meça de novo', texto: 'Marca o alcance outra vez e compara com o primeiro dia. A sua evolução, na sua medida.' },
 ];
@@ -92,7 +92,7 @@ export const JornadaImpulsao: React.FC = () => (
   <section className="py-12 sm:py-16 px-4 max-w-3xl mx-auto">
     <span className="block text-center text-xs font-black uppercase tracking-wider text-[#E23D2E]">Desafio Impulsão 21 Dias</span>
     <h2 className="mt-1 text-center text-3xl sm:text-4xl font-black text-[#14110B] tracking-tight uppercase text-balance">
-      O caminho até o seu <span className="destaque">salto mais alto</span>
+      O caminho até a sua <span className="destaque">melhor impulsão</span>
     </h2>
 
     <ol className="mt-10 relative border-l-4 border-[#FFC60B] ml-4 sm:ml-8 space-y-8">

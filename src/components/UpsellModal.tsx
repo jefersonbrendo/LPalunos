@@ -65,7 +65,7 @@ export const UpsellModal: React.FC<UpsellModalProps> = ({ isOpen, onClose, impul
         {/* Texto */}
         <p className="mt-2.5 text-xs sm:text-sm text-slate-700 leading-relaxed text-balance font-medium">
           {impulsao
-            ? 'Em vez do PDF de salto, você leva o app com a animação de cada salto, o treino pronto de ataque e bloqueio, o Desafio Impulsão 21 Dias e o app completo de vôlei.'
+            ? 'Em vez do PDF de impulsão, você leva o app com a animação de cada exercício, o treino pronto de ataque e bloqueio, o Desafio Impulsão 21 Dias e o app completo de vôlei.'
             : 'Em vez de 100 exercícios em PDF, você leva o app com +420 treinos, na areia e em casa, do iniciante ao avançado, e os 5 bônus.'}
         </p>
 
@@ -90,7 +90,7 @@ export const UpsellModal: React.FC<UpsellModalProps> = ({ isOpen, onClose, impul
           <div className="flex items-start gap-2 text-xs sm:text-sm text-slate-800 font-semibold">
             <span className="text-emerald-600 font-bold shrink-0">✅</span>
             {impulsao ? (
-              <span><strong>Treinos de impulsão:</strong> exercícios de salto com animação e treino pronto para ataque e bloqueio</span>
+              <span><strong>Treinos de impulsão:</strong> exercícios de impulsão com animação e treino pronto para ataque e bloqueio</span>
             ) : (
               <span><strong>App no Celular:</strong> +420 treinos, 240 na areia e 195 em casa (do iniciante ao avançado)</span>
             )}

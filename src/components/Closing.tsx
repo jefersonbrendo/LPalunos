@@ -9,7 +9,7 @@ export const Closing: React.FC<{ variante?: 'impulsao' }> = ({ variante }) => {
         {/* Título */}
         <h2 className="text-3xl sm:text-5xl font-black text-[#14110B] tracking-tight uppercase font-heading text-balance">
           {impulsao ? (
-            <>SEU PRÓXIMO SALTO <span className="destaque">COMEÇA HOJE</span></>
+            <>SUA NOVA IMPULSÃO <span className="destaque">COMEÇA HOJE</span></>
           ) : (
             <>SEU PRÓXIMO TREINO <span className="destaque">JÁ PODE ESTAR PRONTO</span></>
           )}
@@ -18,7 +18,7 @@ export const Closing: React.FC<{ variante?: 'impulsao' }> = ({ variante }) => {
         {/* Texto */}
         <p className="text-base sm:text-xl text-slate-700 font-semibold">
           {impulsao
-            ? 'Exercícios de salto, treino pronto de impulsão e o Desafio Impulsão, junto com o app completo de vôlei no seu celular.'
+            ? 'Exercícios de impulsão, treino pronto para ataque e bloqueio e o Desafio Impulsão, junto com o app completo de vôlei no seu celular.'
             : '+420 treinos de vôlei no seu celular, para treinar na areia, na quadra e em casa.'}
         </p>
 
