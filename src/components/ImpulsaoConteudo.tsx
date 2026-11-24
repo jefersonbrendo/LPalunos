@@ -99,6 +99,18 @@ export const ImpulsaoConteudo: React.FC = () => {
         </div>
       </section>
 
+      {/* Ponte para o resto da página (app completo) */}
+      <section className="pt-12 sm:pt-16 px-4 text-center">
+        <div className="max-w-2xl mx-auto">
+          <span className="inline-block text-xs font-black uppercase tracking-wider text-[#E23D2E]">E não para na impulsão</span>
+          <h2 className="mt-2 text-2xl sm:text-4xl font-black uppercase text-[#14110B] leading-tight text-balance">
+            Junto, você leva o app completo com <span className="destaque">+420 treinos</span>
+          </h2>
+          <p className="mt-3 text-sm sm:text-base text-slate-700 leading-relaxed font-medium">
+            Saque, manchete, toque, ataque, bloqueio e defesa, na areia, na quadra e em casa. Assim, além de pular mais, você chega certo na bola.
+          </p>
+        </div>
+      </section>
     </>
   );
 };

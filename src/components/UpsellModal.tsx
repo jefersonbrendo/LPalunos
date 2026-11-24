@@ -6,11 +6,9 @@ import { buildUrlWithParams } from '../utils/utm';
 interface UpsellModalProps {
   isOpen: boolean;
   onClose: () => void;
-  /** Texto da página /impulsao: o PDF não tem os treinos de salto. */
-  impulsao?: boolean;
 }
 
-export const UpsellModal: React.FC<UpsellModalProps> = ({ isOpen, onClose, impulsao }) => {
+export const UpsellModal: React.FC<UpsellModalProps> = ({ isOpen, onClose }) => {
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === 'Escape') onClose();
@@ -62,9 +60,7 @@ export const UpsellModal: React.FC<UpsellModalProps> = ({ isOpen, onClose, impul
 
         {/* Texto */}
         <p className="mt-2.5 text-xs sm:text-sm text-slate-700 leading-relaxed text-balance font-medium">
-          {impulsao
-            ? 'O PDF não tem os treinos de salto. Por só R$ 7 a mais, você leva os treinos de impulsão, o Desafio Impulsão 21 Dias e o app completo de vôlei.'
-            : 'Em vez de 100 exercícios em PDF, você leva o app com +420 treinos, na areia e em casa, do iniciante ao avançado, e os 5 bônus.'}
+          Em vez de 100 exercícios em PDF, você leva o app com +420 treinos, na areia e em casa, do iniciante ao avançado, e os 5 bônus.
         </p>
 
         {/* Preço */}
@@ -87,11 +83,7 @@ export const UpsellModal: React.FC<UpsellModalProps> = ({ isOpen, onClose, impul
           </div>
           <div className="flex items-start gap-2 text-xs sm:text-sm text-slate-800 font-semibold">
             <span className="text-emerald-600 font-bold shrink-0">✅</span>
-            {impulsao ? (
-              <span><strong>Treinos de impulsão:</strong> exercícios de salto com animação e treino pronto para ataque e bloqueio</span>
-            ) : (
-              <span><strong>App no Celular:</strong> +420 treinos, 240 na areia e 195 em casa (do iniciante ao avançado)</span>
-            )}
+            <span><strong>App no Celular:</strong> +420 treinos, 240 na areia e 195 em casa (do iniciante ao avançado)</span>
           </div>
           <div className="flex items-start gap-2 text-xs sm:text-sm text-slate-800 font-semibold">
             <span className="text-emerald-600 font-bold shrink-0">✅</span>
@@ -99,11 +91,7 @@ export const UpsellModal: React.FC<UpsellModalProps> = ({ isOpen, onClose, impul
           </div>
           <div className="flex items-start gap-2 text-xs sm:text-sm text-[#B87500] font-bold">
             <span className="shrink-0">🎁</span>
-            {impulsao ? (
-              <span><strong>Todos os bônus inclusos:</strong> Desafio Impulsão 21 Dias, app completo de vôlei, Treinos Prontos e Tracker de Evolução (R$ 218 grátis)</span>
-            ) : (
-              <span><strong>Todos os 5 Bônus inclusos:</strong> Desafio Impulsão 21 Dias, Plano de 21 Dias, Treinos Prontos, Treino em Casa e Tracker de Evolução (R$ 225 grátis)</span>
-            )}
+            <span><strong>Todos os 5 Bônus inclusos:</strong> Desafio Impulsão 21 Dias, Plano de 21 Dias, Treinos Prontos, Treino em Casa e Tracker de Evolução (R$ 225 grátis)</span>
           </div>
           <div className="flex items-start gap-2 text-xs sm:text-sm text-slate-800 font-semibold">
             <span className="text-emerald-600 font-bold shrink-0">✅</span>
@@ -120,7 +108,7 @@ export const UpsellModal: React.FC<UpsellModalProps> = ({ isOpen, onClose, impul
           href={checkoutUpsellUrl}
           className="block w-full py-4 px-6 rounded-2xl bg-gradient-to-r from-[#FFC60B] via-[#FFD43B] to-[#FFC60B] text-[#14110B] font-extrabold text-sm sm:text-base tracking-wide shadow-xl hover:brightness-105 active:scale-[0.98] transition-all animate-pulse-cta uppercase border-b-4 border-[#C99A00] cursor-pointer"
         >
-          {impulsao ? 'SIM, QUERO A IMPULSÃO POR R$ 17' : 'SIM, QUERO OS +420 POR R$ 17'}
+          SIM, QUERO OS +420 POR R$ 17
         </a>
 
         {/* Link de texto pequeno, sem cara de botão */}

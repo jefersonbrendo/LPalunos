@@ -6,6 +6,26 @@ export interface FaqItem {
   answer: string;
 }
 
+/** Perguntas de impulsão, mostradas logo depois de "Como recebo o acesso?" na página /impulsao. */
+export const FAQ_IMPULSAO: FaqItem[] = [
+  {
+    question: 'Quantos centímetros eu vou subir?',
+    answer: 'Depende de onde você começa e de quanto treina, por isso a gente não promete um número. O Desafio Impulsão 21 Dias começa e termina com você marcando o seu alcance na parede, para ver a sua diferença na sua própria medida.',
+  },
+  {
+    question: 'Preciso de academia ou de peso?',
+    answer: 'Não. Os exercícios de salto usam o peso do corpo, e o treino pronto de impulsão para ataque e bloqueio dá para fazer em casa, só com uma parede.',
+  },
+  {
+    question: 'Quanto tempo leva cada treino?',
+    answer: 'O treino pronto de impulsão para ataque e bloqueio leva cerca de 20 minutos. É só abrir no app e apertar começar.',
+  },
+  {
+    question: 'Tenho mais de 35 anos ou já senti dor no joelho. Posso fazer?',
+    answer: 'Salto é exercício de impacto. Se você tem mais de 35 anos, sente dor no joelho ou no tornozelo ou está parado há muito tempo, fale com um médico antes de começar. No app, os saltos são separados por nível, para você começar pelos mais leves.',
+  },
+];
+
 const FAQ_DATA: FaqItem[] = [
   {
     question: 'Como recebo o acesso?',
@@ -61,8 +81,8 @@ const FAQ_DATA: FaqItem[] = [
   },
 ];
 
-/** `itens` troca a lista inteira (ex.: FAQ próprio da página /impulsao). */
-export const Faq: React.FC<{ itens?: FaqItem[] }> = ({ itens = FAQ_DATA }) => {
+export const Faq: React.FC<{ extras?: FaqItem[] }> = ({ extras }) => {
+  const itens = extras ? [FAQ_DATA[0], ...extras, ...FAQ_DATA.slice(1)] : FAQ_DATA;
   const [openIndices, setOpenIndices] = useState<number[]>([0]);
 
   const toggleIndex = (index: number) => {
