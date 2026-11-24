@@ -18,7 +18,7 @@ export const Closing: React.FC<{ variante?: 'impulsao' }> = ({ variante }) => {
         {/* Texto */}
         <p className="text-base sm:text-xl text-slate-700 font-semibold">
           {impulsao
-            ? '29 exercícios de salto, o treino pronto de impulsão e o Desafio 21 Dias, junto com +420 treinos de vôlei no seu celular.'
+            ? 'Exercícios de salto, treino pronto de impulsão e o Desafio Impulsão, junto com o app completo de vôlei no seu celular.'
             : '+420 treinos de vôlei no seu celular, para treinar na areia, na quadra e em casa.'}
         </p>
 

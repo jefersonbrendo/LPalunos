@@ -2,6 +2,12 @@ import React from 'react';
 import telaLista from '../assets/images/impulsao/impulsao-lista.webp';
 import { scrollToPlanos } from '../utils/utm';
 
+const CHECKS = [
+  'Sem academia: em casa, só com uma parede',
+  'Do iniciante ao avançado, no seu ritmo',
+  'Treino pronto de cerca de 20 minutos',
+];
+
 /** Topo da página /impulsao: público, número, prazo e preço logo na primeira tela. */
 export const HeroImpulsao: React.FC = () => {
   return (
@@ -34,6 +40,15 @@ export const HeroImpulsao: React.FC = () => {
           />
         </div>
       </div>
+
+      <ul className="mb-6 mx-auto max-w-sm space-y-2 text-left text-sm sm:text-base font-semibold text-[#14110B]">
+        {CHECKS.map((c) => (
+          <li key={c} className="flex items-start gap-2">
+            <span className="text-emerald-600 font-black shrink-0">✓</span>
+            <span>{c}</span>
+          </li>
+        ))}
+      </ul>
 
       <div className="w-full max-w-md mx-auto">
         <button
