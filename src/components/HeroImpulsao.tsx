@@ -3,7 +3,7 @@ import fotoHero from '../assets/images/impulsao/impulsao-hero-areia.webp';
 import { scrollToPlanos } from '../utils/utm';
 
 const CHECKS = [
-  'Em casa, só com uma parede (academia é opcional)',
+  'Sem academia: em casa, só com uma parede',
   'Do iniciante ao avançado, no seu ritmo',
   'Treino pronto de cerca de 20 minutos',
 ];
