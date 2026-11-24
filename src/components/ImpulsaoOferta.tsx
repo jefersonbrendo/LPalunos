@@ -137,9 +137,9 @@ export const BonusImpulsao: React.FC = () => (
 /* ---------- PLANOS: BÁSICO (PDF) E COMPLETO ---------- */
 const NO_ACESSO = [
   'Exercícios de salto com a animação de cada movimento',
+  'Treinos de academia para a impulsão',
   'Treino pronto de impulsão para ataque e bloqueio',
-  'Do iniciante ao avançado, em casa e sem academia',
-  'Também tem treinos de academia para a impulsão',
+  'Do iniciante ao avançado, em casa e na academia',
 ];
 
 const BASICO_TEM = [
@@ -284,7 +284,7 @@ export const FAQ_IMPULSAO: FaqItem[] = [
   },
   {
     question: 'Preciso de academia ou de peso?',
-    answer: 'Não precisa. Os exercícios de salto usam o peso do corpo, e o treino pronto de impulsão para ataque e bloqueio dá para fazer em casa, só com uma parede. E se você treina na academia, o app também tem treinos de academia para a sua impulsão.',
+    answer: 'Não precisa. Os exercícios de salto usam o peso do corpo, e o treino pronto de impulsão para ataque e bloqueio dá para fazer em casa, só com uma parede. E se você treina na academia, o app tem treinos de academia feitos para a impulsão.',
   },
   {
     question: 'Quanto tempo leva cada treino?',
