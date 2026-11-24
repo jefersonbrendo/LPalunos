@@ -60,7 +60,7 @@ export const DoresImpulsao: React.FC = () => (
       </div>
 
       <p className="mt-8 text-center text-base sm:text-lg font-semibold text-[#14110B] leading-relaxed max-w-2xl mx-auto text-balance">
-        Não é só altura nem vontade. <span className="destaque">Impulsão se treina fora do jogo</span>, com perna explosiva e passada certa, e dá para fazer em casa.
+        Não é só altura nem vontade. <span className="destaque">Impulsão se treina fora do jogo</span>, com perna explosiva e passada certa, e dá para fazer em casa. Academia é só um extra, se você quiser.
       </p>
     </div>
   </section>
