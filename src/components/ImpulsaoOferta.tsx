@@ -50,6 +50,8 @@ export const ParaQuemImpulsao: React.FC = () => (
 /* ---------- BÔNUS ---------- */
 interface Bonus {
   nome: string;
+  /** Texto mais longo para a lista do card de R$ 24 (quando o nome sozinho não basta). */
+  naOferta?: string;
   texto: string;
   valor: number;
   imagem: string;
@@ -68,6 +70,7 @@ const BONUS: Bonus[] = [
   },
   {
     nome: 'App completo de vôlei',
+    naOferta: 'App completo de vôlei: saque, recepção, levantamento, ataque e defesa, para evoluir o resto do seu jogo junto com o salto',
     texto: 'Além do salto, treinos de saque, recepção, levantamento, ataque, bloqueio e defesa, na areia, na quadra e em casa. Pular mais e chegar certo na bola.',
     valor: 97,
     imagem: fotoApp,
@@ -241,7 +244,7 @@ export const OfertaImpulsao: React.FC<{ onOpenUpsell: () => void }> = ({ onOpenU
                 <li key={b.nome} className="flex items-start gap-2 font-bold text-[#B87500]">
                   <span className="shrink-0">🎁</span>
                   <span>
-                    {b.nome} <span className="text-slate-400 line-through font-medium">(R$ {b.valor})</span>
+                    {b.naOferta ?? b.nome} <span className="text-slate-400 line-through font-medium">(R$ {b.valor})</span>
                   </span>
                 </li>
               ))}
