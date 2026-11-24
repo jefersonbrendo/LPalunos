@@ -63,7 +63,7 @@ const BONUS: Bonus[] = [
   {
     nome: 'Desafio Impulsão 21 Dias',
     texto: 'Um programa fechado de 21 dias, só de impulsão. Cada treino prepara o seguinte: a primeira semana constrói a base, a segunda deixa a perna explosiva e a terceira junta tudo na passada de ataque. No último dia, você mede na parede e vê o quanto subiu.',
-    valor: 47,
+    valor: 97,
     imagem: capaDesafio,
     w: 300,
     h: 402,
