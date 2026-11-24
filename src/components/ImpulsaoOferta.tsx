@@ -5,6 +5,7 @@ import type { FaqItem } from './Faq';
 import capaDesafio from '../assets/images/bonus-aluno-04.webp';
 import capaTreinos from '../assets/images/bonus-aluno-02.webp';
 import capaTracker from '../assets/images/bonus-aluno-05.webp';
+import capaAterrissagem from '../assets/images/impulsao/bonus-aterrissagem.webp';
 import fotoApp from '../assets/images/hero/app-na-areia.webp';
 
 /**
@@ -63,6 +64,14 @@ const BONUS: Bonus[] = [
     texto: 'Um treino por dia de perna explosiva e passada certa, na sequência. Você marca o alcance na parede no começo e mede de novo no fim.',
     valor: 47,
     imagem: capaDesafio,
+    w: 300,
+    h: 402,
+  },
+  {
+    nome: 'Guia de Aterrissagem Segura',
+    texto: 'Como cair depois de cada salto do jeito certo, com a animação do movimento, sem descarregar o peso todo no joelho e no tornozelo.',
+    valor: 27,
+    imagem: capaAterrissagem,
     w: 300,
     h: 402,
   },
