@@ -86,7 +86,7 @@ const BONUS: Bonus[] = [
   },
   {
     nome: 'Treinos Prontos para Seguir',
-    texto: 'Abra o treino do dia e siga, do iniciante ao avançado, sem precisar montar nada.',
+    texto: 'Treinos prontos de saque, recepção, levantamento e defesa, do iniciante ao avançado, para os dias em que você quer evoluir o resto do jogo além da impulsão.',
     valor: 47,
     imagem: capaTreinos,
     w: 300,
