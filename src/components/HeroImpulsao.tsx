@@ -24,9 +24,7 @@ export const HeroImpulsao: React.FC = () => {
       </h1>
 
       <p className="mt-4 sm:mt-6 text-base sm:text-lg text-slate-700 max-w-2xl mx-auto leading-relaxed font-medium">
-        <strong className="text-[#14110B]">Marque na parede no dia 1 e meça de novo no dia 21.</strong>{' '}
-        São 29 exercícios de salto com animação, um treino pronto para ataque e bloqueio e o Desafio Impulsão 21 Dias, tudo no app,{' '}
-        <strong className="text-[#14110B]">por R$ 24 em pagamento único</strong>.
+        Exercícios de salto com a animação de cada movimento e treino pronto para ataque e bloqueio, tudo no app.
       </p>
 
       <div className="my-8 sm:my-10 mx-auto w-[230px] sm:w-[260px]">
