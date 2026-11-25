@@ -17,7 +17,7 @@ interface Bloco {
 const BLOCOS: Bloco[] = [
   {
     etiqueta: 'No app',
-    titulo: '29 exercícios de impulsão',
+    titulo: 'Exercícios de impulsão',
     texto: 'Do salto no lugar ao salto agrupado, separados em iniciante, intermediário e avançado. Você começa no seu nível e vai subindo.',
     imagem: telaNiveis,
     alt: 'Exercícios de impulsão no app filtrados por nível e material: agachamento com salto, salto lateral, salto de bloqueio',
