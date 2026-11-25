@@ -4,9 +4,9 @@ import tela1 from '../assets/images/app/nova-1-inicio-niveis.webp';
 import tela2 from '../assets/images/app/nova-2-fundamentos-areia.webp';
 import tela3 from '../assets/images/app/nova-3-fundamentos-quadra.webp';
 import tela4 from '../assets/images/app/nova-4-impulsao.webp';
-import tela5 from '../assets/images/app/nova-5-movimento.webp';
+import tela5 from '../assets/images/app/nova-5-video-afundo.webp';
 import tela6 from '../assets/images/app/nova-6-passo-a-passo.webp';
-import tela7 from '../assets/images/app/nova-7-bulgaro-movimento.webp';
+import tela7 from '../assets/images/app/nova-7-video-queda-degrau.webp';
 import tela8 from '../assets/images/app/nova-8-bulgaro-passo-a-passo.webp';
 
 interface SlideItem {
@@ -21,9 +21,9 @@ const SLIDES: SlideItem[] = [
   { id: 2, src: tela2, alt: 'Fundamentos do vôlei de areia: saque, recepção, levantamento, ataque, bloqueio e defesa' },
   { id: 3, src: tela3, alt: 'Fundamentos do vôlei de quadra: saque, recepção, levantamento, ataque, bloqueio e defesa' },
   { id: 4, src: tela4, alt: 'Exercícios de impulsão filtrados por nível e material, com séries e região que trabalha' },
-  { id: 5, src: tela5, alt: 'Exercício aberto com a animação do movimento, a etapa atual, a região que trabalha e a trajetória' },
+  { id: 5, src: tela5, alt: 'Exercício Afundo com salto aberto no app, com o vídeo do movimento e a legenda da etapa' },
   { id: 6, src: tela6, alt: 'Passo a passo do exercício com as etapas ilustradas, o objetivo e o ritmo' },
-  { id: 7, src: tela7, alt: 'Agachamento búlgaro com halteres aberto no app, com a animação do movimento e a etapa atual' },
+  { id: 7, src: tela7, alt: 'Exercício Queda do degrau e salto aberto no app, com o vídeo do movimento e a legenda da etapa' },
   { id: 8, src: tela8, alt: 'Agachamento búlgaro: regiões que trabalha, objetivo e passo a passo com as etapas ilustradas' },
 ];
 
