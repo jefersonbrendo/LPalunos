@@ -23,7 +23,7 @@ const SLIDES: SlideItem[] = [
   { id: 3, src: tela3, alt: 'Fundamentos do vôlei de quadra: saque, recepção, levantamento, ataque, bloqueio e defesa' },
   { id: 4, src: tela4, alt: 'Exercícios de impulsão filtrados por nível e material, com séries e região que trabalha' },
   { id: 5, src: tela5, alt: 'Exercício Afundo com salto aberto no app, com o vídeo do movimento e a legenda da etapa' },
-  { id: 6, src: tela6, alt: 'Passo a passo do exercício com as etapas ilustradas, o objetivo e o ritmo' },
+  { id: 6, src: tela6, alt: 'Passo a passo da Queda do degrau e salto, com uma foto real de cada etapa, o objetivo e o ritmo' },
   { id: 7, src: tela7, alt: 'Exercício Queda do degrau e salto aberto no app, com o vídeo do movimento e a legenda da etapa' },
   { id: 9, src: tela9, alt: 'Exercício Agachamento com salto aberto no app, com o vídeo do movimento e a legenda da etapa' },
   { id: 8, src: tela8, alt: 'Agachamento búlgaro: regiões que trabalha, objetivo e passo a passo com as etapas ilustradas' },
