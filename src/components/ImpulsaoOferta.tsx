@@ -378,10 +378,6 @@ export const FAQ_IMPULSAO: FaqItem[] = [
     answer: 'Vale. Quem não tem altura depende ainda mais da impulsão para chegar na bola, e é isso que esses treinos trabalham.',
   },
   {
-    question: 'Tenho mais de 35 anos ou já senti dor no joelho. Posso fazer?',
-    answer: 'Treino de impulsão é exercício de impacto. Se você tem mais de 35 anos, sente dor no joelho ou no tornozelo ou está parado há muito tempo, fale com um médico antes de começar. No app, os exercícios são separados por nível, para você começar pelos mais leves.',
-  },
-  {
     question: 'Funciona em qualquer celular?',
     answer: 'Sim, funciona em Android e iPhone. E depois de aberto uma vez, funciona até sem internet.',
   },
