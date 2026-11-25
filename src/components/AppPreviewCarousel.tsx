@@ -7,6 +7,7 @@ import tela4 from '../assets/images/app/nova-4-impulsao.webp';
 import tela5 from '../assets/images/app/nova-5-video-afundo.webp';
 import tela6 from '../assets/images/app/nova-6-passo-a-passo.webp';
 import tela7 from '../assets/images/app/nova-7-video-queda-degrau.webp';
+import tela9 from '../assets/images/app/nova-9-video-agachamento-salto.webp';
 import tela8 from '../assets/images/app/nova-8-bulgaro-passo-a-passo.webp';
 
 interface SlideItem {
@@ -24,6 +25,7 @@ const SLIDES: SlideItem[] = [
   { id: 5, src: tela5, alt: 'Exercício Afundo com salto aberto no app, com o vídeo do movimento e a legenda da etapa' },
   { id: 6, src: tela6, alt: 'Passo a passo do exercício com as etapas ilustradas, o objetivo e o ritmo' },
   { id: 7, src: tela7, alt: 'Exercício Queda do degrau e salto aberto no app, com o vídeo do movimento e a legenda da etapa' },
+  { id: 9, src: tela9, alt: 'Exercício Agachamento com salto aberto no app, com o vídeo do movimento e a legenda da etapa' },
   { id: 8, src: tela8, alt: 'Agachamento búlgaro: regiões que trabalha, objetivo e passo a passo com as etapas ilustradas' },
 ];
 
