@@ -211,7 +211,7 @@ export const BonusImpulsao: React.FC = () => (
 
 /* ---------- PLANOS: BÁSICO (PDF) E COMPLETO ---------- */
 const NO_ACESSO = [
-  'Exercícios de impulsão com a animação de cada movimento',
+  'Exercícios de impulsão com vídeo de cada movimento',
   'Treinos de academia para a impulsão',
   'Treino pronto de impulsão para ataque e bloqueio',
   'Do iniciante ao avançado, em casa e na academia',
