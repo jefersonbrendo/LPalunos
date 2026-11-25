@@ -1,14 +1,11 @@
 import React from 'react';
 import { useFaixaInfinita } from '../hooks/useFaixaInfinita';
-import tela1 from '../assets/images/app/tela-1-inicio.webp';
-import tela2 from '../assets/images/app/tela-2-em-casa.webp';
-import tela3 from '../assets/images/app/tela-3-com-bola.webp';
-import tela4 from '../assets/images/app/tela-4-movimento.webp';
-import tela5 from '../assets/images/app/tela-5-saque-areia.webp';
-import tela6 from '../assets/images/app/tela-6-impulsao.webp';
-import tela7 from '../assets/images/app/tela-7-buscar.webp';
-import tela8 from '../assets/images/app/tela-8-levantamento-areia.webp';
-import tela9 from '../assets/images/app/tela-9-saque-diagrama.webp';
+import tela1 from '../assets/images/app/nova-1-inicio-niveis.webp';
+import tela2 from '../assets/images/app/nova-2-fundamentos-areia.webp';
+import tela3 from '../assets/images/app/nova-3-fundamentos-quadra.webp';
+import tela4 from '../assets/images/app/nova-4-impulsao.webp';
+import tela5 from '../assets/images/app/nova-5-movimento.webp';
+import tela6 from '../assets/images/app/nova-6-passo-a-passo.webp';
 
 interface SlideItem {
   id: number;
@@ -18,15 +15,12 @@ interface SlideItem {
 
 // Todas as telas são exibidas dentro da mesma moldura de celular (mesmo tamanho).
 const SLIDES: SlideItem[] = [
-  { id: 1, src: tela1, alt: 'Tela inicial do app Código da Areia: treino do dia, semana de treinos e treinos prontos' },
-  { id: 2, src: tela2, alt: 'Treinos em casa: com bola, impulsão, força, agilidade, coordenação e mobilidade' },
-  { id: 3, src: tela3, alt: 'Lista de treinos com bola na parede, com nível, séries e filtro de material' },
-  { id: 4, src: tela4, alt: 'Exercício aberto com a animação do movimento, a região que trabalha e a trajetória da bola' },
-  { id: 5, src: tela5, alt: 'Treinos de saque na quadra de areia, com filtro por nível e número de pessoas' },
-  { id: 8, src: tela8, alt: 'Exercício de levantamento na areia com o diagrama animado da quadra, a zona alvo e a trajetória da bola' },
-  { id: 9, src: tela9, alt: 'Exercício de saque na areia com o diagrama mostrando as zonas alvo na diagonal e na paralela' },
-  { id: 6, src: tela6, alt: 'Treinos de impulsão do nível avançado para fazer em casa' },
-  { id: 7, src: tela7, alt: 'Busca de treinos no app' },
+  { id: 1, src: tela1, alt: 'Tela inicial do app: escolha do nível e treinos em casa com bola, impulsão, força e agilidade' },
+  { id: 2, src: tela2, alt: 'Fundamentos do vôlei de areia: saque, recepção, levantamento, ataque, bloqueio e defesa' },
+  { id: 3, src: tela3, alt: 'Fundamentos do vôlei de quadra: saque, recepção, levantamento, ataque, bloqueio e defesa' },
+  { id: 4, src: tela4, alt: 'Exercícios de impulsão filtrados por nível e material, com séries e região que trabalha' },
+  { id: 5, src: tela5, alt: 'Exercício aberto com a animação do movimento, a etapa atual, a região que trabalha e a trajetória' },
+  { id: 6, src: tela6, alt: 'Passo a passo do exercício com as etapas ilustradas, o objetivo e o ritmo' },
 ];
 
 // Três cópias da sequência (ver useFaixaInfinita).

@@ -1,5 +1,5 @@
 import React from 'react';
-import telaNiveis from '../assets/images/app/tela-6-impulsao.webp';
+import telaNiveis from '../assets/images/app/nova-4-impulsao.webp';
 import telaTreino from '../assets/images/impulsao/impulsao-treino-pronto.webp';
 import telaExercicio from '../assets/images/impulsao/impulsao-exercicio.webp';
 import capaDesafio from '../assets/images/bonus-aluno-04.webp';
@@ -20,7 +20,7 @@ const BLOCOS: Bloco[] = [
     titulo: '29 exercícios de impulsão',
     texto: 'Do salto no lugar ao salto agrupado, separados em iniciante, intermediário e avançado. Você começa no seu nível e vai subindo.',
     imagem: telaNiveis,
-    alt: 'Exercícios de impulsão do nível avançado no app: afundo com salto, salto agrupado, salto com meia-volta',
+    alt: 'Exercícios de impulsão no app filtrados por nível e material: agachamento com salto, salto lateral, salto de bloqueio',
   },
   {
     etiqueta: 'No app',
