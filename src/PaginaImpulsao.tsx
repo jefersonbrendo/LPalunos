@@ -47,14 +47,14 @@ export default function PaginaImpulsao() {
       {/* 4. DORES DE QUADRA */}
       <DoresImpulsao />
 
+      {/* 4b. CARROSSEL COM AS TELAS DO APP (o mesmo da página principal) */}
+      <AppPreviewCarousel />
+
       {/* 5. JORNADA (DESAFIO 21 DIAS) */}
       <JornadaImpulsao />
 
       {/* 6. CONTEÚDO NO APP */}
       <ImpulsaoConteudo />
-
-      {/* 6b. CARROSSEL COM AS TELAS DO APP (o mesmo da página principal) */}
-      <AppPreviewCarousel />
 
       {/* 7. PARA QUEM É */}
       <ParaQuemImpulsao />
