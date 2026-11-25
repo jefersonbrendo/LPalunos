@@ -46,7 +46,7 @@ export const AppPreviewCarousel: React.FC = () => {
 
         {/* Text */}
         <p className="mt-3 text-sm sm:text-base text-slate-700 max-w-xl mx-auto leading-relaxed font-medium">
-          Escolha o que quer treinar, abra o exercício e siga o passo a passo com a animação do movimento. Tudo em poucos toques.
+          Escolha o que quer treinar, abra o exercício e siga o passo a passo com o vídeo do movimento. Tudo em poucos toques.
         </p>
       </div>
 
