@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { TopBanner } from './components/TopBanner';
 import { HeroImpulsao } from './components/HeroImpulsao';
 import { ImpulsaoConteudo } from './components/ImpulsaoConteudo';
+import { AppPreviewCarousel } from './components/AppPreviewCarousel';
 import { ProvaImpulsao, DoresImpulsao, JornadaImpulsao } from './components/ImpulsaoSecoes';
 import { ParaQuemImpulsao, BonusImpulsao, OfertaImpulsao, FAQ_IMPULSAO } from './components/ImpulsaoOferta';
 import { DEPOIMENTOS, type Depoimento } from './components/TrainerTestimonials';
@@ -51,6 +52,9 @@ export default function PaginaImpulsao() {
 
       {/* 6. CONTEÚDO NO APP */}
       <ImpulsaoConteudo />
+
+      {/* 6b. CARROSSEL COM AS TELAS DO APP (o mesmo da página principal) */}
+      <AppPreviewCarousel />
 
       {/* 7. PARA QUEM É */}
       <ParaQuemImpulsao />
