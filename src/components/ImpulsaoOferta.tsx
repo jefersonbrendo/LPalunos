@@ -1,4 +1,5 @@
 import React from 'react';
+import { IconeLinha } from './IconeLinha';
 import { LINKS } from '../config/links';
 import { buildUrlWithParams, scrollToPlanos } from '../utils/utm';
 import type { FaqItem } from './Faq';
@@ -15,12 +16,12 @@ import fotoApp from '../assets/images/hero/app-na-areia.webp';
 
 /* ---------- PARA QUEM É ---------- */
 const PERFIS = [
-  { emoji: '🏐', titulo: 'Ataca e para no bloqueio', texto: 'e quer passar a mão por cima da rede.' },
-  { emoji: '🏖️', titulo: 'Joga na areia', texto: 'onde o pé afunda e sair do chão é mais difícil.' },
-  { emoji: '🏟️', titulo: 'Joga na quadra', texto: 'e quer chegar mais alto no ataque e no bloqueio.' },
-  { emoji: '🏠', titulo: 'Não tem academia', texto: 'e quer treinar em casa, só com o corpo e uma parede.' },
-  { emoji: '🏋️', titulo: 'Treina na academia', texto: 'e quer um treino de academia feito para pular mais.' },
-  { emoji: '📏', titulo: 'É baixo', texto: 'e quer compensar a altura com a impulsão.' },
+  { icone: 'bola' as const, titulo: 'Ataca e para no bloqueio', texto: 'e quer passar a mão por cima da rede.' },
+  { icone: 'onda' as const, titulo: 'Joga na areia', texto: 'onde o pé afunda e sair do chão é mais difícil.' },
+  { icone: 'quadra' as const, titulo: 'Joga na quadra', texto: 'e quer chegar mais alto no ataque e no bloqueio.' },
+  { icone: 'casa' as const, titulo: 'Não tem academia', texto: 'e quer treinar em casa, só com o corpo e uma parede.' },
+  { icone: 'peso' as const, titulo: 'Treina na academia', texto: 'e quer um treino de academia feito para pular mais.' },
+  { icone: 'regua' as const, titulo: 'É baixo', texto: 'e quer compensar a altura com a impulsão.' },
 ];
 
 export const ParaQuemImpulsao: React.FC = () => (
@@ -35,7 +36,7 @@ export const ParaQuemImpulsao: React.FC = () => (
           key={p.titulo}
           className="w-full flex items-center gap-3 rounded-2xl bg-white border border-[#E6DCC4] p-4 text-left shadow-2xs"
         >
-          <span className="text-2xl leading-none shrink-0" aria-hidden="true">{p.emoji}</span>
+          <IconeLinha nome={p.icone} />
           <span className="flex-1 text-sm sm:text-base text-slate-700 font-medium leading-snug">
             <strong className="block font-black uppercase text-[#14110B]">{p.titulo}</strong>
             {p.texto}

@@ -1,4 +1,5 @@
 import React from 'react';
+import { IconeLinha } from './IconeLinha';
 import { DEPOIMENTOS, type Depoimento } from './TrainerTestimonials';
 import { FaixaDepoimentos } from './FaixaDepoimentos';
 import printRacha from '../assets/images/impulsao/depo-racha-bloqueio.webp';
@@ -48,10 +49,10 @@ export const ProvaImpulsao: React.FC = () => (
 
 /* ---------- 2. DORES DE QUADRA ---------- */
 const DORES = [
-  { emoji: '🧱', titulo: 'Toma block toda vez que sobe para atacar', texto: 'Ou já sobe sabendo que a bola vai bater na rede.' },
-  { emoji: '🫠', titulo: 'Perde o tempo da bola e tem que passar de qualquer jeito', texto: 'Enquanto o cara do outro lado sobe e crava a bola no meio da quadra.' },
-  { emoji: '🎯', titulo: 'O time adversário já sabe onde mandar a bola', texto: 'No bloqueio você não chega, então eles atacam sempre do seu lado.' },
-  { emoji: '🥵', titulo: 'No terceiro set, você nem sai do chão', texto: 'A perna pesa, a impulsão some, e a galera percebe.' },
+  { icone: 'muro' as const, titulo: 'Toma block toda vez que sobe para atacar', texto: 'Ou já sobe sabendo que a bola vai bater na rede.' },
+  { icone: 'relogio' as const, titulo: 'Perde o tempo da bola e tem que passar de qualquer jeito', texto: 'Enquanto o cara do outro lado sobe e crava a bola no meio da quadra.' },
+  { icone: 'alvo' as const, titulo: 'O time adversário já sabe onde mandar a bola', texto: 'No bloqueio você não chega, então eles atacam sempre do seu lado.' },
+  { icone: 'bateria' as const, titulo: 'No terceiro set, você nem sai do chão', texto: 'A perna pesa, a impulsão some, e a galera percebe.' },
 ];
 
 export const DoresImpulsao: React.FC = () => (
@@ -64,7 +65,7 @@ export const DoresImpulsao: React.FC = () => (
       <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
         {DORES.map((d) => (
           <div key={d.titulo} className="flex items-start gap-3 rounded-2xl bg-white border border-[#E6DCC4] p-4 sm:p-5 shadow-2xs">
-            <span className="text-2xl leading-none shrink-0" aria-hidden="true">{d.emoji}</span>
+            <IconeLinha nome={d.icone} escuro />
             <div>
               <h3 className="font-black text-[#14110B] text-base leading-snug">{d.titulo}</h3>
               <p className="mt-1 text-sm text-slate-700 font-medium leading-relaxed">{d.texto}</p>
