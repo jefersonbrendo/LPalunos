@@ -27,7 +27,7 @@ const BLOCOS: Bloco[] = [
     titulo: 'Cada exercício de impulsão com o passo a passo',
     texto: 'A animação mostra a posição inicial, a passada e o salto, a região que trabalha e tem câmera lenta para você copiar o movimento.',
     imagem: telaExercicio,
-    alt: 'Exercício Aproximação e salto de ataque aberto no app, com a animação do movimento',
+    alt: 'Exercício Saltos no lugar aberto no app, com o vídeo do movimento e a etapa do passo a passo',
   },
   {
     etiqueta: 'No app',
