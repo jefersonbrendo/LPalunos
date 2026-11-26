@@ -1,5 +1,6 @@
 import React from 'react';
 import fotoHero from '../assets/images/impulsao/impulsao-hero-areia.webp';
+import fotoHero480 from '../assets/images/impulsao/impulsao-hero-areia-480.webp';
 import { scrollToPlanos } from '../utils/utm';
 
 const CHECKS = [
@@ -27,6 +28,8 @@ export const HeroImpulsao: React.FC = () => {
       <div className="my-8 sm:my-10 mx-auto max-w-md">
         <img
           src={fotoHero}
+          srcSet={`${fotoHero480} 480w, ${fotoHero} 800w`}
+          sizes="(max-width: 480px) calc(100vw - 32px), 448px"
           width={800}
           height={800}
           alt="Celular na mão, numa quadra de areia, com a tela de impulsão do app Código da Areia"

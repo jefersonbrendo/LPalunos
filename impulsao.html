@@ -30,22 +30,29 @@
       })();
     </script>
 
-    <!-- Microsoft Clarity adiado para após o carregamento inicial (não disputa banda/CPU com LCP nem com o pixel) -->
+    <!-- Microsoft Clarity carregado na 1ª interação do usuário (ou após 7s), mantendo gravação real sem pesar no carregamento inicial -->
     <script>
-      window.addEventListener("load", function () {
+      (function () {
+        var carregou = false;
         var iniciarClarity = function () {
+          if (carregou) return;
+          carregou = true;
+          ["pointerdown", "scroll", "keydown", "touchstart"].forEach(function (ev) {
+            window.removeEventListener(ev, iniciarClarity);
+          });
           (function(c,l,a,r,i,t,y){
             c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
             t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
             y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
           })(window, document, "clarity", "script", "zd8bfzlbbj");
         };
-        if ("requestIdleCallback" in window) {
-          window.requestIdleCallback(iniciarClarity, { timeout: 2500 });
-        } else {
-          setTimeout(iniciarClarity, 1500);
-        }
-      });
+        ["pointerdown", "scroll", "keydown", "touchstart"].forEach(function (ev) {
+          window.addEventListener(ev, iniciarClarity, { passive: true, once: true });
+        });
+        window.addEventListener("load", function () {
+          setTimeout(iniciarClarity, 7000);
+        });
+      })();
     </script>
 
   </head>

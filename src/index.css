@@ -34,20 +34,20 @@
   }
 }
 
-/* Glowing pulse animation for the coral fluorescent CTA */
+/* Animação composta na GPU (apenas transform, sem animar box-shadow) */
 @keyframes pulseCoralCta {
   0%, 100% {
     transform: scale(1);
-    box-shadow: 0 0 0 0 rgba(255, 198, 11, 0.45), 0 4px 14px 0 rgba(20, 17, 11, 0.25);
   }
   50% {
     transform: scale(1.02);
-    box-shadow: 0 0 25px 6px rgba(255, 198, 11, 0.38), 0 8px 25px 0 rgba(20, 17, 11, 0.3);
   }
 }
 
 .animate-pulse-cta {
+  box-shadow: 0 6px 20px rgba(255, 198, 11, 0.35), 0 4px 14px rgba(20, 17, 11, 0.25);
   animation: pulseCoralCta 2.2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  will-change: transform;
 }
 
 /* Custom scrollbar */

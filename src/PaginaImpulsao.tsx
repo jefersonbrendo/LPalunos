@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { Suspense, lazy, useState } from 'react';
 import { TopBanner } from './components/TopBanner';
 import { HeroImpulsao } from './components/HeroImpulsao';
 import { ImpulsaoConteudo } from './components/ImpulsaoConteudo';
@@ -12,7 +12,10 @@ import { Guarantee } from './components/Guarantee';
 import { Faq } from './components/Faq';
 import { Closing } from './components/Closing';
 import { Footer } from './components/Footer';
-import { UpsellModal } from './components/UpsellModal';
+
+const UpsellModal = lazy(() =>
+  import('./components/UpsellModal').then((m) => ({ default: m.UpsellModal })),
+);
 
 // Segunda faixa de depoimentos: foto do Lorenzo + os prints que não aparecem no topo
 const MAIS_DEPOIMENTOS: Depoimento[] = [
@@ -82,12 +85,16 @@ export default function PaginaImpulsao() {
       {/* RODAPÉ */}
       <Footer />
 
-      {/* 14. POP-UP (UPSELL DO PLANO BÁSICO) */}
-      <UpsellModal
-        isOpen={isUpsellModalOpen}
-        onClose={() => setIsUpsellModalOpen(false)}
-        impulsao
-      />
+      {/* 14. POP-UP (UPSELL DO PLANO BÁSICO — carregado sob demanda ao clicar) */}
+      {isUpsellModalOpen && (
+        <Suspense fallback={null}>
+          <UpsellModal
+            isOpen={isUpsellModalOpen}
+            onClose={() => setIsUpsellModalOpen(false)}
+            impulsao
+          />
+        </Suspense>
+      )}
     </div>
   );
 }

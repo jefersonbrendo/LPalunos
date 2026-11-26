@@ -7,7 +7,7 @@ import capaTreinos from '../assets/images/bonus-aluno-02.webp';
 import capaJoelho from '../assets/images/impulsao/bonus-joelho.webp';
 import capaMobilidade from '../assets/images/impulsao/bonus-mobilidade.webp';
 import capaAterrissagem from '../assets/images/impulsao/bonus-aterrissagem.webp';
-import fotoApp from '../assets/images/hero/app-na-areia.webp';
+import fotoApp from '../assets/images/impulsao/bonus-app-thumb.webp';
 
 /**
  * Seções da página /impulsao que vêm depois do "como você recebe":
@@ -84,8 +84,8 @@ const BONUS: Bonus[] = [
     texto: 'Além da impulsão, treinos de saque, recepção, levantamento, ataque, bloqueio e defesa, na areia, na quadra e em casa. Pular mais e chegar certo na bola.',
     valor: 97,
     imagem: fotoApp,
-    w: 800,
-    h: 800,
+    w: 240,
+    h: 320,
   },
   {
     nome: 'Treinos Prontos para Seguir',

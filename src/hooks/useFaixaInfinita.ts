@@ -26,14 +26,14 @@ export function useFaixaInfinita(VELOCIDADE = 32) {
     const e = estado.current;
     const reduzir = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-    const medir = () => {
-      const nova = trilho.scrollWidth / 3;
+    const medir = (larguraTotal?: number) => {
+      const nova = (larguraTotal ?? trilho.offsetWidth) / 3;
       if (!nova) return;
       // mantém a posição relativa ao trocar o tamanho da tela
       const proporcao = e.largura ? e.offset / e.largura : -1;
       e.largura = nova;
       e.offset = proporcao * nova;
-      aplicar();
+      requestAnimationFrame(aplicar);
     };
     // offset fica sempre entre -2 cópias e -1 cópia (exclusive)
     const normalizar = () => {
@@ -113,9 +113,10 @@ export function useFaixaInfinita(VELOCIDADE = 32) {
     };
     document.addEventListener('visibilitychange', aoMudarAba);
 
-    const ro = new ResizeObserver(medir);
+    const ro = new ResizeObserver(([entry]) => {
+      if (entry) medir(entry.contentRect.width);
+    });
     ro.observe(trilho);
-    medir();
 
     return () => {
       pararRaf();
