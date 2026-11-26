@@ -210,11 +210,11 @@ export const BonusImpulsao: React.FC = () => (
 
 /* ---------- PLANOS: BÁSICO (PDF) E COMPLETO ---------- */
 const NO_ACESSO = [
-  'Exercícios de impulsão com vídeo de cada movimento',
-  'Treinos de academia para a impulsão',
-  'Treino pronto de impulsão para ataque e bloqueio',
-  'Desafio Impulsão 21 Dias: 21 dias de treino na sequência',
-  'Do iniciante ao avançado, em casa e na academia',
+  '21 dias de treino na sequência certa',
+  'Vídeo de cada movimento, do iniciante ao avançado',
+  'Treinos em casa, só com o corpo e uma parede',
+  'Treinos na academia, montados para pular mais',
+  'Treino pronto de passada para ataque e bloqueio',
 ];
 
 const BASICO_TEM = [
@@ -296,7 +296,7 @@ export const OfertaImpulsao: React.FC<{ onOpenUpsell: () => void }> = ({ onOpenU
             <span className="inline-block mt-2 text-xs font-black uppercase tracking-wide px-3 py-1 rounded-full bg-[#FFF3C4] text-[#14110B] border border-[#FFC60B]">
               📲 VERSÃO APP
             </span>
-            <h3 className="text-2xl sm:text-3xl font-black text-[#14110B] mt-1">IMPULSÃO COMPLETO</h3>
+            <h3 className="text-2xl sm:text-3xl font-black text-[#14110B] mt-1">MÉTODO CÓDIGO DA AREIA</h3>
             <div className="mt-4 pb-4 border-b border-amber-200">
               <span className="text-xs text-slate-400 line-through block font-medium">De R$ 97</span>
               <div className="flex items-baseline gap-1 mt-0.5">
