@@ -14,9 +14,10 @@ export const HeroImpulsao: React.FC = () => {
     <section className="relative pt-6 pb-12 sm:pt-10 sm:pb-16 px-4 max-w-4xl mx-auto text-center overflow-hidden">
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[550px] h-[360px] bg-gradient-to-b from-[#FFC60B]/15 via-[#14110B]/10 to-transparent blur-3xl pointer-events-none -z-10" />
 
-      <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black uppercase text-[#14110B] leading-[1.1] max-w-3xl mx-auto text-balance">
-        <span className="destaque">Aumente sua impulsão</span>{' '}
-        <span className="underline decoration-[#FFC60B] decoration-[4px] underline-offset-6">em 21 dias</span>
+      <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black uppercase text-[#14110B] leading-[1.12] max-w-3xl mx-auto text-balance">
+        Aplicativo de impulsão para{' '}
+        <span className="destaque">aumentar o seu salto</span>{' '}
+        <span className="underline decoration-[#FFC60B] decoration-[4px] underline-offset-6">em até 40cm</span>
       </h1>
 
       <p className="mt-4 sm:mt-6 text-base sm:text-lg text-slate-700 max-w-2xl mx-auto leading-relaxed font-medium">
