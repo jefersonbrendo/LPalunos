@@ -43,7 +43,7 @@ export const ProvaImpulsao: React.FC = () => (
     id="prova-impulsao"
     rotulo="Resultados"
     itens={PROVA_TOPO}
-    titulo={<>Quem já está <span className="destaque">treinando impulsão</span></>}
+    titulo={<>Depoimento de <span className="destaque">nossos alunos</span></>}
   />
 );
 
