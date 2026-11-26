@@ -4,7 +4,8 @@ import { LINKS } from '../config/links';
 import { buildUrlWithParams, scrollToPlanos } from '../utils/utm';
 import type { FaqItem } from './Faq';
 import capaTreinos from '../assets/images/bonus-aluno-02.webp';
-import capaTracker from '../assets/images/bonus-aluno-05.webp';
+import capaJoelho from '../assets/images/impulsao/bonus-joelho.webp';
+import capaMobilidade from '../assets/images/impulsao/bonus-mobilidade.webp';
 import capaAterrissagem from '../assets/images/impulsao/bonus-aterrissagem.webp';
 import fotoApp from '../assets/images/hero/app-na-areia.webp';
 
@@ -61,6 +62,15 @@ interface Bonus {
 
 const BONUS: Bonus[] = [
   {
+    nome: 'Reabilitação de Joelho',
+    texto: 'Exercícios para fortalecer a musculatura em volta do joelho (coxa, glúteo e panturrilha), com o passo a passo de cada movimento. Pensado para quem sente o joelho depois do racha ou está voltando a saltar aos poucos. Você começa pelos mais leves e só avança quando o joelho estiver bem. Não substitui médico ou fisioterapeuta: se tem lesão ou dor forte, passe por eles antes.',
+    valor: 97,
+    imagem: capaJoelho,
+    w: 300,
+    h: 402,
+    destaque: true,
+  },
+  {
     nome: 'Guia de Aterrissagem Segura',
     texto: 'Como cair depois de cada salto do jeito certo, com a animação do movimento, sem descarregar o peso todo no joelho e no tornozelo.',
     valor: 27,
@@ -86,10 +96,10 @@ const BONUS: Bonus[] = [
     h: 402,
   },
   {
-    nome: 'Tracker de Evolução',
-    texto: 'Marque seus dias de treino no app e veja a sequência crescer.',
+    nome: 'Alongamento e Mobilidade',
+    texto: '28 exercícios para soltar tornozelo, quadril e ombro, separados para antes e depois do treino. Tornozelo e quadril travados atrapalham a passada e fazem o joelho absorver mais impacto na aterrissagem. Com 5 minutos antes do racha, você entra na quadra com o corpo solto.',
     valor: 27,
-    imagem: capaTracker,
+    imagem: capaMobilidade,
     w: 300,
     h: 402,
   },

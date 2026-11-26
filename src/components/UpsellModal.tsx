@@ -102,7 +102,7 @@ export const UpsellModal: React.FC<UpsellModalProps> = ({ isOpen, onClose, impul
           <div className="flex items-start gap-2 text-xs sm:text-sm text-[#B87500] font-bold">
             <span className="shrink-0">🎁</span>
             {impulsao ? (
-              <span><strong>Todos os 4 bônus inclusos:</strong> Guia de Aterrissagem Segura, app completo de vôlei, Treinos Prontos e Tracker de Evolução (R$ 198 grátis)</span>
+              <span><strong>Todos os 5 bônus inclusos:</strong> Reabilitação de Joelho, Guia de Aterrissagem Segura, app completo de vôlei, Treinos Prontos e Alongamento e Mobilidade (R$ 295 grátis)</span>
             ) : (
               <span><strong>Todos os 5 Bônus inclusos:</strong> Desafio Impulsão 21 Dias, Plano de 21 Dias, Treinos Prontos, Treino em Casa e Tracker de Evolução (R$ 225 grátis)</span>
             )}
