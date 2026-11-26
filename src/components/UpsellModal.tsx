@@ -90,7 +90,7 @@ export const UpsellModal: React.FC<UpsellModalProps> = ({ isOpen, onClose, impul
           <div className="flex items-start gap-2 text-xs sm:text-sm text-slate-800 font-semibold">
             <span className="text-emerald-600 font-bold shrink-0">✅</span>
             {impulsao ? (
-              <span><strong>Treinos de impulsão:</strong> exercícios de impulsão com animação e treino pronto para ataque e bloqueio</span>
+              <span><strong>Treinos de impulsão:</strong> exercícios com vídeo de cada movimento, treino pronto para ataque e bloqueio e Desafio Impulsão 21 Dias</span>
             ) : (
               <span><strong>App no Celular:</strong> +420 treinos, 240 na areia e 195 em casa (do iniciante ao avançado)</span>
             )}
@@ -102,7 +102,7 @@ export const UpsellModal: React.FC<UpsellModalProps> = ({ isOpen, onClose, impul
           <div className="flex items-start gap-2 text-xs sm:text-sm text-[#B87500] font-bold">
             <span className="shrink-0">🎁</span>
             {impulsao ? (
-              <span><strong>Todos os bônus inclusos:</strong> Desafio Impulsão 21 Dias, Guia de Aterrissagem Segura, app completo de vôlei, Treinos Prontos e Tracker de Evolução (R$ 295 grátis)</span>
+              <span><strong>Todos os 4 bônus inclusos:</strong> Guia de Aterrissagem Segura, app completo de vôlei, Treinos Prontos e Tracker de Evolução (R$ 198 grátis)</span>
             ) : (
               <span><strong>Todos os 5 Bônus inclusos:</strong> Desafio Impulsão 21 Dias, Plano de 21 Dias, Treinos Prontos, Treino em Casa e Tracker de Evolução (R$ 225 grátis)</span>
             )}
