@@ -21,7 +21,7 @@ export const HeroImpulsao: React.FC = () => {
       </h1>
 
       <p className="mt-4 sm:mt-6 text-base sm:text-lg text-slate-700 max-w-2xl mx-auto leading-relaxed font-medium">
-        Com o Método Código da Areia, você treina sua impulsão em 3 fases: primeiro a base do salto, depois a explosão da perna e, por fim, a passada de ataque, tudo com o vídeo de cada movimento no app.
+        Na aba Impulsão está o seu método de salto, com vídeo de cada exercício. Fora dela, tem um app inteiro de vôlei para você explorar.
       </p>
 
       <div className="my-8 sm:my-10 mx-auto max-w-md">
