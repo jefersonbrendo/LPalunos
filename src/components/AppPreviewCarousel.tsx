@@ -9,6 +9,7 @@ import tela6 from '../assets/images/app/nova-6-passo-a-passo.webp';
 import tela7 from '../assets/images/app/nova-7-video-queda-degrau.webp';
 import tela9 from '../assets/images/app/nova-9-video-agachamento-salto.webp';
 import tela8 from '../assets/images/app/nova-8-bulgaro-passo-a-passo.webp';
+import tela10 from '../assets/images/app/nova-10-video-tres-saltos.webp';
 
 interface SlideItem {
   id: number;
@@ -24,6 +25,7 @@ const SLIDES: SlideItem[] = [
   { id: 4, src: tela4, alt: 'Exercícios de impulsão filtrados por nível e material, com séries e região que trabalha' },
   { id: 5, src: tela5, alt: 'Exercício Afundo com salto aberto no app, com o vídeo do movimento e a legenda da etapa' },
   { id: 6, src: tela6, alt: 'Passo a passo da Queda do degrau e salto, com uma foto real de cada etapa, o objetivo e o ritmo' },
+  { id: 10, src: tela10, alt: 'Exercício Três saltos seguidos aberto no app, com o vídeo do movimento e a legenda da etapa' },
   { id: 7, src: tela7, alt: 'Exercício Queda do degrau e salto aberto no app, com o vídeo do movimento e a legenda da etapa' },
   { id: 9, src: tela9, alt: 'Exercício Agachamento com salto aberto no app, com o vídeo do movimento e a legenda da etapa' },
   { id: 8, src: tela8, alt: 'Agachamento búlgaro: regiões que trabalha, objetivo e passo a passo com as etapas ilustradas' },
