@@ -3,7 +3,7 @@ import { TopBanner } from './components/TopBanner';
 import { HeroImpulsao } from './components/HeroImpulsao';
 import { ImpulsaoConteudo } from './components/ImpulsaoConteudo';
 import { AppPreviewCarousel } from './components/AppPreviewCarousel';
-import { ProvaImpulsao, DoresImpulsao, JornadaImpulsao } from './components/ImpulsaoSecoes';
+import { ProvaImpulsao, DoresImpulsao } from './components/ImpulsaoSecoes';
 import { ParaQuemImpulsao, BonusImpulsao, OfertaImpulsao, FAQ_IMPULSAO } from './components/ImpulsaoOferta';
 import { DEPOIMENTOS, type Depoimento } from './components/TrainerTestimonials';
 import { FaixaDepoimentos } from './components/FaixaDepoimentos';
@@ -50,10 +50,7 @@ export default function PaginaImpulsao() {
       {/* 4b. CARROSSEL COM AS TELAS DO APP (o mesmo da página principal) */}
       <AppPreviewCarousel />
 
-      {/* 5. JORNADA (DESAFIO 21 DIAS) */}
-      <JornadaImpulsao />
-
-      {/* 6. CONTEÚDO NO APP */}
+      {/* 5. CONTEÚDO NO APP */}
       <ImpulsaoConteudo />
 
       {/* 7. PARA QUEM É */}
