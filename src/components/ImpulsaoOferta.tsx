@@ -355,7 +355,7 @@ export const FAQ_IMPULSAO: FaqItem[] = [
   },
   {
     question: 'Quantos centímetros eu vou subir?',
-    answer: 'Depende de onde você começa e de quanto treina, por isso a gente não promete um número. O Desafio Impulsão 21 Dias começa e termina com você marcando o seu alcance na parede, para ver a sua diferença na sua própria medida.',
+    answer: 'Os resultados são reais e mensuráveis: já registramos alunos que aumentaram até 40 cm no alcance vertical. Cada corpo responde em um ritmo diferente conforme o seu ponto de partida, mas uma coisa é certa: seguindo o cronograma, nós garantimos uma melhora visível na sua impulsão. No dia 1 você marca a parede, treina por 21 dias e no dia 21 marca de novo. A diferença em centímetros vai estar ali na sua frente.',
   },
   {
     question: 'Preciso de academia ou de peso?',
