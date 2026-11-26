@@ -16,7 +16,7 @@ export const HeroImpulsao: React.FC = () => {
 
       <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black uppercase text-[#14110B] leading-[1.12] max-w-3xl mx-auto text-balance">
         Aplicativo de impulsão para{' '}
-        <span className="destaque">melhorar o seu salto</span>{' '}
+        <span className="destaque">elevar o seu salto</span>{' '}
         <span className="underline decoration-[#FFC60B] decoration-[4px] underline-offset-6">em até 40cm</span>
       </h1>
 
