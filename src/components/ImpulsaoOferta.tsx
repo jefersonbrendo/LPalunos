@@ -299,10 +299,10 @@ export const OfertaImpulsao: React.FC<{ onOpenUpsell: () => void }> = ({ onOpenU
             <h3 className="text-2xl sm:text-3xl font-black text-[#14110B] mt-1">MÉTODO CÓDIGO DA AREIA</h3>
             <div className="mt-4 pb-4 border-b border-amber-200">
               <span className="text-xs text-slate-400 line-through block font-medium">De R$ 97</span>
-              <div className="flex items-baseline gap-1 mt-0.5">
+              <div className="flex items-baseline gap-1.5 mt-0.5 flex-wrap">
                 <span className="text-xs font-bold text-[#14110B]">por apenas</span>
                 <span className="text-4xl sm:text-5xl font-black text-[#E23D2E]">R$ 24</span>
-                <span className="text-xs text-slate-600 font-medium">à vista</span>
+                <span className="text-xs font-bold text-[#14110B] bg-[#FFF3C4] px-2 py-0.5 rounded-md">no Pix ou Cartão</span>
               </div>
             </div>
             <ul className="mt-5 space-y-2.5 text-sm sm:text-base text-left">
