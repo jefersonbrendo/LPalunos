@@ -3,7 +3,6 @@ import { IconeLinha } from './IconeLinha';
 import { LINKS } from '../config/links';
 import { buildUrlWithParams, scrollToPlanos } from '../utils/utm';
 import type { FaqItem } from './Faq';
-import capaDesafio from '../assets/images/bonus-aluno-04.webp';
 import capaTreinos from '../assets/images/bonus-aluno-02.webp';
 import capaTracker from '../assets/images/bonus-aluno-05.webp';
 import capaAterrissagem from '../assets/images/impulsao/bonus-aterrissagem.webp';
@@ -62,15 +61,6 @@ interface Bonus {
 
 const BONUS: Bonus[] = [
   {
-    nome: 'Desafio Impulsão 21 Dias',
-    texto: 'Um programa fechado de 21 dias, só de impulsão. Cada treino prepara o seguinte: a primeira semana constrói a base, a segunda deixa a perna explosiva e a terceira junta tudo na passada de ataque. No último dia, você mede na parede e vê o quanto subiu.',
-    valor: 97,
-    imagem: capaDesafio,
-    w: 300,
-    h: 402,
-    destaque: true,
-  },
-  {
     nome: 'Guia de Aterrissagem Segura',
     texto: 'Como cair depois de cada salto do jeito certo, com a animação do movimento, sem descarregar o peso todo no joelho e no tornozelo.',
     valor: 27,
@@ -115,9 +105,8 @@ export const BonusImpulsao: React.FC = () => (
       style={{ background: 'repeating-linear-gradient(-45deg, transparent 0 22px, rgba(255,255,255,.14) 22px 44px)' }}
     />
     <div className="relative max-w-3xl mx-auto">
-      <span className="block text-center text-xs font-black uppercase tracking-wider text-[#14110B]">⭐ Bônus</span>
-      <h2 className="mt-1 text-center text-3xl sm:text-4xl font-black text-[#14110B] tracking-tight uppercase text-balance">
-        Junto com os treinos de impulsão, você leva
+      <h2 className="text-center text-3xl sm:text-4xl font-black text-[#14110B] tracking-tight uppercase text-balance">
+        Bônus que você recebe gratuitamente
       </h2>
 
       <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -192,7 +181,7 @@ export const BonusImpulsao: React.FC = () => (
       <div className="mt-6 rounded-2xl bg-[#14110B] text-white px-5 py-4 sm:px-6 sm:py-5 shadow-xl flex flex-col sm:flex-row items-center justify-between gap-3 text-center sm:text-left">
         <div>
           <span className="block text-[11px] font-black uppercase tracking-wider text-[#FFC60B]">
-            Valor total dos 5 bônus
+            Valor total dos {BONUS.length} bônus
           </span>
           <p className="mt-0.5 text-sm sm:text-base text-[#DDD5C4] font-medium">
             Separados, esses bônus custariam{' '}
@@ -214,6 +203,7 @@ const NO_ACESSO = [
   'Exercícios de impulsão com vídeo de cada movimento',
   'Treinos de academia para a impulsão',
   'Treino pronto de impulsão para ataque e bloqueio',
+  'Desafio Impulsão 21 Dias: 21 dias de treino na sequência',
   'Do iniciante ao avançado, em casa e na academia',
 ];
 

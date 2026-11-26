@@ -37,11 +37,11 @@ const BLOCOS: Bloco[] = [
     alt: 'Treino pronto Impulsão para ataque e bloqueio no app, com a lista de exercícios',
   },
   {
-    etiqueta: 'Bônus',
+    etiqueta: 'No app',
     titulo: 'Desafio Impulsão 21 Dias',
     texto: 'São 21 dias treinando perna explosiva e passada certa, na sequência. No fim você mede seu alcance na parede e compara com o primeiro dia.',
     imagem: capaDesafio,
-    alt: 'Capa do bônus Desafio Impulsão 21 Dias',
+    alt: 'Capa do Desafio Impulsão 21 Dias',
     capa: true,
   },
 ];
