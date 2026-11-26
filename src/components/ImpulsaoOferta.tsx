@@ -1,7 +1,7 @@
 import React from 'react';
 import { IconeLinha } from './IconeLinha';
 import { LINKS } from '../config/links';
-import { buildUrlWithParams, scrollToPlanos } from '../utils/utm';
+import { buildUrlWithParams } from '../utils/utm';
 import type { FaqItem } from './Faq';
 import capaTreinos from '../assets/images/bonus-aluno-02.webp';
 import capaJoelho from '../assets/images/impulsao/bonus-joelho.webp';

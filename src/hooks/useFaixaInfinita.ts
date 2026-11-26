@@ -16,7 +16,7 @@ export function useFaixaInfinita(VELOCIDADE = 32) {
     segurando: false,
     inicioX: 0,
     inicioOffset: 0,
-    visivel: true,
+    visivel: false,
   });
 
   useEffect(() => {
@@ -48,13 +48,26 @@ export function useFaixaInfinita(VELOCIDADE = 32) {
 
     let ultimo = performance.now();
     let raf = 0;
+    const pararRaf = () => {
+      if (raf) {
+        cancelAnimationFrame(raf);
+        raf = 0;
+      }
+    };
     const quadro = (agora: number) => {
+      raf = 0;
+      if (!e.visivel || reduzir || document.hidden) return;
       const dt = Math.min(0.05, (agora - ultimo) / 1000);
       ultimo = agora;
-      if (!e.segurando && e.visivel && !reduzir) {
+      if (!e.segurando) {
         e.offset -= VELOCIDADE * dt;
         aplicar();
       }
+      raf = requestAnimationFrame(quadro);
+    };
+    const iniciarRaf = () => {
+      if (raf || !e.visivel || reduzir || document.hidden) return;
+      ultimo = performance.now();
       raf = requestAnimationFrame(quadro);
     };
 
@@ -83,22 +96,32 @@ export function useFaixaInfinita(VELOCIDADE = 32) {
     area.addEventListener('pointercancel', soltar);
     area.addEventListener('lostpointercapture', soltar);
 
-    // Só anima quando a seção está na tela (economiza bateria e CPU).
-    const obs = new IntersectionObserver(([en]) => {
-      e.visivel = en.isIntersecting;
-      ultimo = performance.now();
-    });
+    // Só roda requestAnimationFrame quando a seção está na tela e a aba está ativa (zero CPU ociosa).
+    const obs = new IntersectionObserver(
+      ([en]) => {
+        e.visivel = en.isIntersecting;
+        if (e.visivel) iniciarRaf();
+        else pararRaf();
+      },
+      { rootMargin: '120px 0px' },
+    );
     obs.observe(area);
+
+    const aoMudarAba = () => {
+      if (document.hidden) pararRaf();
+      else iniciarRaf();
+    };
+    document.addEventListener('visibilitychange', aoMudarAba);
 
     const ro = new ResizeObserver(medir);
     ro.observe(trilho);
     medir();
-    raf = requestAnimationFrame(quadro);
 
     return () => {
-      cancelAnimationFrame(raf);
+      pararRaf();
       obs.disconnect();
       ro.disconnect();
+      document.removeEventListener('visibilitychange', aoMudarAba);
       area.removeEventListener('pointerdown', baixar);
       area.removeEventListener('pointermove', mover);
       area.removeEventListener('pointerup', soltar);

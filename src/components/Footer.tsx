@@ -10,7 +10,7 @@ export const Footer: React.FC = () => {
 
         {/* Logo Branding */}
         <div className="flex items-center justify-center gap-2.5 mb-3">
-          <img src="/favicon.svg" alt="Logo Código da Areia" className="w-12 h-12 drop-shadow-md transition-transform hover:scale-105" />
+          <img src="/favicon.svg" width={48} height={48} loading="lazy" decoding="async" alt="Logo Código da Areia" className="w-12 h-12 drop-shadow-md transition-transform hover:scale-105" />
           <span className="font-extrabold text-base text-[#14110B] uppercase tracking-wider">Código da Areia</span>
         </div>
 

@@ -3,6 +3,8 @@ import { IconeLinha } from './IconeLinha';
 import { DEPOIMENTOS, type Depoimento } from './TrainerTestimonials';
 import { FaixaDepoimentos } from './FaixaDepoimentos';
 import printRacha from '../assets/images/impulsao/depo-racha-bloqueio.webp';
+import fotoVitoria from '../assets/images/impulsao/depo-vitoria.webp';
+import fotoArthur from '../assets/images/impulsao/depo-arthur.webp';
 import { scrollToPlanos } from '../utils/utm';
 
 /**
@@ -13,11 +15,11 @@ import { scrollToPlanos } from '../utils/utm';
 /* ---------- 1. PROVA LOGO ABAIXO DO TOPO (faixa que anda sozinha) ---------- */
 const PROVA_TOPO: Depoimento[] = [
   {
-    src: '/assets/aistudio/560304279_18390628129131754_7658984777542539434_n_2245e9dc.jpg',
+    src: fotoVitoria,
     alt: 'Vitoria Ferreira jogando vôlei',
     legenda: 'Vitoria Ferreira, 1,64 de altura, começou há 2 meses',
-    w: 640,
-    h: 1138,
+    w: 500,
+    h: 889,
     foto: true,
   },
   {
@@ -28,11 +30,11 @@ const PROVA_TOPO: Depoimento[] = [
     h: 741,
   },
   {
-    src: '/assets/aistudio/345e0c5a-cb66-4e6d-b198-060ee0f66bed_0ed160f6.jpg',
+    src: fotoArthur,
     alt: 'Arthur Lima jogando vôlei de praia',
     legenda: 'Arthur Lima, 1,78 de altura, começou há 1 mês',
-    w: 1080,
-    h: 1440,
+    w: 540,
+    h: 720,
     foto: true,
   },
   ...DEPOIMENTOS.slice(0, 2),

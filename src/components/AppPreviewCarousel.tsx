@@ -74,9 +74,7 @@ export const AppPreviewCarousel: React.FC = () => {
                   width={640}
                   height={1338}
                   alt={i >= SLIDES.length && i < SLIDES.length * 2 ? s.alt : ''}
-                  // a 1ª cópia carrega já (para o carrossel não aparecer vazio ao girar), mas com prioridade
-                  // baixa, para não disputar banda com a imagem do topo; as cópias seguintes são lazy
-                  loading={i < SLIDES.length ? 'eager' : 'lazy'}
+                  loading="lazy"
                   fetchPriority="low"
                   decoding="async"
                   draggable={false}

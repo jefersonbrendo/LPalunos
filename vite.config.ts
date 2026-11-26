@@ -1,11 +1,41 @@
 import tailwindcss from '@tailwindcss/vite';
 import react from '@vitejs/plugin-react';
 import path from 'path';
-import {defineConfig} from 'vite';
+import {defineConfig, type Plugin} from 'vite';
+
+/** Injeta preload da imagem principal (LCP) de impulsao.html usando o nome com hash emitido no build. */
+function preloadHeroImpulsao(): Plugin {
+  return {
+    name: 'preload-hero-impulsao',
+    transformIndexHtml: {
+      order: 'post',
+      handler(_html, ctx) {
+        if (!ctx.filename.endsWith('impulsao.html') || !ctx.bundle) return;
+        const heroAsset = Object.keys(ctx.bundle).find((k) =>
+          /assets\/impulsao-hero-areia-.*\.webp$/.test(k),
+        );
+        if (!heroAsset) return;
+        return [
+          {
+            tag: 'link',
+            attrs: {
+              rel: 'preload',
+              as: 'image',
+              href: `/${heroAsset}`,
+              type: 'image/webp',
+              fetchpriority: 'high',
+            },
+            injectTo: 'head',
+          },
+        ];
+      },
+    },
+  };
+}
 
 export default defineConfig(() => {
   return {
-    plugins: [react(), tailwindcss()],
+    plugins: [react(), tailwindcss(), preloadHeroImpulsao()],
     build: {
       rollupOptions: {
         // Páginas: a landing (index.html), a roleta do back redirect (/roleta) e a página de impulsão (/impulsao)

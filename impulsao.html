@@ -9,36 +9,47 @@
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="shortcut icon" href="/favicon.svg" />
     <link rel="apple-touch-icon" href="/favicon.svg" />
-    <meta name="description" content="Treinos de impulsão para o vôlei: 29 exercícios de impulsão com animação, treino pronto para ataque e bloqueio e o Desafio Impulsão 21 Dias, no app Código da Areia." />
+    <meta name="description" content="Aplicativo de impulsão para elevar o seu salto: exercícios com vídeo de cada movimento, treino pronto para ataque e bloqueio e o Desafio Impulsão 21 Dias." />
     <meta property="og:title" content="Código da Areia | Treinos de Impulsão para o Vôlei" />
-    <meta property="og:description" content="29 exercícios de impulsão, treino pronto de impulsão para ataque e bloqueio e o Desafio Impulsão 21 Dias, no app Código da Areia." />
+    <meta property="og:description" content="Exercícios de impulsão com vídeo de cada movimento, treino pronto para ataque e bloqueio e Desafio Impulsão 21 Dias no app Código da Areia." />
     <meta property="og:type" content="website" />
     <meta name="twitter:card" content="summary_large_image" />
 
-    <!-- Microsoft Clarity -->
-    <script type="text/javascript">
-      (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-      })(window, document, "clarity", "script", "zd8bfzlbbj");
-    </script>
+    <!-- Pré-conexão com o servidor do pixel para máximo Connect Rate -->
+    <link rel="dns-prefetch" href="https://lowtrack.com.br" />
+    <link rel="preconnect" href="https://lowtrack.com.br" crossorigin />
 
-    <!-- Fonte Inter hospedada no próprio site (importada em src/main.tsx) -->
-    <link rel="preconnect" href="https://i.imgur.com" crossorigin>
-
-    <!-- Pixel da Lowtrack -->
+    <!-- Pixel da Lowtrack (prioritário para Connect Rate / PageView) -->
     <script>
       window.pixelId = "lt_px_119ee6776d00";
-      var a = document.createElement("script");
-      a.setAttribute("async", "");
-      a.setAttribute("defer", "");
-      a.setAttribute("src", "https://lowtrack.com.br/pixel.js");
-      document.head.appendChild(a);
+      (function () {
+        var a = document.createElement("script");
+        a.async = true;
+        a.src = "https://lowtrack.com.br/pixel.js";
+        document.head.appendChild(a);
+      })();
+    </script>
+
+    <!-- Microsoft Clarity adiado para após o carregamento inicial (não disputa banda/CPU com LCP nem com o pixel) -->
+    <script>
+      window.addEventListener("load", function () {
+        var iniciarClarity = function () {
+          (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+          })(window, document, "clarity", "script", "zd8bfzlbbj");
+        };
+        if ("requestIdleCallback" in window) {
+          window.requestIdleCallback(iniciarClarity, { timeout: 2500 });
+        } else {
+          setTimeout(iniciarClarity, 1500);
+        }
+      });
     </script>
 
   </head>
-  <body class="bg-[#F7F4EE] text-[#0F172A] antialiased selection:bg-[#FF9F1C] selection:text-white">
+  <body class="bg-[#F6F0E1] text-[#14110B] antialiased selection:bg-[#FFC60B] selection:text-[#14110B]">
     <div id="root"></div>
     <script type="module" src="/src/impulsao.tsx"></script>
   </body>

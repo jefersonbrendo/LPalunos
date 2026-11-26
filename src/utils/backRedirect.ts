@@ -39,7 +39,17 @@ export function iniciarBackRedirect(): void {
   window.addEventListener('pointerdown', aoInteragir, { passive: true });
   window.addEventListener('keydown', aoInteragir);
 
+  let ultimoHash = window.location.hash;
+  window.addEventListener('hashchange', () => {
+    ultimoHash = window.location.hash;
+  });
+
   window.addEventListener('popstate', () => {
+    // Evita disparar o back redirect quando o usuário apenas navega entre âncoras (#) na mesma página.
+    if (window.location.hash !== ultimoHash) {
+      ultimoHash = window.location.hash;
+      return;
+    }
     if (jaFeito()) return;
     marcarFeito();
     window.location.replace(destino);

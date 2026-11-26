@@ -31,7 +31,7 @@ export const HeroImpulsao: React.FC = () => {
           height={800}
           alt="Celular na mão, numa quadra de areia, com a tela de impulsão do app Código da Areia"
           fetchPriority="high"
-          decoding="async"
+          decoding="sync"
           className="w-full h-auto aspect-square rounded-3xl object-cover shadow-2xl block"
         />
       </div>
